@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+*.apk
+/app/src/main/res/values/keys.xml
+/app/src/main/res/layout/activity_main_test.xml

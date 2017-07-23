@@ -1,0 +1,30 @@
+<!DOCTYPE resources[]>
+<resources>
+    <string name="app_name">MyTLC</string>
+    <string name="day_name">Mon</string>
+    <string name="day_num">9</string>
+    <string name="time_1">10:30 AM\u201310:00 PM</string>
+    <string name="time_2">7:30\u201310:00 PM</string>
+    <string name="time_3">10:00\u201310:30 PM</string>
+    <string name="dept_1">Computers</string>
+    <string name="dept_2">Gaming</string>
+    <string name="dept_3">Digital Imaging</string>
+    <string name="username_hint">Employee ID</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="remember_checkbox">Remember password</string>
+    <string name="item_logout">Logout</string>
+    <string name="item_import">Import to calendar</string>
+    <string name="item_delete">Delete username</string>
+    <string name="dialog_calendar">Calendar</string>
+    <string name="dialog_title">Event Title</string>
+    <string name="dialog_store">Store Number</string>
+    <string name="dialog_button_store">Get Address</string>
+    <string name="dialog_store_address">Store Address</string>
+    <string name="dialog_title_default">Work at Best Buy</string>
+    <string name="dialog_check_delete">Delete old or duplicate events</string>
+    <string name="hours">Hours</string>
+    <string name="hours_num">5.5</string>
+    <string name="item_alarm">Set next alarm</string>
+    <string name="dialog_alarm">Next shift starts at: 7:45 AM</string>
+</resources>
