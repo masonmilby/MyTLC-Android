@@ -21,7 +21,7 @@ public class DepartmentMap {
         deptMap.put("61405", "Front of Precinct");
         deptMap.put("61410", "Phones");
         deptMap.put("61420", "Appliances");
-        deptMap.put("61420", "Computing");
+        deptMap.put("61430", "Computing");
         deptMap.put("61450", "Operations Leadership");
         deptMap.put("61460", "Mobile");
         deptMap.put("61480", "Digital Imaging");
