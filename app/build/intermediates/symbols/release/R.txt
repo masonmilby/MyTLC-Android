@@ -828,7 +828,7 @@ int id design_navigation_view 0x7f0d0093
 int id disableHome 0x7f0d001e
 int id divider_horizontal 0x7f0d00b2
 int id divider_vertical 0x7f0d00a9
-int id divider_vertical_1 0x7f0d00ab
+int id divider_vertical_1 0x7f0d00aa
 int id edit_password 0x7f0d0082
 int id edit_query 0x7f0d0070
 int id edit_store_address 0x7f0d00a2
@@ -946,11 +946,11 @@ int id text_input_password_toggle 0x7f0d0097
 int id textinput_counter 0x7f0d0009
 int id textinput_error 0x7f0d000a
 int id textview_calendar 0x7f0d009a
-int id textview_day_name 0x7f0d00aa
-int id textview_day_num 0x7f0d00ad
+int id textview_day_name 0x7f0d00ab
+int id textview_day_num 0x7f0d00ac
 int id textview_dept 0x7f0d00a6
-int id textview_dept_1 0x7f0d00ae
-int id textview_hours 0x7f0d00ac
+int id textview_dept_1 0x7f0d00ad
+int id textview_hours 0x7f0d00ae
 int id textview_hours_num 0x7f0d00af
 int id textview_nextshift 0x7f0d0098
 int id textview_time 0x7f0d00a4

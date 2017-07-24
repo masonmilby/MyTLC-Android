@@ -40,9 +40,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:layout_constraintLeft_toRightOf="@+id/textview_day_name"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"></View>
+                android:layout_marginLeft="56dp"
+                app:layout_constraintLeft_toLeftOf="parent"></View>
 
             <View
                 android:id="@+id/divider_vertical_1"
@@ -54,21 +53,22 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:layout_constraintLeft_toRightOf="@+id/textview_hours"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"></View>
+                android:layout_marginLeft="136dp"
+                app:layout_constraintLeft_toLeftOf="parent"></View>
 
             <TextView
                 android:id="@+id/textview_day_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/day_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="8dp" />
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/divider_vertical"
+                android:layout_marginRight="8dp" />
 
             <TextView
                 android:id="@+id/textview_day_num"
@@ -99,7 +99,7 @@
                 android:textStyle="bold"
                 app:layout_constraintLeft_toRightOf="@+id/divider_vertical_1"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="8dp" />
 
@@ -110,10 +110,12 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/hours"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/divider_vertical"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp" />
+                android:layout_marginLeft="0dp"
+                app:layout_constraintRight_toLeftOf="@+id/divider_vertical_1"
+                android:layout_marginRight="0dp" />
 
             <TextView
                 android:id="@+id/textview_hours_num"

@@ -3454,7 +3454,7 @@ containing a value of this type.
         public static final int disableHome=0x7f0d001e;
         public static final int divider_horizontal=0x7f0d00b2;
         public static final int divider_vertical=0x7f0d00a9;
-        public static final int divider_vertical_1=0x7f0d00ab;
+        public static final int divider_vertical_1=0x7f0d00aa;
         public static final int edit_password=0x7f0d0082;
         public static final int edit_query=0x7f0d0070;
         public static final int edit_store_address=0x7f0d00a2;
@@ -3572,11 +3572,11 @@ containing a value of this type.
         public static final int textinput_counter=0x7f0d0009;
         public static final int textinput_error=0x7f0d000a;
         public static final int textview_calendar=0x7f0d009a;
-        public static final int textview_day_name=0x7f0d00aa;
-        public static final int textview_day_num=0x7f0d00ad;
+        public static final int textview_day_name=0x7f0d00ab;
+        public static final int textview_day_num=0x7f0d00ac;
         public static final int textview_dept=0x7f0d00a6;
-        public static final int textview_dept_1=0x7f0d00ae;
-        public static final int textview_hours=0x7f0d00ac;
+        public static final int textview_dept_1=0x7f0d00ad;
+        public static final int textview_hours=0x7f0d00ae;
         public static final int textview_hours_num=0x7f0d00af;
         public static final int textview_nextshift=0x7f0d0098;
         public static final int textview_time=0x7f0d00a4;

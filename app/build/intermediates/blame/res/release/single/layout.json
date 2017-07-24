@@ -12,12 +12,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\6741d14446ec9c029769bdaa2d1fc4b0294d7f5d\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_main_test.xml",
-        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\layout\\activity_main_test.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_header_item_layout.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\6741d14446ec9c029769bdaa2d1fc4b0294d7f5d\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_main_test.xml",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\layout\\activity_main_test.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\release\\layout\\design_layout_snackbar.xml",
