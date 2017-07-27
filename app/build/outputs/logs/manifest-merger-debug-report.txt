@@ -31,20 +31,20 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:8:22-75
 application
 ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:10:5-34:19
-MERGED from [com.android.support:cardview-v7:25.4.0] C:\Users\mason\.android\build-cache\38abfd1ff67330ee5d21efb36d71cd4ebdc5fc27\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:design:25.4.0] C:\Users\mason\.android\build-cache\2d22ef4be338340ec4e2afbf35be8399176ffc68\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\mason\.android\build-cache\ae12d376c39172b2b052f78e4793c945a2828593\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:25.4.0] C:\Users\mason\.android\build-cache\88bda6989c555c10f4e4f40ebbdda333eb373490\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.0.0] C:\Users\mason\.android\build-cache\327198e07ecad7f6f700b49745d97ff1a963b33f\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:design:26.0.0] C:\Users\mason\.android\build-cache\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\mason\.android\build-cache\d236c31ea9c24fc3393eb7331960b7b92eed24af\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.0] C:\Users\mason\.android\build-cache\fbc104ec11bd393982ccd355eb514fa86b1832f3\output\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\mason\.android\build-cache\4cb1173801cd79eff21a50773403f26a9367c170\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\mason\.android\build-cache\6741d14446ec9c029769bdaa2d1fc4b0294d7f5d\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:25.4.0] C:\Users\mason\.android\build-cache\9d6022640fe1992c8a78ae50435027fd7007b575\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:25.4.0] C:\Users\mason\.android\build-cache\9f33f58dc833403c06acd74fd4d936c1ee25ab71\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\mason\.android\build-cache\e63fe137bb2582764357bc4e261301763b9c2b09\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\mason\.android\build-cache\d1ec3c0350c6a10a48bf08b399308e57d2d23636\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] C:\Users\mason\.android\build-cache\5b6d283ab1f658cb0098b0e72f72b6820c122153\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:25.4.0] C:\Users\mason\.android\build-cache\f54c376f7b797d79788fcad7de697a105a1ef59a\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\mason\.android\build-cache\082d070467ec9598b41099f10f18b513748fd975\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:25.4.0] C:\Users\mason\.android\build-cache\e4144ddab2dbedd1fa72a54664620aa913453cb9\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\mason\.android\build-cache\e262b964c33c33c218db963f486c031f33ab1358\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\mason\.android\build-cache\dfe69154b6b649f086101e435b20f0125f7f25bc\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\mason\.android\build-cache\6a3dd2dc75c7da123cdb6b9e37107907e117a3db\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\mason\.android\build-cache\a295714874b0327179696febafec657eca3b6076\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\mason\.android\build-cache\79f81bdf63da718d64fdecebbe3c59c123cfa92b\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\mason\.android\build-cache\0e231ce245a463d5d1af493ac1865e4cf5d36e90\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\mason\.android\build-cache\5717f995437feb11038fd23cf00e9925750624b4\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\mason\.android\build-cache\1dfa28270d8bc29e8e259f1e958b028707577458\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\mason\.android\build-cache\fe061597da7e95e56e11d40d4d3c6ac55dec0cb5\output\AndroidManifest.xml:25:5-29:19
 	android:label
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:13:9-41
 	android:supportsRtl
@@ -85,23 +85,24 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:29:13-42
 uses-sdk
 INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:cardview-v7:25.4.0] C:\Users\mason\.android\build-cache\38abfd1ff67330ee5d21efb36d71cd4ebdc5fc27\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:25.4.0] C:\Users\mason\.android\build-cache\2d22ef4be338340ec4e2afbf35be8399176ffc68\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\mason\.android\build-cache\ae12d376c39172b2b052f78e4793c945a2828593\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.4.0] C:\Users\mason\.android\build-cache\88bda6989c555c10f4e4f40ebbdda333eb373490\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.0] C:\Users\mason\.android\build-cache\327198e07ecad7f6f700b49745d97ff1a963b33f\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:26.0.0] C:\Users\mason\.android\build-cache\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\mason\.android\build-cache\3107663aa6cf391026d1aa880fd3db78a8f03f36\output\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\mason\.android\build-cache\d236c31ea9c24fc3393eb7331960b7b92eed24af\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0] C:\Users\mason\.android\build-cache\fbc104ec11bd393982ccd355eb514fa86b1832f3\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\mason\.android\build-cache\4cb1173801cd79eff21a50773403f26a9367c170\output\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.1] C:\Users\mason\.android\build-cache\621ba1170615b369b79c12c87af909a2caeda420\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\mason\.android\build-cache\6741d14446ec9c029769bdaa2d1fc4b0294d7f5d\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.4.0] C:\Users\mason\.android\build-cache\9d6022640fe1992c8a78ae50435027fd7007b575\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.4.0] C:\Users\mason\.android\build-cache\9f33f58dc833403c06acd74fd4d936c1ee25ab71\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\mason\.android\build-cache\e63fe137bb2582764357bc4e261301763b9c2b09\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\mason\.android\build-cache\d1ec3c0350c6a10a48bf08b399308e57d2d23636\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] C:\Users\mason\.android\build-cache\5b6d283ab1f658cb0098b0e72f72b6820c122153\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.4.0] C:\Users\mason\.android\build-cache\f54c376f7b797d79788fcad7de697a105a1ef59a\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\mason\.android\build-cache\082d070467ec9598b41099f10f18b513748fd975\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.4.0] C:\Users\mason\.android\build-cache\e4144ddab2dbedd1fa72a54664620aa913453cb9\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\mason\.android\build-cache\e262b964c33c33c218db963f486c031f33ab1358\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\mason\.android\build-cache\dfe69154b6b649f086101e435b20f0125f7f25bc\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\mason\.android\build-cache\6a3dd2dc75c7da123cdb6b9e37107907e117a3db\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\mason\.android\build-cache\a295714874b0327179696febafec657eca3b6076\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\mason\.android\build-cache\79f81bdf63da718d64fdecebbe3c59c123cfa92b\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\mason\.android\build-cache\0e231ce245a463d5d1af493ac1865e4cf5d36e90\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\mason\.android\build-cache\5717f995437feb11038fd23cf00e9925750624b4\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\mason\.android\build-cache\1dfa28270d8bc29e8e259f1e958b028707577458\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\mason\.android\build-cache\fe061597da7e95e56e11d40d4d3c6ac55dec0cb5\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.4.0] C:\Users\mason\.android\build-cache\2d22ef4be338340ec4e2afbf35be8399176ffc68\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.0.0] C:\Users\mason\.android\build-cache\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml
@@ -109,20 +110,20 @@ MERGED from [com.android.support:support-compat:25.4.0] C:\Users\mason\.android\
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:cardview-v7:25.4.0] C:\Users\mason\.android\build-cache\38abfd1ff67330ee5d21efb36d71cd4ebdc5fc27\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:design:25.4.0] C:\Users\mason\.android\build-cache\2d22ef4be338340ec4e2afbf35be8399176ffc68\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\mason\.android\build-cache\ae12d376c39172b2b052f78e4793c945a2828593\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:25.4.0] C:\Users\mason\.android\build-cache\88bda6989c555c10f4e4f40ebbdda333eb373490\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:appcompat-v7:25.4.0] C:\Users\mason\.android\build-cache\6741d14446ec9c029769bdaa2d1fc4b0294d7f5d\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:25.4.0] C:\Users\mason\.android\build-cache\9d6022640fe1992c8a78ae50435027fd7007b575\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:25.4.0] C:\Users\mason\.android\build-cache\9f33f58dc833403c06acd74fd4d936c1ee25ab71\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:25.4.0] C:\Users\mason\.android\build-cache\e63fe137bb2582764357bc4e261301763b9c2b09\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:25.4.0] C:\Users\mason\.android\build-cache\d1ec3c0350c6a10a48bf08b399308e57d2d23636\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:25.4.0] C:\Users\mason\.android\build-cache\5b6d283ab1f658cb0098b0e72f72b6820c122153\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:25.4.0] C:\Users\mason\.android\build-cache\f54c376f7b797d79788fcad7de697a105a1ef59a\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\mason\.android\build-cache\082d070467ec9598b41099f10f18b513748fd975\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:25.4.0] C:\Users\mason\.android\build-cache\e4144ddab2dbedd1fa72a54664620aa913453cb9\output\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:cardview-v7:26.0.0] C:\Users\mason\.android\build-cache\327198e07ecad7f6f700b49745d97ff1a963b33f\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:design:26.0.0] C:\Users\mason\.android\build-cache\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\mason\.android\build-cache\d236c31ea9c24fc3393eb7331960b7b92eed24af\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.0] C:\Users\mason\.android\build-cache\fbc104ec11bd393982ccd355eb514fa86b1832f3\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\mason\.android\build-cache\e262b964c33c33c218db963f486c031f33ab1358\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\mason\.android\build-cache\dfe69154b6b649f086101e435b20f0125f7f25bc\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\mason\.android\build-cache\6a3dd2dc75c7da123cdb6b9e37107907e117a3db\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\mason\.android\build-cache\a295714874b0327179696febafec657eca3b6076\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\mason\.android\build-cache\79f81bdf63da718d64fdecebbe3c59c123cfa92b\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\mason\.android\build-cache\0e231ce245a463d5d1af493ac1865e4cf5d36e90\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\mason\.android\build-cache\5717f995437feb11038fd23cf00e9925750624b4\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\mason\.android\build-cache\1dfa28270d8bc29e8e259f1e958b028707577458\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\mason\.android\build-cache\fe061597da7e95e56e11d40d4d3c6ac55dec0cb5\output\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:cardview-v7:25.4.0] C:\Users\mason\.android\build-cache\38abfd1ff67330ee5d21efb36d71cd4ebdc5fc27\output\AndroidManifest.xml:25:13-35
+		ADDED from [com.android.support:cardview-v7:26.0.0] C:\Users\mason\.android\build-cache\327198e07ecad7f6f700b49745d97ff1a963b33f\output\AndroidManifest.xml:25:13-35
 	android:name
-		ADDED from [com.android.support:cardview-v7:25.4.0] C:\Users\mason\.android\build-cache\38abfd1ff67330ee5d21efb36d71cd4ebdc5fc27\output\AndroidManifest.xml:24:13-51
+		ADDED from [com.android.support:cardview-v7:26.0.0] C:\Users\mason\.android\build-cache\327198e07ecad7f6f700b49745d97ff1a963b33f\output\AndroidManifest.xml:24:13-51

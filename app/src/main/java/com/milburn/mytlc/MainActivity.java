@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
         if (globalSchedule != null && !globalSchedule.isEmpty()) {
             existingList = globalSchedule;
             Date currentTime = Calendar.getInstance().getTime();
-            SimpleDateFormat timeFormat = new SimpleDateFormat("'Last refreshed on' E, MMM d, h:mm aa");
+            SimpleDateFormat timeFormat = new SimpleDateFormat("'Last refreshed on' E, MMM d yyyy, h:mm aa");
             updatedTime = timeFormat.format(currentTime);
             if (tempPass == null) {
                 credentials.setSchedule(existingList);
@@ -188,7 +188,11 @@ public class MainActivity extends AppCompatActivity {
             updatedTime = credentials.getScheduleUpdated();
         }
 
-        if (!existingList.isEmpty()) {
+        System.out.println(existingList);
+        System.out.println(updatedTime);
+        System.out.println(credentials.isScheduleUpdated(updatedTime));
+
+        if (!existingList.isEmpty() && credentials.isScheduleUpdated(updatedTime)) {
             RecyclerView.Adapter mRecyclerAdapter = new RecyclerAdapter(existingList, this);
             mRecyclerView.setAdapter(mRecyclerAdapter);
             addToCalendar(existingList);

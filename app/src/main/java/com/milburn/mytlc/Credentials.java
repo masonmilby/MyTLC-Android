@@ -184,26 +184,23 @@ public class Credentials {
         return null;
     }
 
-    public Boolean isScheduleUpdated() {
-        if (getScheduleUpdated() != null) {
-            SimpleDateFormat format = new SimpleDateFormat("'Last refreshed on' E, MMM d yyyy, h:mm aa");
-            try {
-                Date updatedTime = format.parse(sharedPreferences.getString("ScheduleUpdated", "DEFAULT"));
-                Long updated = updatedTime.getTime();
-                Long current = Calendar.getInstance().getTimeInMillis();
+    public Boolean isScheduleUpdated(String time) {
+        SimpleDateFormat format = new SimpleDateFormat("'Last refreshed on' E, MMM d yyyy, h:mm aa");
+        try {
+            Date updatedTime = format.parse(time);
+            Long updated = updatedTime.getTime();
+            Long current = Calendar.getInstance().getTimeInMillis();
 
-                Long hours = (current-updated)/3600000;
-                if (hours > 12) {
-                    return false;
-                }
-
-            } catch (ParseException e) {
-                e.printStackTrace();
+            Long hours = (current - updated) / 3600000;
+            if (hours > 12) {
                 return false;
             }
-            return true;
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return false;
         }
-        return false;
+        return true;
     }
 
     public boolean scheduleExists() {

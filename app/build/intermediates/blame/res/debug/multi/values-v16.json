@@ -11,13 +11,34 @@
                     "endOffset": 116
                 },
                 "from": {
-                    "file": "C:\\Users\\mason\\.android\\build-cache\\6741d14446ec9c029769bdaa2d1fc4b0294d7f5d\\output\\res\\values-v16\\values-v16.xml",
+                    "file": "C:\\Users\\mason\\.android\\build-cache\\fe061597da7e95e56e11d40d4d3c6ac55dec0cb5\\output\\res\\values-v16\\values-v16.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
                         "startOffset": 55,
                         "endColumn": 65,
                         "endOffset": 116
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 121,
+                    "endLine": 6,
+                    "endColumn": 12,
+                    "endOffset": 289
+                },
+                "from": {
+                    "file": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\values-v16\\values-v16.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 223
                     }
                 }
             }
