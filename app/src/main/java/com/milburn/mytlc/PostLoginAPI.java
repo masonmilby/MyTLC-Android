@@ -56,7 +56,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
             mainResponse = Jsoup.connect("https://mytlc.bestbuy.com/etm/")
                     .method(Connection.Method.GET)
                     .execute();
-            tokenValue = mainResponse.parse().select("input[name=url_login_token").first().attr("value");
+            tokenValue = mainResponse.parse().select("input[name=url_login_token]").first().attr("value");
         } catch (Exception e) {
             publishProgress(102);
             e.printStackTrace();
@@ -97,10 +97,10 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         }
 
         try {
-            String secureToken = loginDoc.select("input[name=secureToken").first().attr("value");
+            String secureToken = loginDoc.select("input[name=secureToken]").first().attr("value");
             String newMonthYear = loginDoc.getElementsByClass("imageButton").last().attr("onclick").split("'")[1];
-            String lastServerTime = loginDoc.select("input[name=lastServerTime").first().attr("value");
-            String currentTime = loginDoc.select("input[name=initialCurrentTime").first().attr("value");
+            String lastServerTime = loginDoc.select("input[name=lastServerTime]").first().attr("value");
+            String currentTime = loginDoc.select("input[name=initialCurrentTime]").first().attr("value");
 
             shiftPageNextResponse = Jsoup.connect("https://mytlc.bestbuy.com/etm/etmMenu.jsp")
                     .method(Connection.Method.POST)

@@ -1,4 +1,4 @@
-#Mon Jul 24 17:07:59 EDT 2017
+#Thu Jul 27 18:22:17 EDT 2017
 base.0=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex

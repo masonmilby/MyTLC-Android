@@ -188,10 +188,6 @@ public class MainActivity extends AppCompatActivity {
             updatedTime = credentials.getScheduleUpdated();
         }
 
-        System.out.println(existingList);
-        System.out.println(updatedTime);
-        System.out.println(credentials.isScheduleUpdated(updatedTime));
-
         if (!existingList.isEmpty() && credentials.isScheduleUpdated(updatedTime)) {
             RecyclerView.Adapter mRecyclerAdapter = new RecyclerAdapter(existingList, this);
             mRecyclerView.setAdapter(mRecyclerAdapter);
