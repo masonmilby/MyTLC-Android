@@ -156,16 +156,14 @@ public class Credentials {
         return null;
     }
 
-    public Object[] getLastCalName(HashMap<Integer, String> calMap) {
+    public String getLastCalName() {
         if (getEventIds() != null && !getEventIds().isEmpty()) {
             HashMap<String, List<Long>> tempMap = getEventIds();
             List<String> keyList = new ArrayList<>(tempMap.keySet());
-            List<String> calNameMap = new ArrayList<>(calMap.values());
 
             String lastCalName = keyList.get(keyList.size()-1);
-            Object[] calNamePos = new Object[]{lastCalName, calNameMap.indexOf(lastCalName)};
 
-            return calNamePos;
+            return lastCalName;
         }
         return null;
     }

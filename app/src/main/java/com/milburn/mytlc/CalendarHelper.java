@@ -45,7 +45,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     private String snackString;
     private View dialogView;
     private CharSequence[] calendarNames;
-    private HashMap<Integer, String> calendarMap;
+    private HashMap<String, Integer> calendarMap;
 
     public CalendarHelper(Context con) {
         context = con;
@@ -79,10 +79,10 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
 
         calendarMap = new HashMap<>();
         while (cur.moveToNext()) {
-            calendarMap.put(cur.getInt(0), cur.getString(1));
+            calendarMap.put(cur.getString(1), cur.getInt(0));
         }
         cur.close();
-        calendarNames = calendarMap.values().toArray(new CharSequence[calendarMap.size()]);
+        calendarNames = calendarMap.keySet().toArray(new CharSequence[calendarMap.size()]);
         if (calendarNames.length < 1) {
             snackString = "No calendars available";
             publishProgress(1);
@@ -98,7 +98,8 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                 .setPositiveButton("Import", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String calName = calendarMap.get(spinnerCalendar.getSelectedItemPosition());
+                        String calName = spinnerCalendar.getSelectedItem().toString();
+                        System.out.println(calName);
 
                         if (checkDelete.isChecked()) {
                             deleteEvents(calName);
@@ -111,7 +112,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                             values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
                             values.put(CalendarContract.Events.TITLE, editEventTitle.getText().toString());
                             values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts());
-                            values.put(CalendarContract.Events.CALENDAR_ID, spinnerCalendar.getSelectedItemPosition());
+                            values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
                             values.put(CalendarContract.Events.EVENT_TIMEZONE, java.util.Calendar.getInstance().getTimeZone().getDisplayName());
                             values.put(CalendarContract.Events.EVENT_LOCATION, editAddress.getText().toString());
 
@@ -212,12 +213,9 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                 ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, calendarNames);
                 spinnerCalendar.setAdapter(adapter);
 
-                if (credentials.getLastCalName(calendarMap) != null) {
-                    Object[] calNamePos = credentials.getLastCalName(calendarMap);
-                    String calName = (String)calNamePos[0];
-                    Integer calNameIndex = (Integer)calNamePos[1];
-
-                    spinnerCalendar.setSelection(calNameIndex);
+                if (credentials.getLastCalName() != null) {
+                    Integer calPos = adapter.getPosition(credentials.getLastCalName());
+                    spinnerCalendar.setSelection(calPos);
                 }
                 break;
         }
