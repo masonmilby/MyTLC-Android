@@ -27,4 +27,5 @@
     <string name="hours_num">5.5</string>
     <string name="item_alarm">Set next alarm</string>
     <string name="dialog_alarm">Next shift starts at: 7:45 AM</string>
+    <string name="activity">Sales Floor</string>
 </resources>

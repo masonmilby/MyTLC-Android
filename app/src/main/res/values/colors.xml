@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#c79100</color>
     <color name="colorAccent">#9E9E9E</color>
     <color name="overflowColor">#FFFFFF</color>
+    <color name="color_divider">#1f000000</color>
 </resources>

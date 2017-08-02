@@ -175,10 +175,12 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                 setCurrentDay();
 
                 if (currentDay != null) {
-                    List<String> parsedDepts = getDepts();
+                    List<List<String>> deptActList = getDeptsActivities();
+                    List<String> parsedDepts = deptActList.get(0);
                     List<Date[]> parsedTimeDate = getTimeDate();
                     String storeNumber = currentDay.select("div.calendarTextSchedDtl").first().text().split(",")[3].split("-")[1].replaceFirst("^0+(?!$)", "");
-                    shiftList.add(new Shift(parsedTimeDate, parsedDepts, storeNumber));
+                    List<String> activityList = deptActList.get(1);
+                    shiftList.add(new Shift(parsedTimeDate, parsedDepts, storeNumber, activityList));
                 }
                 publishProgress(shiftList.size(), shiftsFuture.select("table.etmCursor").size());
             }
@@ -237,17 +239,24 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         return null;
     }
 
-    private List<String> getDepts() {
+    private List<List<String>> getDeptsActivities() {
         Elements depts = currentDay.select("div.calendarTextSchedDtl");
         List<String> deptList = new ArrayList<>();
+        List<String> actList = new ArrayList<>();
         DepartmentMap deptMap = new DepartmentMap();
         for (Element dept : depts) {
             String[] deptSplit = dept.text().split(",");
+            actList.add(deptSplit[4]);
             deptSplit = deptSplit[3].split("-");
             String deptNum = deptSplit[2].replace("DEPT", "");
             deptList.add(deptMap.getDeptName(deptNum));
         }
-        return deptList;
+
+        List<List<String>> finalList = new ArrayList<>();
+        finalList.add(deptList);
+        finalList.add(actList);
+
+        return finalList;
     }
 
     private void createSnack(String notice) {

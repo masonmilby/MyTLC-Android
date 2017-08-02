@@ -11,11 +11,13 @@ public class Shift {
     final private List<Date[]> dateList;
     final private List<String> deptList;
     final private String storeNumber;
+    final private List<String> activityList;
 
-    public Shift(List<Date[]> dates, List<String> depts, String store) {
+    public Shift(List<Date[]> dates, List<String> depts, String store, List<String> activities) {
         dateList = dates;
         deptList = depts;
         storeNumber = store;
+        activityList = activities;
     }
 
     public Float getTotalHours() {
@@ -131,5 +133,26 @@ public class Shift {
 
     public String getStoreNumber() {
         return storeNumber;
+    }
+
+    public List<String> getActivityList() {
+        return activityList;
+    }
+
+    public Boolean getActDiff() {
+        List<String> stringList = new ArrayList<>();
+        for (String act : activityList) {
+            if (!act.contentEquals(activityList.get(0))) {
+                stringList.add(act);
+            }
+        }
+        return stringList.size() != activityList.size();
+    }
+
+    public String getActivity(Integer index) {
+        if ((getActivityList().size()-1) < index) {
+            return null;
+        }
+        return getActivityList().get(index);
     }
 }

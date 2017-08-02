@@ -99,7 +99,6 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String calName = spinnerCalendar.getSelectedItem().toString();
-                        System.out.println(calName);
 
                         if (checkDelete.isChecked()) {
                             deleteEvents(calName);

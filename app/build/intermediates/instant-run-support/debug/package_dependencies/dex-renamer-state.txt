@@ -1,4 +1,4 @@
-#Sat Jul 29 23:51:00 EDT 2017
+#Sun Jul 30 23:07:26 EDT 2017
 file.2=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_90038805e4e3ac9a1fefb384722bf900e32c8924\\classes.dex
 base.2=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_90038805e4e3ac9a1fefb384722bf900e32c8924
 file.1=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_b070b11b741e263810a77e9ff4978d8f88dcbfaf\\classes.dex
