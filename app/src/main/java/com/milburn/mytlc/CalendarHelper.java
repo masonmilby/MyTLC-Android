@@ -110,7 +110,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                             values.put(CalendarContract.Events.DTSTART, shift.getStartTime().getTime());
                             values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
                             values.put(CalendarContract.Events.TITLE, editEventTitle.getText().toString());
-                            values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts());
+                            values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts() + "\n" + "Activities: " + shift.getCombinedAct());
                             values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
                             values.put(CalendarContract.Events.EVENT_TIMEZONE, java.util.Calendar.getInstance().getTimeZone().getDisplayName());
                             values.put(CalendarContract.Events.EVENT_LOCATION, editAddress.getText().toString());

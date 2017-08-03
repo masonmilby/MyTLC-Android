@@ -149,6 +149,13 @@ public class Shift {
         return stringList.size() != activityList.size();
     }
 
+    public String getCombinedAct() {
+        if (getActDiff()) {
+            return String.valueOf(getActivityList()).replace("[", "").replace("]", "");
+        }
+        return getActivity(0);
+    }
+
     public String getActivity(Integer index) {
         if ((getActivityList().size()-1) < index) {
             return null;
