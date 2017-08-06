@@ -4,12 +4,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_search_view.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\6a3dd2dc75c7da123cdb6b9e37107907e117a3db\\output\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_search_view.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
@@ -96,16 +96,20 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\6a3dd2dc75c7da123cdb6b9e37107907e117a3db\\output\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_alarm.xml",
         "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\layout\\dialog_alarm.xml"
     },
     {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_cardview_totalweek.xml",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\layout\\item_cardview_totalweek.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
@@ -128,12 +132,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\\output\\res\\layout\\design_layout_tab_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\6a3dd2dc75c7da123cdb6b9e37107907e117a3db\\output\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\\output\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
@@ -264,12 +268,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tooltip.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\tooltip.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",

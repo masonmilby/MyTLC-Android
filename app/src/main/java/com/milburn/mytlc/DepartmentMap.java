@@ -26,6 +26,8 @@ public class DepartmentMap {
         deptMap.put("61460", "Mobile");
         deptMap.put("61480", "Digital Imaging");
         deptMap.put("61520", "Connected Devices");
+
+        deptMap.put("61102", "Solution Central");
     }
 
     public String getDeptName(String dept) {

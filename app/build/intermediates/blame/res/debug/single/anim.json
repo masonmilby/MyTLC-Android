@@ -4,10 +4,6 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\2d22ef4be338340ec4e2afbf35be8399176ffc68\\output\\res\\anim\\design_fab_in.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\anim\\abc_fade_out.xml"
     },
@@ -28,10 +24,6 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\2d22ef4be338340ec4e2afbf35be8399176ffc68\\output\\res\\anim\\design_fab_out.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
@@ -40,12 +32,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_exit.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\anim\\tooltip_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",

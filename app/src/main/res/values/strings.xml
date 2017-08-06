@@ -28,4 +28,8 @@
     <string name="item_alarm">Set next alarm</string>
     <string name="dialog_alarm">Next shift starts at: 7:45 AM</string>
     <string name="activity">Sales Floor</string>
+    <string name="date_span">8/6–8/12</string>
+    <string name="weeks_hours">55 Hours</string>
+    <string name="weeks_pay">$450</string>
+    <string name="item_settings">Settings</string>
 </resources>

@@ -792,6 +792,7 @@
     <string name="bbyapi">FeKyTtyApAuUh6DCexWrQBHp</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="date_span">8/6–8/12</string>
     <string name="day_name">Mon</string>
     <string name="day_num">9</string>
     <string name="dept_1">Computers</string>
@@ -825,6 +826,8 @@
     <string name="time_2">7:30\u201310:00 PM</string>
     <string name="time_3">10:00\u201310:30 PM</string>
     <string name="username_hint">Employee ID</string>
+    <string name="weeks_hours">55 Hours</string>
+    <string name="weeks_pay">$450</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

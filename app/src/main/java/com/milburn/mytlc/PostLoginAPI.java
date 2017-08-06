@@ -180,12 +180,18 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     List<Date[]> parsedTimeDate = getTimeDate();
                     String storeNumber = currentDay.select("div.calendarTextSchedDtl").first().text().split(",")[3].split("-")[1].replaceFirst("^0+(?!$)", "");
                     List<String> activityList = deptActList.get(1);
-                    shiftList.add(new Shift(parsedTimeDate, parsedDepts, storeNumber, activityList));
+                    if (deptActList != null && parsedDepts != null && parsedTimeDate != null && storeNumber != null && activityList != null) {
+                        shiftList.add(new Shift(parsedTimeDate, parsedDepts, storeNumber, activityList));
+                    } else {
+                        publishProgress(102);
+                        return false;
+                    }
                 }
                 publishProgress(shiftList.size(), shiftsFuture.select("table.etmCursor").size());
             }
             return true;
         }
+        publishProgress(102);
         return false;
     }
 
@@ -213,6 +219,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                 timesList.add(new Date[]{start, end});
             } catch (ParseException e) {
                 e.printStackTrace();
+                return null;
             }
         } else {
             String dateString = currentDay.get(1).text().split(" ")[0];
@@ -230,6 +237,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     timesList.add(new Date[]{start, end});
                 } catch (ParseException e) {
                     e.printStackTrace();
+                    return null;
                 }
             }
         }

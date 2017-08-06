@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,6 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -200,15 +202,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addToCalendar(List<Shift> shiftList) {
-        globalSchedule = shiftList;
-        mCompactCalendarView.removeAllEvents();
-        List<Event> eventList = new ArrayList<>();
-        for (Shift shift : shiftList) {
-            Event event = new Event(Color.BLACK, shift.getStartTime().getTime(), "Shift");
-            eventList.add(event);
+        if (shiftList != null && !shiftList.isEmpty()) {
+            globalSchedule = shiftList;
+            mCompactCalendarView.removeAllEvents();
+            List<Event> eventList = new ArrayList<>();
+            for (Shift shift : shiftList) {
+                if (shift != null) {
+                    Event event = new Event(Color.BLACK, shift.getStartTime().getTime(), "Shift");
+                    eventList.add(event);
+                }
+            }
+            mCompactCalendarView.addEvents(eventList);
+            mCompactCalendarView.setCurrentDate(Calendar.getInstance().getTime());
         }
-        mCompactCalendarView.addEvents(eventList);
-        mCompactCalendarView.setCurrentDate(Calendar.getInstance().getTime());
     }
 
     private String getParsedDate(Date date, String format) {
@@ -273,6 +279,10 @@ public class MainActivity extends AppCompatActivity {
                         createSnack("Alarm cannot be created");
                     }
                 }
+                break;
+
+            case R.id.item_settings:
+                //
                 break;
 
             case R.id.item_logout:
@@ -382,7 +392,7 @@ public class MainActivity extends AppCompatActivity {
     public void updateSelectionColor() {
         if (globalSchedule != null) {
             for (Shift shift : globalSchedule) {
-                if (shift.getScheduledToday()) {
+                if (shift != null && shift.getScheduledToday()) {
                     mCompactCalendarView.setCurrentSelectedDayTextColor(Color.WHITE);
                     mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
                     mCompactCalendarView.setCurrentDayTextColor(Color.WHITE);
