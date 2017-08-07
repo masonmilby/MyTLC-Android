@@ -48,12 +48,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",

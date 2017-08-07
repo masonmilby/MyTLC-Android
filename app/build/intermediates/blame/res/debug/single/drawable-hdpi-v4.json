@@ -24,12 +24,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\design_ic_visibility_off.png",
         "source": "C:\\Users\\mason\\.android\\build-cache\\5c7cd39fcb5f79d17c1060f317c1015881e09c5d\\output\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\e262b964c33c33c218db963f486c031f33ab1358\\output\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png",

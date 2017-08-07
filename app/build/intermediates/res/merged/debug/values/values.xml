@@ -812,6 +812,7 @@
     <string name="item_delete">Delete username</string>
     <string name="item_import">Import to calendar</string>
     <string name="item_logout">Logout</string>
+    <string name="item_settings">Settings</string>
     <string name="login_button">Login</string>
     <string name="password_hint">Password</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
@@ -819,12 +820,16 @@
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="pref_cat_pay">Pay Calculation</string>
+    <string name="pref_hourlypay">Hourly Pay</string>
+    <string name="pref_tax">Tax Percentage</string>
     <string name="remember_checkbox">Remember password</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="time_1">10:30 AM\u201310:00 PM</string>
     <string name="time_2">7:30\u201310:00 PM</string>
     <string name="time_3">10:00\u201310:30 PM</string>
+    <string name="title_activity_settings">Settings</string>
     <string name="username_hint">Employee ID</string>
     <string name="weeks_hours">55 Hours</string>
     <string name="weeks_pay">$450</string>

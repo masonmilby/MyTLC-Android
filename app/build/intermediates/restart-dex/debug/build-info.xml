@@ -6,19 +6,19 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1502018115715"
+    timestamp="1502072130845"
     token="7076933301872360641"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="216" />
+        duration="257" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="11" />
+        duration="17" />
     <task
         name="verifier"
         duration="4" />
@@ -29,10 +29,25 @@
 
     <build
         build-mode="FULL"
-        timestamp="1502012593828"
+        timestamp="1502069466960"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
+            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -44,25 +59,10 @@
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
@@ -70,7 +70,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1502018115715"
+        timestamp="1502072130845"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_5.apk"

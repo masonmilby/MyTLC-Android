@@ -8,6 +8,7 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.preference.PreferenceManager;
 import android.provider.AlarmClock;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         credentials = new Credentials(this);
         tempPass = getIntent().getStringExtra("Password");
         if (getIntent().getStringExtra("Schedule") != null) {
@@ -80,7 +82,22 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mCompactCalendarView = (CompactCalendarView) findViewById(R.id.compactCalendarView);
+
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mCompactCalendarView.getVisibility() == View.VISIBLE) {
+                    mCompactCalendarView.setVisibility(View.GONE);
+                    mToolbar.setSubtitle("");
+                } else {
+                    mCompactCalendarView.setVisibility(View.VISIBLE);
+                    mToolbar.setSubtitle(getParsedDate(mCompactCalendarView.getFirstDayOfCurrentMonth(), "MMMM yyyy"));
+                }
+            }
+        });
+
         mSwipe = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
+        mSwipe.setDistanceToTriggerSync(900);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -248,6 +265,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
         switch (item.getItemId()) {
             case R.id.item_import:
                 if (!checkPerms()) {
@@ -282,7 +300,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.item_settings:
-                //
+                intent = new Intent(getBaseContext(), SettingsActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.item_logout:
@@ -318,7 +337,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.show();
                 } else {
                     credentials.logout();
-                    Intent intent = new Intent(getBaseContext(), LoginActivity.class);
+                    intent = new Intent(getBaseContext(), LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }

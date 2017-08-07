@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_cat_pay">
+
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number|numberDecimal"
+            android:key="edit_hourlypay"
+            android:selectAllOnFocus="true"
+            android:title="@string/pref_hourlypay" />
+
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number|numberDecimal"
+            android:key="edit_tax"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_tax" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

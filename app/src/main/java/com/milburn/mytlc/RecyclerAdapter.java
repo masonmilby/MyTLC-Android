@@ -1,6 +1,9 @@
 package com.milburn.mytlc;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -22,6 +27,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private List<String> mExpandPos = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
+    private SharedPreferences sharedPreferences;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView mTextViewDay;
@@ -223,8 +229,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         SimpleDateFormat dateFormat = new SimpleDateFormat("M'/'d");
         String dates = dateFormat.format(first) + "–" + dateFormat.format(last);
         String totalHours = String.valueOf(hours) + " Hours";
-        String pay = "$450";
 
-        return new String[]{totalHours, dates, pay};
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        Float pay = Float.valueOf(sharedPreferences.getString("edit_hourlypay", ""));
+        Float tax = Float.valueOf(sharedPreferences.getString("edit_tax", ""));
+        DecimalFormat df = new DecimalFormat("#.00");
+        String finalPay = "$" + String.valueOf(df.format((pay*hours)-((pay*hours)*(tax/100.0))));
+
+        return new String[]{totalHours, dates, finalPay};
     }
 }

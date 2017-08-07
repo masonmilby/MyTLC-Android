@@ -6,5 +6,9 @@
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_drop_down.png",
         "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\drawable-mdpi\\ic_drop_down.png"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_back_arrow.png",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\drawable-mdpi\\ic_back_arrow.png"
     }
 ]

@@ -32,4 +32,8 @@
     <string name="weeks_hours">55 Hours</string>
     <string name="weeks_pay">$450</string>
     <string name="item_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_hourlypay">Hourly Pay</string>
+    <string name="pref_tax">Tax Percentage</string>
+    <string name="pref_cat_pay">Pay Calculation</string>
 </resources>
