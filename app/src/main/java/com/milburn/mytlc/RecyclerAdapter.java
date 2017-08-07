@@ -233,7 +233,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         Float pay = Float.valueOf(sharedPreferences.getString("edit_hourlypay", ""));
         Float tax = Float.valueOf(sharedPreferences.getString("edit_tax", ""));
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormat df = new DecimalFormat("0.00");
         String finalPay = "$" + String.valueOf(df.format((pay*hours)-((pay*hours)*(tax/100.0))));
 
         return new String[]{totalHours, dates, finalPay};

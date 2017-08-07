@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mSwipe = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
-        mSwipe.setDistanceToTriggerSync(900);
+        mSwipe.setDistanceToTriggerSync(800);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
