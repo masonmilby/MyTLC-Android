@@ -19,4 +19,17 @@
             android:title="@string/pref_tax" />
 
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_theme">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/BaseTheme"
+            android:entryValues="@array/BaseTheme"
+            android:key="base_theme"
+            android:title="@string/pref_base" />
+
+        <Preference
+            android:title="@string/pref_custom"
+            android:key="custom_colors"/>
+    </PreferenceCategory>
 </PreferenceScreen>

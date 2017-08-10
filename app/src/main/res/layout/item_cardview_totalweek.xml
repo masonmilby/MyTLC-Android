@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    app:cardBackgroundColor="@color/cardview_light_background"
     app:cardCornerRadius="2dp"
     app:cardElevation="2dp">
 
@@ -57,7 +56,7 @@
 
             <ImageView
                 android:id="@+id/image_divider_1"
-                android:layout_width="2dp"
+                android:layout_width="1dp"
                 android:layout_height="0dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
@@ -67,7 +66,7 @@
                 app:layout_constraintRight_toLeftOf="@+id/textview_pay"
                 app:layout_constraintTop_toTopOf="@+id/textview_pay"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@color/color_divider" />
+                app:srcCompat="?attr/dividerColor" />
         </android.support.constraint.ConstraintLayout>
 
         <TextView

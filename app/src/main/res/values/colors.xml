@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffc107</color>
-    <color name="colorPrimaryDark">#c79100</color>
-    <color name="colorAccent">#9E9E9E</color>
-    <color name="overflowColor">#FFFFFF</color>
-    <color name="color_divider">#1f000000</color>
+    <color name="colorPrimary">#673ab7</color>
+    <color name="colorPrimaryDark">#320b86</color>
+    <color name="colorAccent">#66bb6a</color>
+
+    <color name="dividerLight">#1f000000</color>
+    <color name="dividerDark">#1fffffff</color>
 </resources>

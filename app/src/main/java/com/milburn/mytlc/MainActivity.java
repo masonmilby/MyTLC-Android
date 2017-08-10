@@ -3,6 +3,7 @@ package com.milburn.mytlc;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -12,7 +13,6 @@ import android.preference.PreferenceManager;
 import android.provider.AlarmClock;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +20,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,7 +35,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,11 +47,17 @@ public class MainActivity extends AppCompatActivity {
     private Snackbar mSnackBar;
     private List<Shift> globalSchedule;
     private Boolean importBool = false;
+    private Integer currentTheme;
+    private PrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        prefManager = new PrefManager(this);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        currentTheme = prefManager.getTheme();
+        setTheme(currentTheme);
+
         credentials = new Credentials(this);
         tempPass = getIntent().getStringExtra("Password");
         if (getIntent().getStringExtra("Schedule") != null) {
@@ -129,12 +133,12 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         if (shift.getSingleDayDate().equals(dateClicked)) {
                             mRecyclerView.smoothScrollToPosition(i);
-                            mCompactCalendarView.setCurrentSelectedDayTextColor(Color.WHITE);
-                            mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
+                            //mCompactCalendarView.setCurrentSelectedDayTextColor(Color.WHITE);
+                            //mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
                             break;
                         } else {
-                            mCompactCalendarView.setCurrentSelectedDayTextColor(Color.BLACK);
-                            mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.WHITE);
+                            //mCompactCalendarView.setCurrentSelectedDayTextColor(Color.BLACK);
+                            //mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.WHITE);
                         }
                     }
                 }
@@ -257,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         Drawable drawable = mToolbar.getOverflowIcon();
         if (drawable != null) {
-            drawable.setColorFilter(ContextCompat.getColor(this, R.color.overflowColor), PorterDuff.Mode.MULTIPLY);
+            drawable.setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
             mToolbar.setOverflowIcon(drawable);
         }
         return super.onCreateOptionsMenu(menu);
@@ -409,7 +413,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateSelectionColor() {
-        if (globalSchedule != null) {
+        /*if (globalSchedule != null) {
             for (Shift shift : globalSchedule) {
                 if (shift != null && shift.getScheduledToday()) {
                     mCompactCalendarView.setCurrentSelectedDayTextColor(Color.WHITE);
@@ -418,6 +422,14 @@ public class MainActivity extends AppCompatActivity {
                     mCompactCalendarView.setCurrentDayBackgroundColor(Color.BLACK);
                 }
             }
+        *///}
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (prefManager.getTheme() != currentTheme) {
+            recreate();
         }
     }
 }

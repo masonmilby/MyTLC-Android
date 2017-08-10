@@ -2,13 +2,16 @@ package com.milburn.mytlc;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        setTheme(new PrefManager(this).getTheme());
         initLogin();
     }
 
@@ -117,10 +122,10 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         Drawable drawable = mToolbar.getOverflowIcon();
         if (drawable != null) {
-            drawable.setColorFilter(ContextCompat.getColor(this, R.color.overflowColor), PorterDuff.Mode.MULTIPLY);
+            drawable.setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
             mToolbar.setOverflowIcon(drawable);
         }
         return super.onCreateOptionsMenu(menu);
