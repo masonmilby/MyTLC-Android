@@ -8,6 +8,12 @@
         <item name="dividerColor">@color/dividerLight</item>
     </style>
 
+    <style name="CustomLight.RecentApps">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/grey_700</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="CustomDark" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -16,4 +22,2379 @@
         <item name="dropSrc">@drawable/ic_drop_dark</item>
         <item name="dividerColor">@color/dividerDark</item>
     </style>
+
+
+    <style name="CustomLight.Red">
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorPrimaryDark">@color/red_700</item>
+    </style>
+    <style name="CustomLight.Red.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Red.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Red.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Red.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Red.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Red.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Red.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Red.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Red.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Red.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Red.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Red.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Red.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Red.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Red.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Red.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Red.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Red.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Red.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Red">
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorPrimaryDark">@color/red_700</item>
+    </style>
+    <style name="CustomDark.Red.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Red.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Red.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Red.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Red.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Red.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Red.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Red.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Red.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Red.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Red.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Red.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Red.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Red.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Red.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Red.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Red.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Red.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Red.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Pink">
+        <item name="colorPrimary">@color/pink_500</item>
+        <item name="colorPrimaryDark">@color/pink_700</item>
+    </style>
+    <style name="CustomLight.Pink.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Pink.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Pink.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Pink.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Pink.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Pink.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Pink.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Pink.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Pink">
+        <item name="colorPrimary">@color/pink_500</item>
+        <item name="colorPrimaryDark">@color/pink_700</item>
+    </style>
+    <style name="CustomDark.Pink.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Pink.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Pink.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Pink.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Pink.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Pink.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Pink.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Pink.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Purple">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+    </style>
+    <style name="CustomLight.Purple.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Purple.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Purple.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Purple.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Purple.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Purple.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Purple.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Purple.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Purple">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+    </style>
+    <style name="CustomDark.Purple.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Purple.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Purple.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Purple.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Purple.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Purple.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Purple.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Purple.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.DeepPurple">
+        <item name="colorPrimary">@color/deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/deep_purple_700</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.DeepPurple.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.DeepPurple.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.DeepPurple">
+        <item name="colorPrimary">@color/deep_purple_500</item>
+        <item name="colorPrimaryDark">@color/deep_purple_700</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.DeepPurple.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.DeepPurple.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Indigo">
+        <item name="colorPrimary">@color/indigo_500</item>
+        <item name="colorPrimaryDark">@color/indigo_700</item>
+    </style>
+    <style name="CustomLight.Indigo.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Indigo.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Indigo.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Indigo.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Indigo">
+        <item name="colorPrimary">@color/indigo_500</item>
+        <item name="colorPrimaryDark">@color/indigo_700</item>
+    </style>
+    <style name="CustomDark.Indigo.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Indigo.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Indigo.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Indigo.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomLight.Blue">
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryDark">@color/blue_700</item>
+    </style>
+    <style name="CustomLight.Blue.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Blue.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Blue.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Blue.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Blue.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Blue.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Blue.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Blue.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Blue">
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryDark">@color/blue_700</item>
+    </style>
+    <style name="CustomDark.Blue.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Blue.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Blue.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Blue.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Blue.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Blue.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Blue.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Blue.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.LightBlue">
+        <item name="colorPrimary">@color/light_blue_500</item>
+        <item name="colorPrimaryDark">@color/light_blue_700</item>
+    </style>
+    <style name="CustomLight.LightBlue.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.LightBlue.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.LightBlue.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.LightBlue.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.LightBlue">
+        <item name="colorPrimary">@color/light_blue_500</item>
+        <item name="colorPrimaryDark">@color/light_blue_700</item>
+    </style>
+    <style name="CustomDark.LightBlue.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.LightBlue.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.LightBlue.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.LightBlue.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Cyan">
+        <item name="colorPrimary">@color/cyan_500</item>
+        <item name="colorPrimaryDark">@color/cyan_700</item>
+    </style>
+    <style name="CustomLight.Cyan.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Cyan.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Cyan.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Cyan.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Cyan">
+        <item name="colorPrimary">@color/cyan_500</item>
+        <item name="colorPrimaryDark">@color/cyan_700</item>
+    </style>
+    <style name="CustomDark.Cyan.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Cyan.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Cyan.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Cyan.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Teal">
+        <item name="colorPrimary">@color/teal_500</item>
+        <item name="colorPrimaryDark">@color/teal_700</item>
+    </style>
+    <style name="CustomLight.Teal.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Teal.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Teal.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Teal.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Teal.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Teal.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Teal.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Teal.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Teal">
+        <item name="colorPrimary">@color/teal_500</item>
+        <item name="colorPrimaryDark">@color/teal_700</item>
+    </style>
+    <style name="CustomDark.Teal.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Teal.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Teal.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Teal.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Teal.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Teal.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Teal.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Teal.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Green">
+        <item name="colorPrimary">@color/green_500</item>
+        <item name="colorPrimaryDark">@color/green_700</item>
+    </style>
+    <style name="CustomLight.Green.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Green.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Green.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Green.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Green.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Green.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Green.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Green.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Green.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Green.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Green.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Green.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Green.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Green.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Green.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Green.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Green.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Green.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Green.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Green">
+        <item name="colorPrimary">@color/green_500</item>
+        <item name="colorPrimaryDark">@color/green_700</item>
+    </style>
+    <style name="CustomDark.Green.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Green.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Green.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Green.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Green.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Green.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Green.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Green.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Green.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Green.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Green.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Green.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Green.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Green.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Green.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Green.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Green.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Green.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Green.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.LightGreen">
+        <item name="colorPrimary">@color/light_green_500</item>
+        <item name="colorPrimaryDark">@color/light_green_700</item>
+    </style>
+    <style name="CustomLight.LightGreen.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.LightGreen.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.LightGreen.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.LightGreen.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.LightGreen">
+        <item name="colorPrimary">@color/light_green_500</item>
+        <item name="colorPrimaryDark">@color/light_green_700</item>
+    </style>
+    <style name="CustomDark.LightGreen.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.LightGreen.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.LightGreen.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.LightGreen.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Lime">
+        <item name="colorPrimary">@color/lime_500</item>
+        <item name="colorPrimaryDark">@color/lime_700</item>
+    </style>
+    <style name="CustomLight.Lime.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Lime.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Lime.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Lime.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Lime.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Lime.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Lime.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Lime.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Lime">
+        <item name="colorPrimary">@color/lime_500</item>
+        <item name="colorPrimaryDark">@color/lime_700</item>
+    </style>
+    <style name="CustomDark.Lime.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Lime.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Lime.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Lime.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Lime.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Lime.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Lime.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Lime.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Yellow">
+        <item name="colorPrimary">@color/yellow_500</item>
+        <item name="colorPrimaryDark">@color/yellow_700</item>
+    </style>
+    <style name="CustomLight.Yellow.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Yellow.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Yellow.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Yellow.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Yellow">
+        <item name="colorPrimary">@color/yellow_500</item>
+        <item name="colorPrimaryDark">@color/yellow_700</item>
+    </style>
+    <style name="CustomDark.Yellow.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Yellow.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Yellow.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Yellow.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Amber">
+        <item name="colorPrimary">@color/amber_500</item>
+        <item name="colorPrimaryDark">@color/amber_700</item>
+    </style>
+    <style name="CustomLight.Amber.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Amber.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Amber.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Amber.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Amber.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Amber.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Amber.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Amber.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Amber">
+        <item name="colorPrimary">@color/amber_500</item>
+        <item name="colorPrimaryDark">@color/amber_700</item>
+    </style>
+    <style name="CustomDark.Amber.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Amber.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Amber.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Amber.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Amber.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Amber.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Amber.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Amber.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Orange">
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorPrimaryDark">@color/orange_700</item>
+    </style>
+    <style name="CustomLight.Orange.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Orange.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Orange.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Orange.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Orange.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Orange.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Orange.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Orange.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Orange">
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorPrimaryDark">@color/orange_700</item>
+    </style>
+    <style name="CustomDark.Orange.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Orange.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Orange.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Orange.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Orange.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Orange.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Orange.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Orange.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.DeepOrange">
+        <item name="colorPrimary">@color/deep_orange_500</item>
+        <item name="colorPrimaryDark">@color/deep_orange_700</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.DeepOrange.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.DeepOrange.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.DeepOrange">
+        <item name="colorPrimary">@color/deep_orange_500</item>
+        <item name="colorPrimaryDark">@color/deep_orange_700</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.DeepOrange.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.DeepOrange.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Brown">
+        <item name="colorPrimary">@color/brown_500</item>
+        <item name="colorPrimaryDark">@color/brown_700</item>
+    </style>
+    <style name="CustomLight.Brown.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Brown.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Brown.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Brown.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Brown.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Brown.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Brown.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Brown.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Brown">
+        <item name="colorPrimary">@color/brown_500</item>
+        <item name="colorPrimaryDark">@color/brown_700</item>
+    </style>
+    <style name="CustomDark.Brown.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Brown.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Brown.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Brown.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Brown.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Brown.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Brown.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Brown.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.Grey">
+        <item name="colorPrimary">@color/grey_500</item>
+        <item name="colorPrimaryDark">@color/grey_700</item>
+    </style>
+    <style name="CustomLight.Grey.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.Grey.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.Grey.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.Grey.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.Grey.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.Grey.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.Grey.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.Grey.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.Grey">
+        <item name="colorPrimary">@color/grey_500</item>
+        <item name="colorPrimaryDark">@color/grey_700</item>
+    </style>
+    <style name="CustomDark.Grey.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.Grey.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.Grey.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.Grey.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.Grey.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.Grey.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.Grey.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.Grey.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+
+    <style name="CustomLight.BlueGrey">
+        <item name="colorPrimary">@color/blue_grey_500</item>
+        <item name="colorPrimaryDark">@color/blue_grey_700</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomLight.BlueGrey.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomLight.BlueGrey.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
+    <style name="CustomDark.BlueGrey">
+        <item name="colorPrimary">@color/blue_grey_500</item>
+        <item name="colorPrimaryDark">@color/blue_grey_700</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Red">
+        <item name="colorAccent">@color/red_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Pink">
+        <item name="colorAccent">@color/pink_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Purple">
+        <item name="colorAccent">@color/purple_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.DeepPurple">
+        <item name="colorAccent">@color/deep_purple_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Indigo">
+        <item name="colorAccent">@color/indigo_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Blue">
+        <item name="colorAccent">@color/blue_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.LightBlue">
+        <item name="colorAccent">@color/light_blue_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Cyan">
+        <item name="colorAccent">@color/cyan_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Teal">
+        <item name="colorAccent">@color/teal_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Green">
+        <item name="colorAccent">@color/green_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.LightGreen">
+        <item name="colorAccent">@color/light_green_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Lime">
+        <item name="colorAccent">@color/lime_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Yellow">
+        <item name="colorAccent">@color/yellow_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Amber">
+        <item name="colorAccent">@color/amber_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Orange">
+        <item name="colorAccent">@color/orange_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.DeepOrange">
+        <item name="colorAccent">@color/deep_orange_a400</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Brown">
+        <item name="colorAccent">@color/brown_500</item>
+    </style>
+    <style name="CustomDark.BlueGrey.Grey">
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+    <style name="CustomDark.BlueGrey.BlueGrey">
+        <item name="colorAccent">@color/blue_grey_500</item>
+    </style>
+
 </resources>

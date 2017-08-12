@@ -28,7 +28,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@android:color/background_light"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -52,8 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/username_hint"
-                    android:inputType="text"
-                    android:textColorLink="@android:color/black" />
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -74,8 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password_hint"
-                    android:inputType="textPassword"
-                    android:textColorLink="@android:color/black" />
+                    android:inputType="textPassword" />
             </android.support.design.widget.TextInputLayout>
 
             <CheckBox
@@ -102,7 +99,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorPrimary"
+                android:background="?attr/colorPrimary"
                 android:elevation="2dp"
                 android:text="@string/login_button"
                 android:textColor="@android:color/white"

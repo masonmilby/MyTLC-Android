@@ -56,7 +56,7 @@ MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\
 	android:icon
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:12:9-43
 	android:theme
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:16:9-43
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:16:9-54
 activity#com.milburn.mytlc.MainActivity
 ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:17:9-25:20
 	android:windowSoftInputMode

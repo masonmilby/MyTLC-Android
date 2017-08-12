@@ -204,4 +204,14 @@ public class Credentials {
     public boolean scheduleExists() {
         return (sharedPreferences.contains("Schedule") && sharedPreferences.contains("ScheduleUpdated"));
     }
+
+    public void setGetAddress(Boolean bool) {
+        sharedPreferences.edit()
+                .putBoolean("getAddress", bool)
+                .apply();
+    }
+
+    public boolean isGetAddress() {
+        return sharedPreferences.getBoolean("getAddress", true);
+    }
 }

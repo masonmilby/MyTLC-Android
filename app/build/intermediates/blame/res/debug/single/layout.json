@@ -144,6 +144,10 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_color.xml",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\layout\\dialog_color.xml"
+    },
+    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\0dd15bc5ef023542c738cc69abfc339d38a9014e\\output\\res\\layout\\notification_template_big_media_narrow.xml"
     },

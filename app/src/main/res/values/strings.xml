@@ -33,10 +33,13 @@
     <string name="weeks_pay">$450</string>
     <string name="item_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="pref_hourlypay">Hourly pay</string>
-    <string name="pref_tax">Tax percentage</string>
-    <string name="pref_cat_pay">Pay</string>
-    <string name="pref_theme">Theme</string>
-    <string name="pref_base">Base theme</string>
-    <string name="pref_custom">Custom colors</string>
+    <string name="pref_pay_title">Hourly pay</string>
+    <string name="pref_tax_title">Tax percentage</string>
+    <string name="pref_cat_pay_title">Pay</string>
+    <string name="pref_cat_theme_title">Theme</string>
+    <string name="pref_base_title">Base theme</string>
+    <string name="pref_base_default">Light</string>
+    <string name="pref_custom_title">Custom colors</string>
+    <string name="dialog_primary">Primary color</string>
+    <string name="dialog_accent">Accent color</string>
 </resources>

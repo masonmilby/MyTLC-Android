@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/CustomLight" >
+        android:theme="@style/CustomLight.RecentApps" >
         <activity
             android:name="com.milburn.mytlc.MainActivity"
             android:configChanges="orientation|screenSize"

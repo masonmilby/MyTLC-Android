@@ -1,5 +1,6 @@
 package com.milburn.mytlc;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -33,11 +34,17 @@ public class LoginActivity extends AppCompatActivity {
     private HashMap<String, String> mUserPassMap;
     private Toolbar mToolbar;
 
+    private Boolean paused = false;
+    private PrefManager pm;
+    private Integer currentTheme;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        setTheme(new PrefManager(this).getTheme());
+        pm = new PrefManager(this);
+        currentTheme = pm.getTheme();
+        setTheme(currentTheme);
         initLogin();
     }
 
@@ -122,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_login, menu);
         Drawable drawable = mToolbar.getOverflowIcon();
         if (drawable != null) {
             drawable.setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
@@ -138,6 +145,11 @@ public class LoginActivity extends AppCompatActivity {
                 credentials.setUsername(null);
                 mUser.setText("");
                 break;
+
+            case R.id.item_settings:
+                Intent intent = new Intent(getBaseContext(), SettingsActivity.class);
+                startActivity(intent);
+                break;
         }
         return true;
     }
@@ -145,5 +157,20 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        paused = true;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (paused && !currentTheme.equals(pm.getTheme())) {
+            recreate();
+        }
+        paused = false;
     }
 }

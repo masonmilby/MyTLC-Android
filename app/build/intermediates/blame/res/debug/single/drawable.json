@@ -32,12 +32,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\\output\\res\\drawable\\design_password_eye.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",

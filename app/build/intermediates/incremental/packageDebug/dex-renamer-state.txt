@@ -1,7 +1,7 @@
-#Thu Aug 10 03:06:00 EDT 2017
+#Sat Aug 12 02:59:47 EDT 2017
 base.0=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0a87b346d352940e463a18e6316e5585d742e202
-renamed.1=classes2.dex
-renamed.0=classes.dex
+renamed.1=classes.dex
+renamed.0=classes2.dex
 file.1=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_511da4ad4a2e162a7e729fb8a50d918eb8ac9291\\classes.dex
 base.1=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_511da4ad4a2e162a7e729fb8a50d918eb8ac9291
 file.0=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0a87b346d352940e463a18e6316e5585d742e202\\classes.dex

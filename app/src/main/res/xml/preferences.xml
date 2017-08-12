@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="@string/pref_cat_pay">
+    <PreferenceCategory android:title="@string/pref_cat_pay_title">
 
         <EditTextPreference
             android:defaultValue="0"
             android:inputType="number|numberDecimal"
-            android:key="edit_hourlypay"
+            android:key="pay"
             android:selectAllOnFocus="true"
-            android:title="@string/pref_hourlypay" />
+            android:title="@string/pref_pay_title" />
 
         <EditTextPreference
             android:defaultValue="0"
             android:inputType="number|numberDecimal"
-            android:key="edit_tax"
+            android:key="tax"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="@string/pref_tax" />
+            android:title="@string/pref_tax_title" />
 
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/pref_theme">
+    <PreferenceCategory android:title="@string/pref_cat_theme_title">
 
         <ListPreference
-            android:defaultValue="0"
+            android:defaultValue="@string/pref_base_default"
             android:entries="@array/BaseTheme"
             android:entryValues="@array/BaseTheme"
             android:key="base_theme"
-            android:title="@string/pref_base" />
+            android:title="@string/pref_base_title" />
 
         <Preference
-            android:title="@string/pref_custom"
-            android:key="custom_colors"/>
+            android:key="custom_colors"
+            android:title="@string/pref_custom_title" />
     </PreferenceCategory>
 </PreferenceScreen>

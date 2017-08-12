@@ -104,6 +104,12 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                             deleteEvents(calName);
                         }
 
+                        if (editAddress.getText().toString().contentEquals("")) {
+                            credentials.setGetAddress(false);
+                        } else {
+                            credentials.setGetAddress(true);
+                        }
+
                         List<Long> eventIds = new ArrayList<>();
                         for (Shift shift : shiftList) {
                             ContentValues values = new ContentValues();
@@ -204,7 +210,10 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                     }
                 });
                 editStore.setText(shiftList.get(0).getStoreNumber());
-                getStoreAddress();
+
+                if (credentials.isGetAddress()) {
+                    getStoreAddress();
+                }
 
                 checkDelete = (CheckBox) dialogView.findViewById(R.id.check_delete);
                 checkDelete.setChecked(true);

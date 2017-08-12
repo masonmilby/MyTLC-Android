@@ -3,7 +3,6 @@ package com.milburn.mytlc;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -47,14 +46,15 @@ public class MainActivity extends AppCompatActivity {
     private Snackbar mSnackBar;
     private List<Shift> globalSchedule;
     private Boolean importBool = false;
-    private Integer currentTheme;
     private PrefManager prefManager;
+    private Boolean paused = false;
+    private Integer currentTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        prefManager = new PrefManager(this);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        prefManager = new PrefManager(this);
         currentTheme = prefManager.getTheme();
         setTheme(currentTheme);
 
@@ -133,12 +133,10 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         if (shift.getSingleDayDate().equals(dateClicked)) {
                             mRecyclerView.smoothScrollToPosition(i);
-                            //mCompactCalendarView.setCurrentSelectedDayTextColor(Color.WHITE);
-                            //mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
+                            mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
                             break;
                         } else {
-                            //mCompactCalendarView.setCurrentSelectedDayTextColor(Color.BLACK);
-                            //mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.WHITE);
+                            mCompactCalendarView.setCurrentSelectedDayBackgroundColor(prefManager.getColorFromAttribute(R.attr.colorPrimaryDark));
                         }
                     }
                 }
@@ -229,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
             List<Event> eventList = new ArrayList<>();
             for (Shift shift : shiftList) {
                 if (shift != null) {
-                    Event event = new Event(Color.BLACK, shift.getStartTime().getTime(), "Shift");
+                    Event event = new Event(R.color.black, shift.getStartTime().getTime(), "Shift");
                     eventList.add(event);
                 }
             }
@@ -413,23 +411,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateSelectionColor() {
-        /*if (globalSchedule != null) {
+        if (globalSchedule != null) {
             for (Shift shift : globalSchedule) {
                 if (shift != null && shift.getScheduledToday()) {
-                    mCompactCalendarView.setCurrentSelectedDayTextColor(Color.WHITE);
-                    mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
-                    mCompactCalendarView.setCurrentDayTextColor(Color.WHITE);
                     mCompactCalendarView.setCurrentDayBackgroundColor(Color.BLACK);
+                    mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
                 }
             }
-        *///}
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        paused = true;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (prefManager.getTheme() != currentTheme) {
+        if (paused && !currentTheme.equals(prefManager.getTheme())) {
             recreate();
         }
+        paused = false;
     }
 }
