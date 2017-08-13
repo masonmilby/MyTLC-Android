@@ -1,5 +1,9 @@
 package com.milburn.mytlc;
 
+import android.app.ActivityManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -36,5 +40,17 @@ public class SettingsActivity extends AppCompatActivity {
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, settingsFragment)
                 .commit();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            Drawable draw = getPackageManager().getApplicationIcon(this.getApplicationInfo());
+            Bitmap icon = ((BitmapDrawable) draw).getBitmap();
+
+            ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
+            this.setTaskDescription(taskDesc);
+        }
     }
 }

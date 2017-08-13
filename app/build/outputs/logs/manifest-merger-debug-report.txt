@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml
@@ -33,14 +33,8 @@ uses-permission#android.permission.WAKE_LOCK
 ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:9:5-68
 	android:name
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:9:22-65
-receiver#com.milburn.mytlc.Alarm
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:11:5-65
-	android:process
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:11:16-41
-	android:name
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:11:42-62
 application
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:13:5-42:19
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:11:5-40:19
 MERGED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\output\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\81cda7aaf0dcd58fb897774bf76ef7edae09e229\output\AndroidManifest.xml:22:5-26:19
@@ -56,55 +50,55 @@ MERGED from [com.android.support:support-vector-drawable:26.0.1] C:\Users\mason\
 MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\mason\.android\build-cache\1b27681e2f240b2dd0ee0324518d7fb70ff6376d\output\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\build-cache\9e75085aebc5ed12f5ecfe3aff7e52092b4917fc\output\AndroidManifest.xml:25:5-29:19
 	android:label
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:14:9-41
 	android:supportsRtl
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:16:9-35
 	android:resizeableActivity
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:20:9-43
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:18:9-43
 	android:roundIcon
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:17:9-54
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:15:9-54
 	android:allowBackup
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:13:9-43
 	android:theme
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:17:9-54
 activity#com.milburn.mytlc.MainActivity
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:21:9-29:20
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:19:9-27:20
 	android:windowSoftInputMode
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:24:13-55
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:22:13-55
 	android:configChanges
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:23:13-59
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:21:13-59
 	android:name
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:22:13-41
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:20:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:25:13-28:29
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.milburn.mytlc.LoginActivity
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:30:9-34:20
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:28:9-32:20
 	android:windowSoftInputMode
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:33:13-55
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:31:13-55
 	android:configChanges
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:32:13-59
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:30:13-59
 	android:name
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:31:13-42
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:29:13-42
 activity#com.milburn.mytlc.SettingsActivity
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:35:9-38:20
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:33:9-36:20
 	android:label
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:37:13-60
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:35:13-60
 	android:name
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:36:13-45
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:34:13-45
 service#com.milburn.mytlc.BackgroundSync
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:39:9-41:19
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:37:9-39:19
 	android:name
-		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:40:13-43
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:38:13-43
 uses-sdk
 INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:20:5-44

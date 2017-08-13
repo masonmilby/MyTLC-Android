@@ -1,16 +1,16 @@
 package com.milburn.mytlc;
 
 import android.Manifest;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
+import android.app.ActivityManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.AlarmClock;
 import android.support.design.widget.Snackbar;
@@ -423,6 +423,18 @@ public class MainActivity extends AppCompatActivity {
                     mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
                 }
             }
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            Drawable draw = getPackageManager().getApplicationIcon(this.getApplicationInfo());
+            Bitmap icon = ((BitmapDrawable) draw).getBitmap();
+
+            ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
+            this.setTaskDescription(taskDesc);
         }
     }
 }

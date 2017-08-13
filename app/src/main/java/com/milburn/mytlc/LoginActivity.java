@@ -1,18 +1,18 @@
 package com.milburn.mytlc;
 
-import android.annotation.SuppressLint;
+import android.app.ActivityManager;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.support.design.widget.TextInputLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -158,5 +158,17 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            Drawable draw = getPackageManager().getApplicationIcon(this.getApplicationInfo());
+            Bitmap icon = ((BitmapDrawable) draw).getBitmap();
+
+            ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
+            this.setTaskDescription(taskDesc);
+        }
     }
 }

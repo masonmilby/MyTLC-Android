@@ -3,7 +3,6 @@ package com.milburn.mytlc;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.support.annotation.ColorInt;
 import android.util.TypedValue;
 import android.view.View;
