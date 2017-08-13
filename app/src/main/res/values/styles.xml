@@ -8,12 +8,6 @@
         <item name="dividerColor">@color/dividerLight</item>
     </style>
 
-    <style name="CustomLight.RecentApps">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/grey_700</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
     <style name="CustomDark" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

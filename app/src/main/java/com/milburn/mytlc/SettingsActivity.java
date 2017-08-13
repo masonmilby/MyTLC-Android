@@ -1,6 +1,7 @@
 package com.milburn.mytlc;
 
 import android.app.ActivityManager;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -19,8 +20,10 @@ public class SettingsActivity extends AppCompatActivity {
 
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override
-            public void prefChanged() {
-                recreate();
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
+                if (pm.isCriticalAttr(s)) {
+                    recreate();
+                }
             }
         });
 

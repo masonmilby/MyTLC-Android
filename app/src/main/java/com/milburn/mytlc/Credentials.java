@@ -79,6 +79,8 @@ public class Credentials {
                 .remove("getAddress")
                 .remove("pay")
                 .remove("tax")
+                .remove("past_shifts")
+                .remove("PastSchedule")
                 .apply();
     }
 
@@ -91,6 +93,10 @@ public class Credentials {
     }
 
     public void setSchedule(List<Shift> shiftList) {
+        if (sharedPreferences.getBoolean("past_shifts", false)) {
+            setPastSchedule(getSchedule(), shiftList);
+        }
+
         Gson gson = new Gson();
         String serializedSchedule = gson.toJson(shiftList);
         Date currentTime = Calendar.getInstance().getTime();
@@ -102,6 +108,41 @@ public class Credentials {
                 .apply();
     }
 
+    public void setPastSchedule(List<Shift> oldShiftList, List<Shift> newShiftList) {
+        List<Shift> tempList = new ArrayList<>();
+        List<Shift> oldPastShiftList = getPastSchedule();
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.DAY_OF_MONTH, 1);
+        for (Shift shift : oldShiftList) {
+            if (shift.getSingleDayDate().getTime() < Calendar.getInstance().getTime().getTime()
+                    && shift.getSingleDayDate().getTime() > cal.getTime().getTime()
+                    && !newShiftList.contains(shift)
+                    && !oldPastShiftList.contains(shift)) {
+                tempList.add(shift);
+            }
+        }
+        if (!tempList.isEmpty()) {
+            Gson gson = new Gson();
+            String serializedSchedule = gson.toJson(tempList);
+            sharedPreferences.edit()
+                    .putString("PastSchedule", serializedSchedule)
+                    .apply();
+        }
+    }
+
+    public void clearPastSchedule() {
+        sharedPreferences.edit()
+                .remove("PastSchedule")
+                .apply();
+    }
+
+    public List<Shift> getPastSchedule() {
+        if (sharedPreferences.contains("PastSchedule")) {
+            return getSchedule(sharedPreferences.getString("PastSchedule", "DEFAULT"));
+        }
+        return new ArrayList<>();
+    }
+
     public String getSerialSchedule(List<Shift> shiftList) {
         Gson gson = new Gson();
         String serializedSchedule = gson.toJson(shiftList);
@@ -109,11 +150,14 @@ public class Credentials {
     }
 
     public List<Shift> getSchedule() {
-        Gson gson = new Gson();
-        String scheduleString = sharedPreferences.getString("Schedule", "DEFAULT");
-        Type stringType = new TypeToken<ArrayList<Shift>>(){}.getType();
+        if (sharedPreferences.contains("Schedule")) {
+            Gson gson = new Gson();
+            String scheduleString = sharedPreferences.getString("Schedule", "DEFAULT");
+            Type stringType = new TypeToken<ArrayList<Shift>>(){}.getType();
 
-        return gson.fromJson(scheduleString, stringType);
+            return gson.fromJson(scheduleString, stringType);
+        }
+        return new ArrayList<>();
     }
 
     public void addEventIds(String calName, List<Long> eventIds) {

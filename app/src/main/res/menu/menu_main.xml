@@ -7,6 +7,10 @@
         android:title="@string/item_import"/>
 
     <item
+        android:id="@+id/item_past"
+        android:checkable="true"
+        android:title="@string/item_past" />
+    <item
         android:id="@+id/item_alarm"
         android:title="@string/item_alarm" />
     <item

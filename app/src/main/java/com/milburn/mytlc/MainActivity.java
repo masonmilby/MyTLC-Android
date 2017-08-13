@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.ActivityManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -50,15 +51,19 @@ public class MainActivity extends AppCompatActivity {
     private List<Shift> globalSchedule;
     private Boolean importBool = false;
     private PrefManager pm;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override
-            public void prefChanged() {
-                recreate();
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
+                if (pm.isCriticalAttr(s)) {
+                    recreate();
+                }
             }
         });
         setTheme(pm.getTheme());
@@ -236,6 +241,15 @@ public class MainActivity extends AppCompatActivity {
                     eventList.add(event);
                 }
             }
+            if (sharedPreferences.getBoolean("display_past", false)) {
+                List<Shift> pastList = credentials.getPastSchedule();
+                for (Shift shift : pastList) {
+                    if (shift != null) {
+                        Event event = new Event(Color.GRAY, shift.getStartTime().getTime(), "Shift");
+                        eventList.add(event);
+                    }
+                }
+            }
             mCompactCalendarView.addEvents(eventList);
             mCompactCalendarView.setCurrentDate(Calendar.getInstance().getTime());
         }
@@ -267,6 +281,8 @@ public class MainActivity extends AppCompatActivity {
             drawable.setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
             mToolbar.setOverflowIcon(drawable);
         }
+
+        menu.findItem(R.id.item_past).setChecked(sharedPreferences.getBoolean("display_past", false));
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -280,6 +296,22 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     importBool = true;
                     getSchedule();
+                }
+                break;
+
+            case R.id.item_past:
+                if (item.isChecked()) {
+                    item.setChecked(false);
+                    sharedPreferences.edit()
+                            .putBoolean("display_past", false)
+                            .apply();
+                    recreate();
+                } else {
+                    item.setChecked(true);
+                    sharedPreferences.edit()
+                            .putBoolean("display_past", true)
+                            .apply();
+                    recreate();
                 }
                 break;
 
@@ -436,5 +468,9 @@ public class MainActivity extends AppCompatActivity {
             ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
             this.setTaskDescription(taskDesc);
         }
+    }
+
+    private void addPastToGlobal() {
+        //
     }
 }

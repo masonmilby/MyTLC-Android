@@ -123,7 +123,7 @@ public final class R {
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 0x7f0a008f;
         public static final int TextAppearance_Compat_Notification_Info = 0x7f0a0090;
-        public static final int TextAppearance_Compat_Notification_Line2 = 0x7f0a0410;
+        public static final int TextAppearance_Compat_Notification_Line2 = 0x7f0a040f;
         public static final int TextAppearance_Compat_Notification_Time = 0x7f0a0093;
         public static final int TextAppearance_Compat_Notification_Title = 0x7f0a0095;
         public static final int Widget_Compat_NotificationActionContainer = 0x7f0a0097;

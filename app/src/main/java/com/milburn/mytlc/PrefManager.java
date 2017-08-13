@@ -11,7 +11,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
 
     private SharedPreferences sharedPref;
     private Context con;
-    public onPrefChanged inter;
+    public onPrefChanged changeInterface;
 
     public String key_pay;
     public String key_tax;
@@ -19,9 +19,10 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     public String key_custom;
     public String key_primary;
     public String key_accent;
+    public String key_past;
 
     public PrefManager(Context context, onPrefChanged onChanged) {
-        inter = onChanged;
+        changeInterface = onChanged;
         con = context;
         sharedPref = android.preference.PreferenceManager.getDefaultSharedPreferences(con);
         sharedPref.registerOnSharedPreferenceChangeListener(this);
@@ -32,10 +33,11 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
         key_custom = "custom_colors";
         key_primary = "primaryColor";
         key_accent = "accentColor";
+        key_past = "past_shifts";
     }
 
     public interface onPrefChanged {
-        void prefChanged();
+        void prefChanged(SharedPreferences sharedPreferences, String s);
     }
 
     public Integer getTheme() {
@@ -100,6 +102,17 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-        inter.prefChanged();
+        changeInterface.prefChanged(sharedPreferences, s);
+    }
+
+    public Boolean isCriticalAttr(String s) {
+        if (s.contentEquals(key_base)
+                || s.contentEquals(key_primary)
+                || s.contentEquals(key_accent)
+                || s.contentEquals(key_pay)
+                || s.contentEquals(key_tax)) {
+            return true;
+        }
+        return false;
     }
 }

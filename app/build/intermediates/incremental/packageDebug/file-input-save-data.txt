@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Aug 12 02:59:47 EDT 2017
+#Sun Aug 13 19:08:53 EDT 2017
 210.set=ANDROID_RESOURCE
 282.file=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\design_navigation_item.xml
 14.set=ANDROID_RESOURCE

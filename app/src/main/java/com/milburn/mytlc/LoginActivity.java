@@ -2,6 +2,7 @@ package com.milburn.mytlc;
 
 import android.app.ActivityManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -41,8 +42,10 @@ public class LoginActivity extends AppCompatActivity {
         PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override
-            public void prefChanged() {
-                recreate();
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
+                if (pm.isCriticalAttr(s)) {
+                    recreate();
+                }
             }
         });
         setTheme(pm.getTheme());

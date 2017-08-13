@@ -65,6 +65,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     public RecyclerAdapter(List<Shift> itemArray, Context con) {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(con);
+        if (sharedPreferences.getBoolean("display_past", false)) {
+            Credentials credentials = new Credentials(con);
+            mShiftArray.addAll(credentials.getPastSchedule());
+        }
         mShiftArray.addAll(itemArray);
         addDividers();
         context = con;
@@ -230,10 +235,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         String dates = dateFormat.format(first) + "–" + dateFormat.format(last);
         String totalHours = String.valueOf(hours) + " Hours";
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         PrefManager pm = new PrefManager(context, new PrefManager.onPrefChanged() {
             @Override
-            public void prefChanged() {
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
                 //
             }
         });

@@ -3,6 +3,7 @@ package com.milburn.mytlc;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
@@ -21,6 +22,8 @@ public class SettingsFragment extends PreferenceFragment {
     private View accent = null;
     private LinearLayout layoutPrimary;
     private LinearLayout layoutAccent;
+    private Credentials credentials;
+    private CheckBoxPreference checkPref;
 
 
     @Override
@@ -28,19 +31,32 @@ public class SettingsFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
 
+        credentials = new Credentials(getActivity());
+
         pm = new PrefManager(getActivity(), new PrefManager.onPrefChanged() {
             @Override
-            public void prefChanged() {
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
                 setSummary();
             }
         });
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        checkPref = (CheckBoxPreference) findPreference(pm.key_past);
         setSummary();
 
         findPreference(pm.key_custom).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 showColorPicker();
+                return false;
+            }
+        });
+
+        findPreference(pm.key_past).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                if (!checkPref.isChecked()) {
+                    showConfirmation();
+                }
                 return false;
             }
         });
@@ -132,5 +148,28 @@ public class SettingsFragment extends PreferenceFragment {
             return new Integer[]{primaryId, accentId};
         }
         return new Integer[]{0, 0};
+    }
+
+    private void showConfirmation() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Are you sure?");
+        builder.setMessage("Disabling past shift saving will clear all currently stored past shifts.");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                credentials.clearPastSchedule();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                sharedPref.edit()
+                        .putBoolean(pm.key_past, true)
+                        .apply();
+                checkPref.setChecked(true);
+            }
+        });
+        builder.create();
+        builder.show();
     }
 }
