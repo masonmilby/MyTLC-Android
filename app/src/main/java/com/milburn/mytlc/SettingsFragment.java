@@ -7,11 +7,12 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class SettingsFragment extends PreferenceFragment {
 
     private PrefManager pm;
     private SharedPreferences sharedPref;
@@ -26,9 +27,13 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
-        getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
 
-        pm = new PrefManager(getActivity());
+        pm = new PrefManager(getActivity(), new PrefManager.onPrefChanged() {
+            @Override
+            public void prefChanged() {
+                setSummary();
+            }
+        });
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
         setSummary();
 
@@ -39,11 +44,6 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
                 return false;
             }
         });
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-        setSummary();
     }
 
     private void showColorPicker() {
@@ -94,27 +94,29 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
     }
 
     private void changeSelectedColor(View view) {
+        int height_selected = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 60, getResources().getDisplayMetrics());
+        int height_normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
         ViewGroup.LayoutParams params;
         LinearLayout layout = (LinearLayout) view.getParent();
         if (layout.getId() == R.id.primaryColors) {
             if (primary != null) {
                 params = primary.getLayoutParams();
-                params.height = 175;
+                params.height = height_normal;
                 primary.setLayoutParams(params);
             }
             primary = view;
             params = primary.getLayoutParams();
-            params.height = 210;
+            params.height = height_selected;
             primary.setLayoutParams(params);
         } else if (layout.getId() == R.id.accentColors) {
             if (accent != null) {
                 params = accent.getLayoutParams();
-                params.height = 175;
+                params.height = height_normal;
                 accent.setLayoutParams(params);
             }
             accent = view;
             params = accent.getLayoutParams();
-            params.height = 210;
+            params.height = height_selected;
             accent.setLayoutParams(params);
         }
     }

@@ -8,10 +8,11 @@ import android.support.annotation.ColorInt;
 import android.util.TypedValue;
 import android.view.View;
 
-public class PrefManager {
+public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeListener{
 
     private SharedPreferences sharedPref;
     private Context con;
+    public onPrefChanged inter;
 
     public String key_pay;
     public String key_tax;
@@ -20,9 +21,11 @@ public class PrefManager {
     public String key_primary;
     public String key_accent;
 
-    public PrefManager(Context context) {
+    public PrefManager(Context context, onPrefChanged onChanged) {
+        inter = onChanged;
         con = context;
         sharedPref = android.preference.PreferenceManager.getDefaultSharedPreferences(con);
+        sharedPref.registerOnSharedPreferenceChangeListener(this);
 
         key_pay = "pay";
         key_tax = "tax";
@@ -30,6 +33,10 @@ public class PrefManager {
         key_custom = "custom_colors";
         key_primary = "primaryColor";
         key_accent = "accentColor";
+    }
+
+    public interface onPrefChanged {
+        void prefChanged();
     }
 
     public Integer getTheme() {
@@ -90,5 +97,10 @@ public class PrefManager {
         theme.resolveAttribute(attr, typedValue, true);
         @ColorInt int color = typedValue.data;
         return color;
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+        inter.prefChanged();
     }
 }

@@ -46,17 +46,19 @@ public class MainActivity extends AppCompatActivity {
     private Snackbar mSnackBar;
     private List<Shift> globalSchedule;
     private Boolean importBool = false;
-    private PrefManager prefManager;
-    private Boolean paused = false;
-    private Integer currentTheme;
+    private PrefManager pm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        prefManager = new PrefManager(this);
-        currentTheme = prefManager.getTheme();
-        setTheme(currentTheme);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
+        pm = new PrefManager(this, new PrefManager.onPrefChanged() {
+            @Override
+            public void prefChanged() {
+                recreate();
+            }
+        });
+        setTheme(pm.getTheme());
 
         credentials = new Credentials(this);
         tempPass = getIntent().getStringExtra("Password");
@@ -136,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                             mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
                             break;
                         } else {
-                            mCompactCalendarView.setCurrentSelectedDayBackgroundColor(prefManager.getColorFromAttribute(R.attr.colorPrimaryDark));
+                            mCompactCalendarView.setCurrentSelectedDayBackgroundColor(pm.getColorFromAttribute(R.attr.colorPrimaryDark));
                         }
                     }
                 }
@@ -419,20 +421,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        paused = true;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (paused && !currentTheme.equals(prefManager.getTheme())) {
-            recreate();
-        }
-        paused = false;
     }
 }

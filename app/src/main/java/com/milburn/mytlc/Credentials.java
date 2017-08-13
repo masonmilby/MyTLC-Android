@@ -76,6 +76,9 @@ public class Credentials {
                 .remove("Password")
                 .remove("Schedule")
                 .remove("ScheduleUpdated")
+                .remove("getAddress")
+                .remove("pay")
+                .remove("tax")
                 .apply();
     }
 

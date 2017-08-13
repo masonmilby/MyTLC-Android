@@ -33,18 +33,19 @@ public class LoginActivity extends AppCompatActivity {
     private CheckBox mSaveCreds;
     private HashMap<String, String> mUserPassMap;
     private Toolbar mToolbar;
-
-    private Boolean paused = false;
     private PrefManager pm;
-    private Integer currentTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        pm = new PrefManager(this);
-        currentTheme = pm.getTheme();
-        setTheme(currentTheme);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
+        pm = new PrefManager(this, new PrefManager.onPrefChanged() {
+            @Override
+            public void prefChanged() {
+                recreate();
+            }
+        });
+        setTheme(pm.getTheme());
         initLogin();
     }
 
@@ -157,20 +158,5 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        paused = true;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (paused && !currentTheme.equals(pm.getTheme())) {
-            recreate();
-        }
-        paused = false;
     }
 }
