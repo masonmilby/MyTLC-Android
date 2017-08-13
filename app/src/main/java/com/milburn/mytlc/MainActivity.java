@@ -1,6 +1,8 @@
 package com.milburn.mytlc;
 
 import android.Manifest;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,6 +10,7 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.AlarmClock;
 import android.support.design.widget.Snackbar;
@@ -229,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
             List<Event> eventList = new ArrayList<>();
             for (Shift shift : shiftList) {
                 if (shift != null) {
-                    Event event = new Event(R.color.black, shift.getStartTime().getTime(), "Shift");
+                    Event event = new Event(Color.BLACK, shift.getStartTime().getTime(), "Shift");
                     eventList.add(event);
                 }
             }
