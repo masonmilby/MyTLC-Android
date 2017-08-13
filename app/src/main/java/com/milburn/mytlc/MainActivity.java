@@ -224,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.setAdapter(mRecyclerAdapter);
             addToCalendar(existingList);
             createSnack(updatedTime);
+            List<Shift> pastSchedule = credentials.getPastSchedule();
+            mRecyclerView.smoothScrollToPosition(pastSchedule.size());
             return true;
         }
 
