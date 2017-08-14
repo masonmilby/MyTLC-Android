@@ -106,13 +106,10 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     }
 
     public Boolean isCriticalAttr(String s) {
-        if (s.contentEquals(key_base)
-                || s.contentEquals(key_primary)
-                || s.contentEquals(key_accent)
-                || s.contentEquals(key_pay)
-                || s.contentEquals(key_tax)) {
-            return true;
-        }
-        return false;
+        return s.contentEquals(key_base) || s.contentEquals(key_primary) || s.contentEquals(key_accent) || s.contentEquals(key_pay) || s.contentEquals(key_tax);
+    }
+
+    public Boolean isThemeChange(String s) {
+        return s.contentEquals(key_base) || s.contentEquals(key_primary) || s.contentEquals(key_accent);
     }
 }

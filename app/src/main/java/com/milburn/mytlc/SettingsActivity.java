@@ -21,7 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override
             public void prefChanged(SharedPreferences sharedPreferences, String s) {
-                if (pm.isCriticalAttr(s)) {
+                if (pm.isThemeChange(s)) {
                     recreate();
                 }
             }

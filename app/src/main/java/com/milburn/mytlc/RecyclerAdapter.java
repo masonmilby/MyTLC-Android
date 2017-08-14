@@ -202,15 +202,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     private String[] getTotals(Integer position) {
-        int i = -1;
+        System.out.println("Position: " + position);
+
         List<Shift> list = new ArrayList<>();
-        for (Shift shift : mShiftArray) {
-            i++;
-            if (i < position) {
-                list.add(shift);
-            } else {
-                break;
-            }
+        int i = position - 1;
+        while (i >= 0 && mShiftArray.get(i) != null) {
+            list.add(mShiftArray.get(i));
+            i--;
         }
 
         float hours = 0;
@@ -220,32 +218,35 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             }
         }
 
-        Date dayInWeek = list.get(list.size()-1).getStartTime();
+        if (!list.isEmpty()) {
+            Date dayInWeek = list.get(list.size() - 1).getStartTime();
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.setFirstDayOfWeek(Calendar.SUNDAY);
-        calendar.setTime(dayInWeek);
-        calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setFirstDayOfWeek(Calendar.SUNDAY);
+            calendar.setTime(dayInWeek);
+            calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
 
-        Date first = calendar.getTime();
-        calendar.add(Calendar.DATE, 6);
-        Date last = calendar.getTime();
+            Date first = calendar.getTime();
+            calendar.add(Calendar.DATE, 6);
+            Date last = calendar.getTime();
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("M'/'d");
-        String dates = dateFormat.format(first) + "–" + dateFormat.format(last);
-        String totalHours = String.valueOf(hours) + " Hours";
+            SimpleDateFormat dateFormat = new SimpleDateFormat("M'/'d");
+            String dates = dateFormat.format(first) + "–" + dateFormat.format(last);
+            String totalHours = String.valueOf(hours) + " Hours";
 
-        PrefManager pm = new PrefManager(context, new PrefManager.onPrefChanged() {
-            @Override
-            public void prefChanged(SharedPreferences sharedPreferences, String s) {
-                //
-            }
-        });
-        Float pay = Float.valueOf(sharedPreferences.getString(pm.key_pay, ""));
-        Float tax = Float.valueOf(sharedPreferences.getString(pm.key_tax, ""));
-        DecimalFormat df = new DecimalFormat("0.00");
-        String finalPay = "$" + String.valueOf(df.format((pay*hours)-((pay*hours)*(tax/100.0))));
+            PrefManager pm = new PrefManager(context, new PrefManager.onPrefChanged() {
+                @Override
+                public void prefChanged(SharedPreferences sharedPreferences, String s) {
+                    //
+                }
+            });
+            Float pay = Float.valueOf(sharedPreferences.getString(pm.key_pay, ""));
+            Float tax = Float.valueOf(sharedPreferences.getString(pm.key_tax, ""));
+            DecimalFormat df = new DecimalFormat("0.00");
+            String finalPay = "$" + String.valueOf(df.format((pay * hours) - ((pay * hours) * (tax / 100.0))));
 
-        return new String[]{totalHours, dates, finalPay};
+            return new String[]{totalHours, dates, finalPay};
+        }
+        return new String[]{"0", "0", "0"};
     }
 }

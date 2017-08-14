@@ -43,7 +43,7 @@
     <string name="dialog_primary">Primary color</string>
     <string name="dialog_accent">Accent color</string>
     <string name="item_past">Show past shifts</string>
-    <string name="pref_past_title">Save past shifts</string>
+    <string name="pref_past_title">Save past shifts (Experimental)</string>
     <string name="pref_past_sum">Allows for accurate pay and hour calculation</string>
     <string name="pref_cat_sch_title">Schedule</string>
 </resources>

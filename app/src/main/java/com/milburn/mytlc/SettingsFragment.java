@@ -82,7 +82,9 @@ public class SettingsFragment extends PreferenceFragment {
 
         for (int i = 0; i < layoutPrimary.getChildCount(); i++) {
             View pv = layoutPrimary.getChildAt(i);
-            if (getSavedColors()[0].equals(pv.getId())) { changeSelectedColor(pv); }
+            if (getSavedColors()[0].equals(pv.getId())) {
+                changeSelectedColor(pv);
+            }
             pv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -93,7 +95,9 @@ public class SettingsFragment extends PreferenceFragment {
 
         for (int i = 0; i < layoutAccent.getChildCount(); i++) {
             View av = layoutAccent.getChildAt(i);
-            if (getSavedColors()[1].equals(av.getId())) { changeSelectedColor(av); }
+            if (getSavedColors()[1].equals(av.getId())) {
+                changeSelectedColor(av);
+            }
             av.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -138,16 +142,20 @@ public class SettingsFragment extends PreferenceFragment {
     }
 
     private Integer[] getSavedColors() {
-        if (sharedPref.contains(pm.key_primary) && sharedPref.contains(pm.key_accent)) {
-            String primary = sharedPref.getString(pm.key_primary, "");
-            String accent = sharedPref.getString(pm.key_accent, "");
-
-            Integer primaryId = getActivity().getResources().getIdentifier("id/" + primary, null, getActivity().getPackageName());
-            Integer accentId = getActivity().getResources().getIdentifier("id/" + accent + "_A", null, getActivity().getPackageName());
-
-            return new Integer[]{primaryId, accentId};
+        if (!sharedPref.contains(pm.key_primary) && !sharedPref.contains(pm.key_accent)) {
+            sharedPref.edit()
+                    .putString(pm.key_primary, "Amber")
+                    .putString(pm.key_accent, "Grey")
+                    .apply();
         }
-        return new Integer[]{0, 0};
+
+        String primary = sharedPref.getString(pm.key_primary, "");
+        String accent = sharedPref.getString(pm.key_accent, "");
+
+        Integer primaryId = getActivity().getResources().getIdentifier("id/" + primary, null, getActivity().getPackageName());
+        Integer accentId = getActivity().getResources().getIdentifier("id/" + accent + "_A", null, getActivity().getPackageName());
+
+        return new Integer[]{primaryId, accentId};
     }
 
     private void showConfirmation() {
