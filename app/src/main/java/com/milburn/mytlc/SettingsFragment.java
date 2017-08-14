@@ -40,6 +40,14 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        if (!sharedPref.contains(pm.key_primary) && !sharedPref.contains(pm.key_accent)) {
+            sharedPref.edit()
+                    .putString(pm.key_primary, "Amber")
+                    .putString(pm.key_accent, "Grey")
+                    .apply();
+        }
+
         checkPref = (CheckBoxPreference) findPreference(pm.key_past);
         setSummary();
 
@@ -54,7 +62,7 @@ public class SettingsFragment extends PreferenceFragment {
         findPreference(pm.key_past).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                if (!checkPref.isChecked()) {
+                if (!checkPref.isChecked() && sharedPref.contains("PastSchedule")) {
                     showConfirmation();
                 }
                 return false;
@@ -142,12 +150,6 @@ public class SettingsFragment extends PreferenceFragment {
     }
 
     private Integer[] getSavedColors() {
-        if (!sharedPref.contains(pm.key_primary) && !sharedPref.contains(pm.key_accent)) {
-            sharedPref.edit()
-                    .putString(pm.key_primary, "Amber")
-                    .putString(pm.key_accent, "Grey")
-                    .apply();
-        }
 
         String primary = sharedPref.getString(pm.key_primary, "");
         String accent = sharedPref.getString(pm.key_accent, "");
