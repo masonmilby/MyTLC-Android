@@ -6,9 +6,9 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endColumn": 104,
-                    "endOffset": 155
+                    "endOffset": 205
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -25,9 +25,9 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 160,
+                    "startOffset": 210,
                     "endColumn": 107,
-                    "endOffset": 263
+                    "endOffset": 313
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -44,9 +44,9 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 268,
+                    "startOffset": 318,
                     "endColumn": 122,
-                    "endOffset": 386
+                    "endOffset": 436
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -63,9 +63,9 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 391,
+                    "startOffset": 441,
                     "endColumn": 98,
-                    "endOffset": 485
+                    "endOffset": 535
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -82,9 +82,9 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 490,
+                    "startOffset": 540,
                     "endColumn": 111,
-                    "endOffset": 597
+                    "endOffset": 647
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -101,9 +101,9 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 602,
+                    "startOffset": 652,
                     "endColumn": 84,
-                    "endOffset": 682
+                    "endOffset": 732
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -120,9 +120,9 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 687,
+                    "startOffset": 737,
                     "endColumn": 105,
-                    "endOffset": 788
+                    "endOffset": 838
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -139,9 +139,9 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 793,
+                    "startOffset": 843,
                     "endColumn": 119,
-                    "endOffset": 908
+                    "endOffset": 958
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -158,9 +158,9 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 913,
+                    "startOffset": 963,
                     "endColumn": 78,
-                    "endOffset": 987
+                    "endOffset": 1037
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -177,9 +177,9 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 992,
+                    "startOffset": 1042,
                     "endColumn": 75,
-                    "endOffset": 1063
+                    "endOffset": 1113
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -196,9 +196,9 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1068,
+                    "startOffset": 1118,
                     "endColumn": 78,
-                    "endOffset": 1142
+                    "endOffset": 1192
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -215,9 +215,9 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1147,
+                    "startOffset": 1197,
                     "endColumn": 106,
-                    "endOffset": 1249
+                    "endOffset": 1299
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -234,9 +234,9 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1254,
+                    "startOffset": 1304,
                     "endColumn": 104,
-                    "endOffset": 1354
+                    "endOffset": 1404
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -253,9 +253,9 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1359,
+                    "startOffset": 1409,
                     "endColumn": 95,
-                    "endOffset": 1450
+                    "endOffset": 1500
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -272,9 +272,9 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1455,
+                    "startOffset": 1505,
                     "endColumn": 106,
-                    "endOffset": 1557
+                    "endOffset": 1607
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -291,9 +291,9 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1562,
+                    "startOffset": 1612,
                     "endColumn": 101,
-                    "endOffset": 1659
+                    "endOffset": 1709
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -310,9 +310,9 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1664,
+                    "startOffset": 1714,
                     "endColumn": 107,
-                    "endOffset": 1767
+                    "endOffset": 1817
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -329,9 +329,9 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1772,
+                    "startOffset": 1822,
                     "endColumn": 118,
-                    "endOffset": 1886
+                    "endOffset": 1936
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -348,9 +348,9 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1891,
+                    "startOffset": 1941,
                     "endColumn": 97,
-                    "endOffset": 1984
+                    "endOffset": 2034
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -367,9 +367,28 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1989,
+                    "startOffset": 2039,
+                    "endColumn": 205,
+                    "endOffset": 2240
+                },
+                "from": {
+                    "file": "C:\\Users\\mason\\.android\\build-cache\\8e83e3a3275fb2baec218da9669955653036c927\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 205,
+                        "endOffset": 490
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2245,
                     "endColumn": 78,
-                    "endOffset": 2063
+                    "endOffset": 2319
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",
@@ -384,11 +403,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2068,
+                    "startOffset": 2324,
                     "endColumn": 100,
-                    "endOffset": 2164
+                    "endOffset": 2420
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-tr\\values-tr.xml",

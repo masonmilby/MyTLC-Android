@@ -42,10 +42,7 @@ public class SettingsFragment extends PreferenceFragment {
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         if (!sharedPref.contains(pm.key_primary) && !sharedPref.contains(pm.key_accent)) {
-            sharedPref.edit()
-                    .putString(pm.key_primary, "Amber")
-                    .putString(pm.key_accent, "Grey")
-                    .apply();
+            pm.setTheme("Amber", "Grey");
         }
 
         checkPref = (CheckBoxPreference) findPreference(pm.key_past);
@@ -116,9 +113,9 @@ public class SettingsFragment extends PreferenceFragment {
     }
 
     private void setSummary() {
-        findPreference(pm.key_pay).setSummary("$" + sharedPref.getString(pm.key_pay, ""));
-        findPreference(pm.key_tax).setSummary(sharedPref.getString(pm.key_tax, "") + "%");
-        findPreference(pm.key_base).setSummary(sharedPref.getString(pm.key_base, ""));
+        findPreference(pm.key_pay).setSummary("$" + pm.getPay());
+        findPreference(pm.key_tax).setSummary(pm.getTax() + "%");
+        findPreference(pm.key_base).setSummary(pm.getBase());
     }
 
     private void changeSelectedColor(View view) {
@@ -150,12 +147,8 @@ public class SettingsFragment extends PreferenceFragment {
     }
 
     private Integer[] getSavedColors() {
-
-        String primary = sharedPref.getString(pm.key_primary, "");
-        String accent = sharedPref.getString(pm.key_accent, "");
-
-        Integer primaryId = getActivity().getResources().getIdentifier("id/" + primary, null, getActivity().getPackageName());
-        Integer accentId = getActivity().getResources().getIdentifier("id/" + accent + "_A", null, getActivity().getPackageName());
+        Integer primaryId = getActivity().getResources().getIdentifier("id/" + pm.getPrimary(), null, getActivity().getPackageName());
+        Integer accentId = getActivity().getResources().getIdentifier("id/" + pm.getAccent() + "_A", null, getActivity().getPackageName());
 
         return new Integer[]{primaryId, accentId};
     }
@@ -173,9 +166,7 @@ public class SettingsFragment extends PreferenceFragment {
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                sharedPref.edit()
-                        .putBoolean(pm.key_past, true)
-                        .apply();
+                pm.setPast(true);
                 checkPref.setChecked(true);
             }
         });

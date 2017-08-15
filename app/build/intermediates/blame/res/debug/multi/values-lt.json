@@ -6,9 +6,9 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endColumn": 115,
-                    "endOffset": 166
+                    "endOffset": 216
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -25,9 +25,9 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 171,
+                    "startOffset": 221,
                     "endColumn": 107,
-                    "endOffset": 274
+                    "endOffset": 324
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -44,9 +44,9 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 279,
+                    "startOffset": 329,
                     "endColumn": 122,
-                    "endOffset": 397
+                    "endOffset": 447
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -63,9 +63,9 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 402,
+                    "startOffset": 452,
                     "endColumn": 100,
-                    "endOffset": 498
+                    "endOffset": 548
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -82,9 +82,9 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 503,
+                    "startOffset": 553,
                     "endColumn": 112,
-                    "endOffset": 611
+                    "endOffset": 661
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -101,9 +101,9 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 616,
+                    "startOffset": 666,
                     "endColumn": 86,
-                    "endOffset": 698
+                    "endOffset": 748
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -120,9 +120,9 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 703,
+                    "startOffset": 753,
                     "endColumn": 108,
-                    "endOffset": 807
+                    "endOffset": 857
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -139,9 +139,9 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 812,
+                    "startOffset": 862,
                     "endColumn": 120,
-                    "endOffset": 928
+                    "endOffset": 978
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -158,9 +158,9 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 933,
+                    "startOffset": 983,
                     "endColumn": 81,
-                    "endOffset": 1010
+                    "endOffset": 1060
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -177,9 +177,9 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1015,
+                    "startOffset": 1065,
                     "endColumn": 80,
-                    "endOffset": 1091
+                    "endOffset": 1141
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -196,9 +196,9 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1096,
+                    "startOffset": 1146,
                     "endColumn": 84,
-                    "endOffset": 1176
+                    "endOffset": 1226
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -215,9 +215,9 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1181,
+                    "startOffset": 1231,
                     "endColumn": 108,
-                    "endOffset": 1285
+                    "endOffset": 1335
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -234,9 +234,9 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1290,
+                    "startOffset": 1340,
                     "endColumn": 108,
-                    "endOffset": 1394
+                    "endOffset": 1444
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -253,9 +253,9 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1399,
+                    "startOffset": 1449,
                     "endColumn": 99,
-                    "endOffset": 1494
+                    "endOffset": 1544
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -272,9 +272,9 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1499,
+                    "startOffset": 1549,
                     "endColumn": 109,
-                    "endOffset": 1604
+                    "endOffset": 1654
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -291,9 +291,9 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1609,
+                    "startOffset": 1659,
                     "endColumn": 103,
-                    "endOffset": 1708
+                    "endOffset": 1758
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -310,9 +310,9 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1713,
+                    "startOffset": 1763,
                     "endColumn": 112,
-                    "endOffset": 1821
+                    "endOffset": 1871
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -329,9 +329,9 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1826,
+                    "startOffset": 1876,
                     "endColumn": 129,
-                    "endOffset": 1951
+                    "endOffset": 2001
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -348,9 +348,9 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1956,
+                    "startOffset": 2006,
                     "endColumn": 100,
-                    "endOffset": 2052
+                    "endOffset": 2102
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -367,9 +367,28 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 2057,
+                    "startOffset": 2107,
+                    "endColumn": 217,
+                    "endOffset": 2320
+                },
+                "from": {
+                    "file": "C:\\Users\\mason\\.android\\build-cache\\8e83e3a3275fb2baec218da9669955653036c927\\output\\res\\values-lt\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 217,
+                        "endOffset": 502
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2325,
                     "endColumn": 82,
-                    "endOffset": 2135
+                    "endOffset": 2403
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",
@@ -384,11 +403,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2140,
+                    "startOffset": 2408,
                     "endColumn": 100,
-                    "endOffset": 2236
+                    "endOffset": 2504
                 },
                 "from": {
                     "file": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\values-lt\\values-lt.xml",

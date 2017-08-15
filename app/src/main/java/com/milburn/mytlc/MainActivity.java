@@ -51,13 +51,12 @@ public class MainActivity extends AppCompatActivity {
     private List<Shift> globalSchedule;
     private Boolean importBool = false;
     private PrefManager pm;
-    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override
             public void prefChanged(SharedPreferences sharedPreferences, String s) {
@@ -243,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
                     eventList.add(event);
                 }
             }
-            if (sharedPreferences.getBoolean("display_past", false)) {
+            if (pm.getDisplay()) {
                 List<Shift> pastList = credentials.getPastSchedule();
                 for (Shift shift : pastList) {
                     if (shift != null) {
@@ -284,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
             mToolbar.setOverflowIcon(drawable);
         }
 
-        menu.findItem(R.id.item_past).setChecked(sharedPreferences.getBoolean("display_past", false));
+        menu.findItem(R.id.item_past).setChecked(pm.getDisplay());
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -304,15 +303,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_past:
                 if (item.isChecked()) {
                     item.setChecked(false);
-                    sharedPreferences.edit()
-                            .putBoolean("display_past", false)
-                            .apply();
+                    pm.setDisplay(false);
                     recreate();
                 } else {
                     item.setChecked(true);
-                    sharedPreferences.edit()
-                            .putBoolean("display_past", true)
-                            .apply();
+                    pm.setDisplay(true);
                     recreate();
                 }
                 break;
@@ -470,9 +465,5 @@ public class MainActivity extends AppCompatActivity {
             ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
             this.setTaskDescription(taskDesc);
         }
-    }
-
-    private void addPastToGlobal() {
-        //
     }
 }

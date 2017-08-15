@@ -3,6 +3,7 @@ package com.milburn.mytlc;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 
@@ -11,6 +12,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -34,6 +38,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     private String tokenValue;
     private Elements currentDay;
     public AsyncResponse delegate = null;
+    private List<String> htmlList = new ArrayList<>();
 
     public PostLoginAPI(Context context, AsyncResponse asyncResponse) {
         mContext = context;
@@ -166,6 +171,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                             .cookies(loginResponse.cookies())
                             .header("cache-control", "no-cache")
                             .get();
+
                 } catch (Exception e) {
                     publishProgress(102);
                     e.printStackTrace();
@@ -205,6 +211,9 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
             currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().child(0).child(0).children();
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").isEmpty()) {
             currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().child(0).child(0).children();
+        }
+        if (currentDay != null) {
+            htmlList.add(currentDay.toString());
         }
     }
 
@@ -274,6 +283,26 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
     @Override
     protected void onPostExecute(Boolean result) {
+        /*
+        int i = 0;
+        for (String s : htmlList) {
+            i++;
+            File file = new File(mContext.getFilesDir(), "shift" + i + ".html");
+            FileOutputStream outputStream;
+
+            try {
+                outputStream = mContext.openFileOutput("shift" + i + ".html", Context.MODE_PRIVATE);
+                outputStream.write(s.getBytes());
+                outputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            Uri path = Uri.fromFile(file);
+            System.out.println(path);
+        }
+        */
+
         delegate.processFinish(shiftList);
     }
 

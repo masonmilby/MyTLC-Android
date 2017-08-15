@@ -27,7 +27,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private List<String> mExpandPos = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
-    private SharedPreferences sharedPreferences;
+    private PrefManager pm;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView mTextViewDay;
@@ -65,8 +65,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     public RecyclerAdapter(List<Shift> itemArray, Context con) {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(con);
-        if (sharedPreferences.getBoolean("display_past", false)) {
+        pm = new PrefManager(con, new PrefManager.onPrefChanged() {
+            @Override
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
+                //
+            }
+        });
+        if (pm.getDisplay()) {
             Credentials credentials = new Credentials(con);
             mShiftArray.addAll(credentials.getPastSchedule());
         }
@@ -188,7 +193,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         List<Integer> posList = new ArrayList<>();
         for (Shift shift : mShiftArray) {
             i++;
-            if (shift.getStartTime().getTime() > calendar.getTime().getTime()) {
+            if (shift.getSingleDayDate().getTime() >= calendar.getTime().getTime()) {
                 posList.add(i);
                 calendar.add(Calendar.DATE, 7);
             }
@@ -202,8 +207,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     private String[] getTotals(Integer position) {
-        System.out.println("Position: " + position);
-
         List<Shift> list = new ArrayList<>();
         int i = position - 1;
         while (i >= 0 && mShiftArray.get(i) != null) {
@@ -240,8 +243,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     //
                 }
             });
-            Float pay = Float.valueOf(sharedPreferences.getString(pm.key_pay, ""));
-            Float tax = Float.valueOf(sharedPreferences.getString(pm.key_tax, ""));
+            Float pay = Float.valueOf(pm.getPay());
+            Float tax = Float.valueOf(pm.getTax());
             DecimalFormat df = new DecimalFormat("0.00");
             String finalPay = "$" + String.valueOf(df.format((pay * hours) - ((pay * hours) * (tax / 100.0))));
 

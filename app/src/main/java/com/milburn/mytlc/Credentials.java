@@ -113,9 +113,14 @@ public class Credentials {
         List<Shift> oldPastShiftList = getPastSchedule();
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.DAY_OF_MONTH, 1);
+        Calendar cal1 = Calendar.getInstance();
+        cal1.clear(Calendar.HOUR);
+        cal1.clear(Calendar.MINUTE);
+        cal1.clear(Calendar.SECOND);
+        cal1.clear(Calendar.MILLISECOND);
         for (Shift shift : oldShiftList) {
-            if (shift.getSingleDayDate().getTime() < Calendar.getInstance().getTime().getTime()
-                    && shift.getSingleDayDate().getTime() > cal.getTime().getTime()
+            if (shift.getSingleDayDate().getTime() < cal1.getTime().getTime()
+                    && shift.getSingleDayDate().getTime() >= cal.getTime().getTime()
                     && !newShiftList.contains(shift)
                     && !oldPastShiftList.contains(shift)) {
                 tempList.add(shift);

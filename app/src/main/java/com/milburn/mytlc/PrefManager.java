@@ -20,6 +20,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     public String key_primary;
     public String key_accent;
     public String key_past;
+    public String key_display;
 
     public PrefManager(Context context, onPrefChanged onChanged) {
         changeInterface = onChanged;
@@ -34,6 +35,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
         key_primary = "primaryColor";
         key_accent = "accentColor";
         key_past = "past_shifts";
+        key_display = "display_past";
     }
 
     public interface onPrefChanged {
@@ -92,6 +94,13 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
         }
     }
 
+    public void setTheme(String primary, String accent) {
+        sharedPref.edit()
+                .putString(key_primary, primary)
+                .putString(key_accent, accent)
+                .apply();
+    }
+
     public Integer getColorFromAttribute(Integer attr) {
         TypedValue typedValue = new TypedValue();
         Resources.Theme theme = con.getTheme();
@@ -111,5 +120,45 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
 
     public Boolean isThemeChange(String s) {
         return s.contentEquals(key_base) || s.contentEquals(key_primary) || s.contentEquals(key_accent);
+    }
+
+    public String getPay() {
+        return sharedPref.getString(key_pay, "");
+    }
+
+    public String getTax() {
+        return sharedPref.getString(key_tax, "");
+    }
+
+    public String getBase() {
+        return sharedPref.getString(key_base, "");
+    }
+
+    public String getPrimary() {
+        return sharedPref.getString(key_primary, "");
+    }
+
+    public String getAccent() {
+        return sharedPref.getString(key_accent, "");
+    }
+
+    public Boolean getPast() {
+        return sharedPref.getBoolean(key_past, false);
+    }
+
+    public void setPast(Boolean bool) {
+        sharedPref.edit()
+                .putBoolean(key_past, bool)
+                .apply();
+    }
+
+    public Boolean getDisplay() {
+        return sharedPref.getBoolean(key_display, false);
+    }
+
+    public void setDisplay(Boolean bool) {
+        sharedPref.edit()
+                .putBoolean(key_display, bool)
+                .apply();
     }
 }
