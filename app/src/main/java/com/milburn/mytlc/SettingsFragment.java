@@ -41,10 +41,6 @@ public class SettingsFragment extends PreferenceFragment {
         });
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        if (!sharedPref.contains(pm.key_primary) && !sharedPref.contains(pm.key_accent)) {
-            pm.setTheme("Amber", "Grey");
-        }
-
         checkPref = (CheckBoxPreference) findPreference(pm.key_past);
         setSummary();
 

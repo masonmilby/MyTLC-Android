@@ -123,23 +123,23 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     }
 
     public String getPay() {
-        return sharedPref.getString(key_pay, "");
+        return sharedPref.getString(key_pay, "0");
     }
 
     public String getTax() {
-        return sharedPref.getString(key_tax, "");
+        return sharedPref.getString(key_tax, "0");
     }
 
     public String getBase() {
-        return sharedPref.getString(key_base, "");
+        return sharedPref.getString(key_base, "Light");
     }
 
     public String getPrimary() {
-        return sharedPref.getString(key_primary, "");
+        return sharedPref.getString(key_primary, "Amber");
     }
 
     public String getAccent() {
-        return sharedPref.getString(key_accent, "");
+        return sharedPref.getString(key_accent, "Grey");
     }
 
     public Boolean getPast() {

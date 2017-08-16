@@ -1,4 +1,4 @@
-#Tue Aug 15 01:28:47 EDT 2017
+#Wed Aug 16 04:41:21 EDT 2017
 base.0=C\:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0a87b346d352940e463a18e6316e5585d742e202
 renamed.1=classes2.dex
 renamed.0=classes.dex

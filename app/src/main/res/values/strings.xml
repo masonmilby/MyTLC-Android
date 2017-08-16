@@ -46,4 +46,6 @@
     <string name="pref_past_title">Save past shifts (Experimental)</string>
     <string name="pref_past_sum">Allows for accurate pay and hour calculation</string>
     <string name="pref_cat_sch_title">Schedule</string>
+    <string name="item_report">Report issue</string>
+    <string name="dialog_issue_message">Message</string>
 </resources>

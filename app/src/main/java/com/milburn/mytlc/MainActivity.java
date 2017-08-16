@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Shift> globalSchedule;
     private Boolean importBool = false;
     private PrefManager pm;
+    private FirebaseHelper firebaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         });
         setTheme(pm.getTheme());
 
+        firebaseHelper = new FirebaseHelper(this);
         credentials = new Credentials(this);
         tempPass = getIntent().getStringExtra("Password");
         if (getIntent().getStringExtra("Schedule") != null) {
@@ -110,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mSwipe = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
-        mSwipe.setDistanceToTriggerSync(800);
+        mSwipe.setDistanceToTriggerSync(700);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -333,6 +335,11 @@ public class MainActivity extends AppCompatActivity {
                         createSnack("Alarm cannot be created");
                     }
                 }
+                break;
+
+            case R.id.item_report:
+                firebaseHelper.setReport(true);
+                getSchedule();
                 break;
 
             case R.id.item_settings:
