@@ -111,16 +111,24 @@ public class Credentials {
     public void setPastSchedule(List<Shift> oldShiftList, List<Shift> newShiftList) {
         List<Shift> tempList = new ArrayList<>();
         List<Shift> oldPastShiftList = getPastSchedule();
-        Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.DAY_OF_MONTH, 1);
-        Calendar cal1 = Calendar.getInstance();
-        cal1.clear(Calendar.HOUR);
-        cal1.clear(Calendar.MINUTE);
-        cal1.clear(Calendar.SECOND);
-        cal1.clear(Calendar.MILLISECOND);
+
+        Calendar calFirst = Calendar.getInstance();
+        calFirst.set(Calendar.DAY_OF_MONTH, 1);
+
+        Calendar calCurrent = Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMddyyyy");
+        String current = simpleDateFormat.format(calCurrent.getTime());
+        Date currentTime = null;
+        try {
+            currentTime = simpleDateFormat.parse(current);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
         for (Shift shift : oldShiftList) {
-            if (shift.getSingleDayDate().getTime() < cal1.getTime().getTime()
-                    && shift.getSingleDayDate().getTime() >= cal.getTime().getTime()
+            if (currentTime != null
+                    && shift.getSingleDayDate().getTime() < currentTime.getTime()
+                    && shift.getSingleDayDate().getTime() >= calFirst.getTime().getTime()
                     && !newShiftList.contains(shift)
                     && !oldPastShiftList.contains(shift)) {
                 tempList.add(shift);

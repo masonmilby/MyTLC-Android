@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.storage.FirebaseStorage;
@@ -16,13 +17,13 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 public class FirebaseHelper {
     private Context context;
     private SharedPreferences sharedPreferences;
-    private String issueText;
     private View v;
 
     public FirebaseHelper(Context con) {
@@ -30,7 +31,7 @@ public class FirebaseHelper {
         sharedPreferences = android.preference.PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    private void uploadFiles(List<String[]> htmlList, List<Shift> shiftList, String issue) {
+    private void uploadFiles(List<String[]> htmlList, List<Shift> shiftList, String issue, String email) {
         int i = 0;
         FileOutputStream outputStream;
         for (String[] s : htmlList) {
@@ -54,8 +55,23 @@ public class FirebaseHelper {
         try {
             outputStream = context.openFileOutput(issueName, Context.MODE_PRIVATE);
             outputStream.write(issue.getBytes());
+            String emailString = "\n" + email;
+            outputStream.write(emailString.getBytes());
             outputStream.write("\n\n---------------------\n\n".getBytes());
-            outputStream.write(shiftList.toArray().toString().getBytes());
+            for (Shift shift : shiftList) {
+                for (Date[] date : shift.getDates()) {
+                    int x = 0;
+                    while (x < date.length-1) {
+                        String string = date[x].toString() + " | ";
+                        outputStream.write(string.getBytes());
+                        x++;
+                    }
+                }
+                outputStream.write(shift.getDepts().toString().getBytes());
+                outputStream.write(shift.getActivityList().toString().getBytes());
+                outputStream.write(shift.getStoreNumber().getBytes());
+                outputStream.write("\n\n---------------------\n\n".getBytes());
+            }
             outputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +82,7 @@ public class FirebaseHelper {
         StorageReference storageReference = storage.getReference(getUUID() + "/" + issueName);
         UploadTask uploadTask = storageReference.putFile(path);
 
-        Toast.makeText(context, "Issue sent", Toast.LENGTH_LONG);
+        Toast.makeText(context, "Issue sent successfully", Toast.LENGTH_LONG).show();
     }
 
     public void sendIssue(final List<String[]> htmlList, final List<Shift> shiftList) {
@@ -78,8 +94,9 @@ public class FirebaseHelper {
         builder.setPositiveButton("Send", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                issueText = v.findViewById(R.id.textview_issue).toString();
-                uploadFiles(htmlList, shiftList, issueText);
+                EditText issue = v.findViewById(R.id.edittext_message);
+                EditText email = v.findViewById(R.id.edittext_email);
+                uploadFiles(htmlList, shiftList, issue.getText().toString(), email.getText().toString());
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -92,7 +109,7 @@ public class FirebaseHelper {
         builder.show();
     }
 
-    private String getUUID() {
+    public String getUUID() {
         String uuid;
 
         if (sharedPreferences.contains("UUID")) {

@@ -48,4 +48,5 @@
     <string name="pref_cat_sch_title">Schedule</string>
     <string name="item_report">Report issue</string>
     <string name="dialog_issue_message">Message</string>
+    <string name="dialog_issue_email">Follow-up email</string>
 </resources>

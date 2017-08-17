@@ -39,12 +39,14 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     private String tokenValue;
     private Elements currentDay;
     public AsyncResponse delegate = null;
+    public FirebaseAnalytics firebaseAnalytics;
 
     private List<String[]> htmlList = new ArrayList<>();
 
     public PostLoginAPI(Context context, AsyncResponse asyncResponse) {
         mContext = context;
         delegate = asyncResponse;
+        firebaseAnalytics = FirebaseAnalytics.getInstance(context);
     }
 
     public interface AsyncResponse {
@@ -151,6 +153,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
             htmlList.add(new String[]{"ShiftNextPage.html", shiftPageNextDoc.toString()});
         } catch (Exception e) {
             FirebaseCrash.log("Next page loading failed");
+            FirebaseCrash.report(e);
             publishProgress(102);
             e.printStackTrace();
             return false;
@@ -190,6 +193,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     htmlList.add(new String[]{"Shift" + i + ".html", shiftDoc.toString()});
                 } catch (Exception e) {
                     FirebaseCrash.log("Shift" + i + " load failed");
+                    FirebaseCrash.report(e);
                     publishProgress(102);
                     e.printStackTrace();
                     return false;
@@ -307,6 +311,9 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     protected void onPostExecute(Boolean result) {
         FirebaseHelper firebaseHelper = new FirebaseHelper(mContext);
         if (firebaseHelper.getReport() && shiftList != null && !shiftList.isEmpty()) {
+            Bundle bundle = new Bundle();
+            bundle.putString("UUID", firebaseHelper.getUUID());
+            firebaseAnalytics.logEvent("report_issue", bundle);
             firebaseHelper.sendIssue(htmlList, shiftList);
         }
         firebaseHelper.setReport(false);
