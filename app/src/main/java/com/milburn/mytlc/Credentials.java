@@ -129,8 +129,7 @@ public class Credentials {
             if (currentTime != null
                     && shift.getSingleDayDate().getTime() < currentTime.getTime()
                     && shift.getSingleDayDate().getTime() >= calFirst.getTime().getTime()
-                    && !newShiftList.contains(shift)
-                    && !oldPastShiftList.contains(shift)) {
+                    && !doesContain(shift, newShiftList) && !doesContain(shift, oldPastShiftList)) {
                 tempList.add(shift);
             }
         }
@@ -141,6 +140,15 @@ public class Credentials {
                     .putString("PastSchedule", serializedSchedule)
                     .apply();
         }
+    }
+
+    private Boolean doesContain(Shift shift, List<Shift> shiftList) {
+        for (Shift shift1 : shiftList) {
+            if (shift1.getSingleDayDate().getTime() == shift.getSingleDayDate().getTime()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void clearPastSchedule() {
