@@ -261,4 +261,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         }
         return new String[]{"0", "0", "0"};
     }
+
+    public Integer getPosition(Shift shift) {
+        int i = -1;
+        for (Shift shift1 : mShiftArray) {
+            i++;
+            if (shift1 != null && shift1.equals(shift)) {
+                return i;
+            }
+        }
+        return 0;
+    }
 }

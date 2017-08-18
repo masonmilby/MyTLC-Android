@@ -21,9 +21,17 @@ public class Shift {
     }
 
     public Float getTotalHours() {
-        Long start = getStartTime().getTime();
-        Long end = getEndTime().getTime();
-        Float totalHours = (float)(end-start)/3600000;
+        Date start = getStartTime();
+        Date end = getEndTime();
+
+        if (end.before(start)) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(end);
+            calendar.add(Calendar.DATE, 1);
+            end = calendar.getTime();
+        }
+
+        Float totalHours = (float)(end.getTime()-start.getTime())/3600000;
         return totalHours;
     }
 

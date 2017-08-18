@@ -21,6 +21,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     public String key_accent;
     public String key_past;
     public String key_display;
+    public String key_collapsed;
 
     public PrefManager(Context context, onPrefChanged onChanged) {
         changeInterface = onChanged;
@@ -36,6 +37,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
         key_accent = "accentColor";
         key_past = "past_shifts";
         key_display = "display_past";
+        key_collapsed = "collapsed";
     }
 
     public interface onPrefChanged {
@@ -159,6 +161,16 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     public void setDisplay(Boolean bool) {
         sharedPref.edit()
                 .putBoolean(key_display, bool)
+                .apply();
+    }
+
+    public Boolean getCollapsed() {
+        return sharedPref.getBoolean(key_collapsed, false);
+    }
+
+    public void setCollapsed(Boolean bool) {
+        sharedPref.edit()
+                .putBoolean(key_collapsed, bool)
                 .apply();
     }
 }

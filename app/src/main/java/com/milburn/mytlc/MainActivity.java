@@ -104,9 +104,11 @@ public class MainActivity extends AppCompatActivity {
                 if (mCompactCalendarView.getVisibility() == View.VISIBLE) {
                     mCompactCalendarView.setVisibility(View.GONE);
                     mToolbar.setSubtitle("");
+                    pm.setCollapsed(true);
                 } else {
                     mCompactCalendarView.setVisibility(View.VISIBLE);
                     mToolbar.setSubtitle(getParsedDate(mCompactCalendarView.getFirstDayOfCurrentMonth(), "MMMM yyyy"));
+                    pm.setCollapsed(false);
                 }
             }
         });
@@ -120,6 +122,11 @@ public class MainActivity extends AppCompatActivity {
 
         mCompactCalendarView.setFirstDayOfWeek(Calendar.SUNDAY);
         mToolbar.setSubtitle(getParsedDate(mCompactCalendarView.getFirstDayOfCurrentMonth(), "MMMM yyyy"));
+
+        if (pm.getCollapsed()) {
+            mCompactCalendarView.setVisibility(View.GONE);
+            mToolbar.setSubtitle("");
+        }
 
         mSwipe.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
@@ -143,7 +150,8 @@ public class MainActivity extends AppCompatActivity {
                     for (Shift shift : globalSchedule) {
                         i++;
                         if (shift.getSingleDayDate().equals(dateClicked)) {
-                            mRecyclerView.smoothScrollToPosition(i);
+                            RecyclerAdapter recyclerAdapter = (RecyclerAdapter)mRecyclerView.getAdapter();
+                            mRecyclerView.smoothScrollToPosition(recyclerAdapter.getPosition(shift));
                             mCompactCalendarView.setCurrentSelectedDayBackgroundColor(Color.BLACK);
                             break;
                         } else {
@@ -225,8 +233,7 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.setAdapter(mRecyclerAdapter);
             addToCalendar(existingList);
             createSnack(updatedTime);
-            List<Shift> pastSchedule = credentials.getPastSchedule();
-            mRecyclerView.smoothScrollToPosition(pastSchedule.size());
+            mRecyclerView.smoothScrollToPosition(credentials.getPastSchedule().size());
             return true;
         }
 
