@@ -2,4 +2,5 @@
 <resources>
     <attr name="dropSrc" format="reference" />
     <attr name="dividerColor" format="color" />
+    <attr name="txtSecond" format="color" />
 </resources>

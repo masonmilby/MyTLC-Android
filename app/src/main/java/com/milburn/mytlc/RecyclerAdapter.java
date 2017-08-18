@@ -3,8 +3,10 @@ package com.milburn.mytlc;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -129,12 +131,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     View extraFrag = layoutInflater.inflate(R.layout.extra_time_frag, null);
 
                     TextView time = (TextView)extraFrag.findViewById(R.id.textview_time);
+                    time.setTextColor(pm.getColorFromAttribute(R.attr.txtSecond));
                     time.setText(mShiftArray.get(position).getCombinedTime(i));
 
                     TextView dept = (TextView)extraFrag.findViewById(R.id.textview_dept);
+                    dept.setTextColor(pm.getColorFromAttribute(R.attr.txtSecond));
                     dept.setText(deptName);
 
                     TextView act = (TextView)extraFrag.findViewById(R.id.textview_activity);
+                    act.setTextColor(pm.getColorFromAttribute(R.attr.txtSecond));
                     act.setText(mShiftArray.get(position).getActivity(i));
 
                     holder.linearLayout.addView(extraFrag);

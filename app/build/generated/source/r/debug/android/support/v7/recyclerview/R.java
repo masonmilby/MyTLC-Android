@@ -8,24 +8,24 @@ package android.support.v7.recyclerview;
 
 public final class R {
     public static final class attr {
-        public static final int fastScrollEnabled = 0x7f010151;
-        public static final int fastScrollHorizontalThumbDrawable = 0x7f010154;
-        public static final int fastScrollHorizontalTrackDrawable = 0x7f010155;
-        public static final int fastScrollVerticalThumbDrawable = 0x7f010152;
-        public static final int fastScrollVerticalTrackDrawable = 0x7f010153;
-        public static final int font = 0x7f01012e;
-        public static final int fontProviderAuthority = 0x7f010127;
-        public static final int fontProviderCerts = 0x7f01012a;
-        public static final int fontProviderFetchStrategy = 0x7f01012b;
-        public static final int fontProviderFetchTimeout = 0x7f01012c;
-        public static final int fontProviderPackage = 0x7f010128;
-        public static final int fontProviderQuery = 0x7f010129;
-        public static final int fontStyle = 0x7f01012d;
-        public static final int fontWeight = 0x7f01012f;
-        public static final int layoutManager = 0x7f01014d;
-        public static final int reverseLayout = 0x7f01014f;
-        public static final int spanCount = 0x7f01014e;
-        public static final int stackFromEnd = 0x7f010150;
+        public static final int fastScrollEnabled = 0x7f010152;
+        public static final int fastScrollHorizontalThumbDrawable = 0x7f010155;
+        public static final int fastScrollHorizontalTrackDrawable = 0x7f010156;
+        public static final int fastScrollVerticalThumbDrawable = 0x7f010153;
+        public static final int fastScrollVerticalTrackDrawable = 0x7f010154;
+        public static final int font = 0x7f01012f;
+        public static final int fontProviderAuthority = 0x7f010128;
+        public static final int fontProviderCerts = 0x7f01012b;
+        public static final int fontProviderFetchStrategy = 0x7f01012c;
+        public static final int fontProviderFetchTimeout = 0x7f01012d;
+        public static final int fontProviderPackage = 0x7f010129;
+        public static final int fontProviderQuery = 0x7f01012a;
+        public static final int fontStyle = 0x7f01012e;
+        public static final int fontWeight = 0x7f010130;
+        public static final int layoutManager = 0x7f01014e;
+        public static final int reverseLayout = 0x7f010150;
+        public static final int spanCount = 0x7f01014f;
+        public static final int stackFromEnd = 0x7f010151;
     }
     public static final class bool {
         public static final int abc_action_bar_embed_tabs = 0x7f0b0000;
@@ -130,8 +130,8 @@ public final class R {
         public static final int Widget_Compat_NotificationActionText = 0x7f0a0098;
     }
     public static final class styleable {
-        public static final int[] FontFamily = { 0x7f010127, 0x7f010128, 0x7f010129, 0x7f01012a, 0x7f01012b, 0x7f01012c };
-        public static final int[] FontFamilyFont = { 0x7f01012d, 0x7f01012e, 0x7f01012f };
+        public static final int[] FontFamily = { 0x7f010128, 0x7f010129, 0x7f01012a, 0x7f01012b, 0x7f01012c, 0x7f01012d };
+        public static final int[] FontFamilyFont = { 0x7f01012e, 0x7f01012f, 0x7f010130 };
         public static final int FontFamilyFont_font = 1;
         public static final int FontFamilyFont_fontStyle = 0;
         public static final int FontFamilyFont_fontWeight = 2;
@@ -141,7 +141,7 @@ public final class R {
         public static final int FontFamily_fontProviderFetchTimeout = 5;
         public static final int FontFamily_fontProviderPackage = 1;
         public static final int FontFamily_fontProviderQuery = 2;
-        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f01014d, 0x7f01014e, 0x7f01014f, 0x7f010150, 0x7f010151, 0x7f010152, 0x7f010153, 0x7f010154, 0x7f010155 };
+        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f01014e, 0x7f01014f, 0x7f010150, 0x7f010151, 0x7f010152, 0x7f010153, 0x7f010154, 0x7f010155, 0x7f010156 };
         public static final int RecyclerView_android_descendantFocusability = 1;
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_fastScrollEnabled = 6;

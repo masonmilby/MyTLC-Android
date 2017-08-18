@@ -6,6 +6,7 @@
 
         <item name="dropSrc">@drawable/ic_drop_light</item>
         <item name="dividerColor">@color/dividerLight</item>
+        <item name="txtSecond">@color/txtLight</item>
     </style>
 
     <style name="CustomDark" parent="Theme.AppCompat.NoActionBar">
@@ -15,6 +16,7 @@
 
         <item name="dropSrc">@drawable/ic_drop_dark</item>
         <item name="dividerColor">@color/dividerDark</item>
+        <item name="txtSecond">@color/txtDark</item>
     </style>
 
 

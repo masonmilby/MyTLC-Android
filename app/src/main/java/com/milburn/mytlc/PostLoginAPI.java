@@ -41,6 +41,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     public AsyncResponse delegate = null;
     public FirebaseAnalytics firebaseAnalytics;
 
+    private Boolean errorStatus = true;
     private List<String[]> htmlList = new ArrayList<>();
 
     public PostLoginAPI(Context context, AsyncResponse asyncResponse) {
@@ -318,7 +319,11 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         }
         firebaseHelper.setReport(false);
 
-        delegate.processFinish(shiftList);
+        if (!errorStatus) {
+            delegate.processFinish(shiftList);
+        } else {
+            delegate.processFinish(new ArrayList<Shift>());
+        }
     }
 
     @Override
@@ -355,6 +360,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     mProgressDialog.show();
                 } else {
                     mProgressDialog.dismiss();
+                    errorStatus = false;
                 }
                 break;
         }

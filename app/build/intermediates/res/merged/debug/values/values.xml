@@ -112,6 +112,7 @@
         <flag name="chains" value="8"/>
     </attr>
     <attr format="string" name="title"/>
+    <attr format="color" name="txtSecond"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_allow_stacked_button_bar">true</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
@@ -257,6 +258,8 @@
     <color name="teal_a400">#1DE9B6</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
+    <color name="txtDark">#B3FFFFFF</color>
+    <color name="txtLight">#8A000000</color>
     <color name="white">#FFFFFF</color>
     <color name="yellow_500">#FFEB3B</color>
     <color name="yellow_700">#FBC02D</color>
@@ -2041,6 +2044,7 @@
 
         <item name="dropSrc">@drawable/ic_drop_dark</item>
         <item name="dividerColor">@color/dividerDark</item>
+        <item name="txtSecond">@color/txtDark</item>
     </style>
     <style name="CustomDark.Amber">
         <item name="colorPrimary">@color/amber_500</item>
@@ -3208,6 +3212,7 @@
 
         <item name="dropSrc">@drawable/ic_drop_light</item>
         <item name="dividerColor">@color/dividerLight</item>
+        <item name="txtSecond">@color/txtLight</item>
     </style>
     <style name="CustomLight.Amber">
         <item name="colorPrimary">@color/amber_500</item>
