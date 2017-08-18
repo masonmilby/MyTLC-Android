@@ -24,12 +24,12 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\\output\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
-        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
-        "source": "C:\\Users\\mason\\.android\\build-cache\\0dd15bc5ef023542c738cc69abfc339d38a9014e\\output\\res\\layout\\notification_template_big_media_custom.xml"
-    },
-    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\0dd15bc5ef023542c738cc69abfc339d38a9014e\\output\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",

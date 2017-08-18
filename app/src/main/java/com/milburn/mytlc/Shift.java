@@ -102,7 +102,7 @@ public class Shift {
     }
 
     public Date[] getDate(Integer index) {
-        if ((getDeptSize()-1) < index) {
+        if (index > (getDates().size()-1)) {
             return null;
         }
         return dateList.get(index);

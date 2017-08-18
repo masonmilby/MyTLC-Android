@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -243,10 +245,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     //
                 }
             });
-            Float pay = Float.valueOf(pm.getPay());
-            Float tax = Float.valueOf(pm.getTax());
-            DecimalFormat df = new DecimalFormat("0.00");
-            String finalPay = "$" + String.valueOf(df.format((pay * hours) - ((pay * hours) * (tax / 100.0))));
+
+            String finalPay;
+            try {
+                Float pay = Float.valueOf(pm.getPay());
+                Float tax = Float.valueOf(pm.getTax());
+                DecimalFormat df = new DecimalFormat("0.00");
+                finalPay = "$" + String.valueOf(df.format((pay * hours) - ((pay * hours) * (tax / 100.0))));
+            } catch (Exception e) {
+                finalPay = "0";
+                FirebaseCrash.report(e);
+            }
 
             return new String[]{totalHours, dates, finalPay};
         }

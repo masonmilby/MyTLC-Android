@@ -228,20 +228,20 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     private void setCurrentDay() {
         currentDay = null;
         if (!shiftDoc.getElementsByClass(" calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().child(0).child(0).children();
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().children().select("div.calendarShift").first().children();
         } else if (!shiftDoc.getElementsByClass(" calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().child(0).child(0).children();
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().children().select("div.calendarShift").first().children();
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().child(0).child(0).children();
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().children().select("div.calendarShift").first().children();
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().child(0).child(0).children();
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().children().select("div.calendarShift").first().children();
         }
     }
 
     private List<Date[]> getTimeDate() {
         List<Date[]> timesList = new ArrayList<>();
         if (!currentDay.hasClass("calendarTextSchedDtlTime")) {
-            String[] dateTimes = currentDay.get(1).text().split(" - ");
+            String[] dateTimes = currentDay.select("div.calendarTextShiftTime").text().split(" - ");
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
             try {
                 Date start = dateFormat.parse(dateTimes[0]);
@@ -254,7 +254,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                 return null;
             }
         } else {
-            String dateString = currentDay.get(1).text().split(" ")[0];
+            String dateString = currentDay.select("div.calendarTextShiftTime").text().split(" ")[0];
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhh:mmaa");
 
             Elements timeElements = currentDay.select("div.calendarTextSchedDtlTime");
