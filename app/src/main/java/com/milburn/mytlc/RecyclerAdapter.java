@@ -196,21 +196,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
         calendar.add(Calendar.DATE, 7);
 
-        int i = -1;
-        List<Integer> posList = new ArrayList<>();
+        int i = 0;
+        List<Shift> tempList = new ArrayList<>();
+        tempList.addAll(mShiftArray);
         for (Shift shift : mShiftArray) {
-            i++;
             if (shift.getSingleDayDate().getTime() >= calendar.getTime().getTime()) {
-                posList.add(i);
+                tempList.add(tempList.indexOf(shift), null);
                 calendar.add(Calendar.DATE, 7);
             }
         }
-        for (Integer pos : posList) {
-            mShiftArray.add(pos, null);
+
+        if (tempList.get(tempList.size()-1) != null) {
+            tempList.add(tempList.size(), null);
         }
-        if (mShiftArray.get(mShiftArray.size()-1) != null) {
-            mShiftArray.add(mShiftArray.size(), null);
-        }
+
+        mShiftArray = tempList;
     }
 
     private String[] getTotals(Integer position) {
