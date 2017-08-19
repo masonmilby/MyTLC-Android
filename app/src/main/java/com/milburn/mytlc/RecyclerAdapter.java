@@ -186,17 +186,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     private void addDividers() {
         Calendar calendar = Calendar.getInstance();
-        calendar.setFirstDayOfWeek(Calendar.SUNDAY);
-
-        calendar.clear(Calendar.HOUR);
-        calendar.clear(Calendar.MINUTE);
-        calendar.clear(Calendar.SECOND);
-        calendar.clear(Calendar.MILLISECOND);
-
         calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
         calendar.add(Calendar.DATE, 7);
 
-        int i = 0;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        String formatedDate = simpleDateFormat.format(calendar.getTime());
+        Date parsedDate = new Date();
+        try {
+            parsedDate = simpleDateFormat.parse(formatedDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        calendar.setTime(parsedDate);
+
         List<Shift> tempList = new ArrayList<>();
         tempList.addAll(mShiftArray);
         for (Shift shift : mShiftArray) {
