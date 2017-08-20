@@ -948,14 +948,19 @@
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="pref_account_change_pass">Change password</string>
+    <string name="pref_account_change_user">Change username</string>
+    <string name="pref_account_delete_events">Delete imported events on logout</string>
+    <string name="pref_account_delete_settings">Delete settings on logout</string>
     <string name="pref_base_default">Light</string>
     <string name="pref_base_title">Base theme</string>
+    <string name="pref_cat_account_title">Account</string>
     <string name="pref_cat_pay_title">Pay</string>
-    <string name="pref_cat_sch_title">Schedule</string>
+    <string name="pref_cat_schedule_title">Schedule</string>
     <string name="pref_cat_theme_title">Theme</string>
     <string name="pref_custom_title">Custom colors</string>
     <string name="pref_past_sum">Allows for accurate pay and hour calculation</string>
-    <string name="pref_past_title">Save past shifts (Experimental)</string>
+    <string name="pref_past_title">Save past shifts</string>
     <string name="pref_pay_title">Hourly pay</string>
     <string name="pref_tax_title">Tax percentage</string>
     <string name="project_id" translatable="false">mytlc-43536</string>

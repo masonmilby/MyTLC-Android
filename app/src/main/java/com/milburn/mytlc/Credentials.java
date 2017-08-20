@@ -19,9 +19,16 @@ import java.util.List;
 public class Credentials {
 
     private SharedPreferences sharedPreferences;
+    private PrefManager pm;
 
     public Credentials(Context context) {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        pm = new PrefManager(context, new PrefManager.onPrefChanged() {
+            @Override
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
+                //
+            }
+        });
     }
 
     public HashMap<String, String> getCredentials() {
@@ -76,12 +83,16 @@ public class Credentials {
                 .remove("Password")
                 .remove("Schedule")
                 .remove("ScheduleUpdated")
-                .remove("getAddress")
-                .remove("pay")
-                .remove("tax")
-                .remove("past_shifts")
                 .remove("PastSchedule")
                 .apply();
+        if (pm.getDeleteSettings()) {
+            sharedPreferences.edit()
+                    .remove("pay")
+                    .remove("tax")
+                    .remove("getAddress")
+                    .remove("past_shifts")
+                    .apply();
+        }
     }
 
     public boolean credsExist() {

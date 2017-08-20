@@ -13,31 +13,23 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     private Context con;
     public onPrefChanged changeInterface;
 
-    public String key_pay;
-    public String key_tax;
-    public String key_base;
-    public String key_custom;
-    public String key_primary;
-    public String key_accent;
-    public String key_past;
-    public String key_display;
-    public String key_collapsed;
+    public String key_pay = "pay";
+    public String key_tax = "tax";
+    public String key_base = "base_theme";
+    public String key_custom = "custom_colors";
+    public String key_primary = "primaryColor";
+    public String key_accent = "accentColor";
+    public String key_past = "past_shifts";
+    public String key_display = "display_past";
+    public String key_collapsed = "collapsed";
+    public String key_delete_settings = "delete_settings";
+    public String key_delete_events = "delete_events";
 
     public PrefManager(Context context, onPrefChanged onChanged) {
         changeInterface = onChanged;
         con = context;
         sharedPref = android.preference.PreferenceManager.getDefaultSharedPreferences(con);
         sharedPref.registerOnSharedPreferenceChangeListener(this);
-
-        key_pay = "pay";
-        key_tax = "tax";
-        key_base = "base_theme";
-        key_custom = "custom_colors";
-        key_primary = "primaryColor";
-        key_accent = "accentColor";
-        key_past = "past_shifts";
-        key_display = "display_past";
-        key_collapsed = "collapsed";
     }
 
     public interface onPrefChanged {
@@ -172,5 +164,13 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
         sharedPref.edit()
                 .putBoolean(key_collapsed, bool)
                 .apply();
+    }
+
+    public Boolean getDeleteSettings() {
+        return sharedPref.getBoolean(key_delete_settings, false);
+    }
+
+    public Boolean getDeleteEvents() {
+        return sharedPref.getBoolean(key_delete_events, false);
     }
 }

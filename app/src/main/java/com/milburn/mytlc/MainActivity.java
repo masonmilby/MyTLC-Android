@@ -355,36 +355,16 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.item_logout:
-                if (!credentials.getEventIds().isEmpty()) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    builder.setMessage("Delete imported calendar events?");
-                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            if (!checkPerms()) {
-                                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_CALENDAR, Manifest.permission.WRITE_CALENDAR}, 1);
-                            } else {
-                                CalendarHelper calendarHelper = new CalendarHelper(getBaseContext());
-                                calendarHelper.deleteEvents();
+                if (pm.getDeleteEvents() && checkPerms()) {
+                    CalendarHelper calendarHelper = new CalendarHelper(getBaseContext());
+                    calendarHelper.deleteEvents();
 
-                                credentials.logout();
-                                Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-                                startActivity(intent);
-                                finish();
-                            }
-                        }
-                    });
-                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            credentials.logout();
-                            Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                    });
-                    builder.create();
-                    builder.show();
+                    credentials.logout();
+                    intent = new Intent(getBaseContext(), LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else if (pm.getDeleteEvents()) {
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_CALENDAR, Manifest.permission.WRITE_CALENDAR}, 1);
                 } else {
                     credentials.logout();
                     intent = new Intent(getBaseContext(), LoginActivity.class);
