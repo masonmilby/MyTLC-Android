@@ -198,6 +198,8 @@ public class MainActivity extends AppCompatActivity {
                         importBool = false;
                         importToCalendar(shiftList);
                     }
+                } else {
+                    getExistingSchedule();
                 }
                 mSwipe.setRefreshing(false);
                 importBool = false;
@@ -355,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.item_logout:
-                if (pm.getDeleteEvents() && checkPerms()) {
+                if (pm.getDeleteEvents() && !credentials.getEventIds().isEmpty() && checkPerms()) {
                     CalendarHelper calendarHelper = new CalendarHelper(getBaseContext());
                     calendarHelper.deleteEvents();
 
@@ -363,7 +365,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(getBaseContext(), LoginActivity.class);
                     startActivity(intent);
                     finish();
-                } else if (pm.getDeleteEvents()) {
+                } else if (pm.getDeleteEvents() && !credentials.getEventIds().isEmpty()) {
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_CALENDAR, Manifest.permission.WRITE_CALENDAR}, 1);
                 } else {
                     credentials.logout();

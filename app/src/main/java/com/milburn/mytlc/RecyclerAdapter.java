@@ -82,6 +82,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         mShiftArray.addAll(itemArray);
         addDividers();
         context = con;
+        context.setTheme(pm.getTheme());
         layoutInflater = LayoutInflater.from(context);
     }
 
@@ -129,20 +130,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 for (String deptName : mShiftArray.get(position).getDepts()) {
                     i++;
                     View extraFrag = layoutInflater.inflate(R.layout.extra_time_frag, null);
+                    holder.linearLayout.addView(extraFrag);
 
                     TextView time = (TextView)extraFrag.findViewById(R.id.textview_time);
-                    time.setTextColor(pm.getColorFromAttribute(R.attr.txtSecond));
                     time.setText(mShiftArray.get(position).getCombinedTime(i));
 
                     TextView dept = (TextView)extraFrag.findViewById(R.id.textview_dept);
-                    dept.setTextColor(pm.getColorFromAttribute(R.attr.txtSecond));
                     dept.setText(deptName);
 
                     TextView act = (TextView)extraFrag.findViewById(R.id.textview_activity);
-                    act.setTextColor(pm.getColorFromAttribute(R.attr.txtSecond));
                     act.setText(mShiftArray.get(position).getActivity(i));
-
-                    holder.linearLayout.addView(extraFrag);
                 }
             }
 
