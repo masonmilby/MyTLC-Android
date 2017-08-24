@@ -50,8 +50,8 @@
     <string name="item_report">Report issue</string>
     <string name="dialog_issue_message">Message</string>
     <string name="dialog_issue_email">Follow-up email</string>
-    <string name="pref_account_change_user">Change username</string>
-    <string name="pref_account_change_pass">Change password</string>
+    <string name="pref_account_change_user">Update saved username</string>
+    <string name="pref_account_change_pass">Update saved password</string>
     <string name="pref_account_delete_settings">Delete settings on logout</string>
     <string name="pref_account_delete_events">Delete imported events on logout</string>
 </resources>

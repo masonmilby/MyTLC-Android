@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
                         importBool = false;
                         importToCalendar(shiftList);
                     }
-                } else {
+                } else if (mRecyclerView.getAdapter().getItemCount() == 0) {
                     getExistingSchedule();
                 }
                 mSwipe.setRefreshing(false);

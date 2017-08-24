@@ -37,7 +37,7 @@
         <CheckBoxPreference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="past_shifts"
             android:summary="@string/pref_past_sum"
             android:title="@string/pref_past_title" />
@@ -59,7 +59,7 @@
             android:key="delete_settings"
             android:title="@string/pref_account_delete_settings" />
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="delete_events"
             android:title="@string/pref_account_delete_events" />
     </PreferenceCategory>

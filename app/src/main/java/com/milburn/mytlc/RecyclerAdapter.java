@@ -182,27 +182,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     private void addDividers() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
-        calendar.add(Calendar.DATE, 7);
-
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-        String formatedDate = simpleDateFormat.format(calendar.getTime());
-        Date parsedDate = new Date();
-        try {
-            parsedDate = simpleDateFormat.parse(formatedDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        calendar.setTime(parsedDate);
-
         List<Shift> tempList = new ArrayList<>();
         tempList.addAll(mShiftArray);
+        Date lastDate = null;
+
         for (Shift shift : mShiftArray) {
-            if (shift.getSingleDayDate().getTime() >= calendar.getTime().getTime()) {
-                tempList.add(tempList.indexOf(shift), null);
-                calendar.add(Calendar.DATE, 7);
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(shift.getSingleDayDate());
+            cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+
+            if (lastDate == null) {
+                lastDate = cal.getTime();
             }
+
+            if (!cal.getTime().equals(lastDate)) {
+                tempList.add(tempList.indexOf(shift), null);
+                lastDate = cal.getTime();
+            }
+
         }
 
         if (tempList.get(tempList.size()-1) != null) {
@@ -231,7 +228,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             Date dayInWeek = list.get(list.size() - 1).getStartTime();
 
             Calendar calendar = Calendar.getInstance();
-            calendar.setFirstDayOfWeek(Calendar.SUNDAY);
             calendar.setTime(dayInWeek);
             calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
 
