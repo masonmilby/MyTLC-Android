@@ -27,6 +27,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
     private Context mContext;
     private ProgressDialog mProgressDialog;
+    private ProgressDialog mProgressAlert = null;
     private Snackbar mSnackBar;
     private HashMap<String, String> loginMap;
     private List<Shift> shiftList = new ArrayList<>();
@@ -355,11 +356,24 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                 break;
 
             default:
-                mProgressDialog.setMessage("Parsing shift "+Integer.toString(progress[0])+"/"+Integer.toString(progress[1]));
-                if (!progress[0].equals(progress[1])) {
-                    mProgressDialog.show();
-                } else {
+                if (mProgressDialog.isShowing()) {
                     mProgressDialog.dismiss();
+                }
+
+                if (mProgressAlert == null) {
+                    mProgressAlert = new ProgressDialog(mContext);
+                    mProgressAlert.setIndeterminate(false);
+                    mProgressAlert.setCancelable(false);
+                    mProgressAlert.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                    mProgressAlert.setTitle("Parsing shifts");
+                }
+
+                if (!progress[0].equals(progress[1])) {
+                    mProgressAlert.setMax(progress[1]);
+                    mProgressAlert.setProgress(progress[0]);
+                    mProgressAlert.show();
+                } else {
+                    mProgressAlert.dismiss();
                     errorStatus = false;
                 }
                 break;

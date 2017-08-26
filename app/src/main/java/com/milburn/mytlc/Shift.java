@@ -111,7 +111,7 @@ public class Shift {
 
     public Date[] getDate(Integer index) {
         if (index > (getDates().size()-1)) {
-            return null;
+            return new Date[]{};
         }
         return dateList.get(index);
     }
