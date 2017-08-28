@@ -276,7 +276,7 @@ public class Credentials {
             Long current = Calendar.getInstance().getTimeInMillis();
 
             Long hours = (current - updated) / 3600000;
-            if (hours > 12) {
+            if (hours > 24) {
                 return false;
             }
 

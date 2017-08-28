@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:2:1-45:12
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml
@@ -51,7 +51,7 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:12:22-77
 application
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:14:5-43:19
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:14:5-44:19
 MERGED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\output\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\81cda7aaf0dcd58fb897774bf76ef7edae09e229\output\AndroidManifest.xml:22:5-26:19
@@ -122,8 +122,10 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:38:13-60
 	android:name
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:37:13-45
-service#com.milburn.mytlc.BackgroundSync
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:40:9-42:19
+receiver#com.milburn.mytlc.BackgroundSync
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:40:9-43:20
+	android:exported
+		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:41:13-43
 uses-sdk

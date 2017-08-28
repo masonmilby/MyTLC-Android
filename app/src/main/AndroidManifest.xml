@@ -37,9 +37,10 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings">
         </activity>
-        <service
-            android:name=".BackgroundSync">
-        </service>
+        <receiver
+            android:name=".BackgroundSync"
+            android:exported="false">
+        </receiver>
     </application>
 
 </manifest>

@@ -229,14 +229,22 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
     private void setCurrentDay() {
         currentDay = null;
+        Elements tempElements = new Elements();
         if (!shiftDoc.getElementsByClass(" calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().children().select("div.calendarShift").first().children();
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().children().select("div.calendarShift");
         } else if (!shiftDoc.getElementsByClass(" calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().children().select("div.calendarShift").first().children();
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().children().select("div.calendarShift");
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().children().select("div.calendarShift").first().children();
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().children().select("div.calendarShift");
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().children().select("div.calendarShift").first().children();
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().children().select("div.calendarShift");
+        }
+
+        if (currentDay != null) {
+            for (Element group : currentDay) {
+                tempElements.addAll(group.children());
+            }
+            currentDay = tempElements;
         }
     }
 
@@ -329,54 +337,58 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
     @Override
     protected void onProgressUpdate(Integer... progress) {
-        if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(mContext);
-            mProgressDialog.setCancelable(false);
-        }
+        if (!mContext.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+            if (mProgressDialog == null) {
+                mProgressDialog = new ProgressDialog(mContext);
+                mProgressDialog.setCancelable(false);
+            }
 
-        switch (progress[0]) {
-            case 100:
-                mProgressDialog.dismiss();
-                createSnack("MyTLC is currently updating. " + loginDoc.getElementsByTag("font").first().text().replace("MyTLC is currently updating schedule information and viewing schedules is unavailable. ", ""));
-                break;
-
-            case 101:
-                mProgressDialog.dismiss();
-                createSnack(loginDoc.getElementsByClass("errorText").first().text());
-                break;
-
-            case 102:
-                mProgressDialog.dismiss();
-                createSnack("Error retrieving schedule");
-                break;
-
-            case 103:
-                mProgressDialog.setMessage("Authenticating...");
-                mProgressDialog.show();
-                break;
-
-            default:
-                if (mProgressDialog.isShowing()) {
+            switch (progress[0]) {
+                case 100:
                     mProgressDialog.dismiss();
-                }
+                    createSnack("MyTLC is currently updating. " + loginDoc.getElementsByTag("font").first().text().replace("MyTLC is currently updating schedule information and viewing schedules is unavailable. ", ""));
+                    break;
 
-                if (mProgressAlert == null) {
-                    mProgressAlert = new ProgressDialog(mContext);
-                    mProgressAlert.setIndeterminate(false);
-                    mProgressAlert.setCancelable(false);
-                    mProgressAlert.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                    mProgressAlert.setTitle("Parsing shifts");
-                }
+                case 101:
+                    mProgressDialog.dismiss();
+                    createSnack(loginDoc.getElementsByClass("errorText").first().text());
+                    break;
 
-                if (!progress[0].equals(progress[1])) {
-                    mProgressAlert.setMax(progress[1]);
-                    mProgressAlert.setProgress(progress[0]);
-                    mProgressAlert.show();
-                } else {
-                    mProgressAlert.dismiss();
-                    errorStatus = false;
-                }
-                break;
+                case 102:
+                    mProgressDialog.dismiss();
+                    createSnack("Error retrieving schedule");
+                    break;
+
+                case 103:
+                    mProgressDialog.setMessage("Authenticating...");
+                    mProgressDialog.show();
+                    break;
+
+                default:
+                    if (mProgressDialog.isShowing()) {
+                        mProgressDialog.dismiss();
+                    }
+
+                    if (mProgressAlert == null) {
+                        mProgressAlert = new ProgressDialog(mContext);
+                        mProgressAlert.setIndeterminate(false);
+                        mProgressAlert.setCancelable(false);
+                        mProgressAlert.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                        mProgressAlert.setTitle("Parsing shifts");
+                    }
+
+                    if (!progress[0].equals(progress[1])) {
+                        mProgressAlert.setMax(progress[1]);
+                        mProgressAlert.setProgress(progress[0]);
+                        mProgressAlert.show();
+                    } else {
+                        mProgressAlert.dismiss();
+                        errorStatus = false;
+                    }
+                    break;
+            }
+        } else if (progress[0] < 100 && progress[0].equals(progress[1])) {
+            errorStatus = false;
         }
     }
 }
