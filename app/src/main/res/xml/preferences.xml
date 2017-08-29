@@ -41,6 +41,18 @@
             android:key="past_shifts"
             android:summary="@string/pref_past_sum"
             android:title="@string/pref_past_title" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="check_box_preference_1"
+            android:title="Background syncing" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="check_box_preference_1"
+            android:title="Calendar import on sync" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="check_box_preference_1"
+            android:title="Set alarm on sync" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_cat_account_title">
         <EditTextPreference

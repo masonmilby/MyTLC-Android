@@ -8,7 +8,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -23,14 +22,24 @@ public class BackgroundSync extends BroadcastReceiver {
         credentials = new Credentials(context);
 
         if (!credentials.getCredentials().isEmpty()) {
-            Toast.makeText(context, "Started", Toast.LENGTH_SHORT).show();
             PostLoginAPI postLoginAPI = new PostLoginAPI(context, new PostLoginAPI.AsyncResponse() {
                 @Override
                 public void processFinish(List<Shift> shiftList) {
                     if (!shiftList.isEmpty()) {
                         Credentials credentials = new Credentials(context);
+                        List<Shift> pastList = credentials.getSchedule();
                         credentials.setSchedule(shiftList);
-                        createNotification();
+                        int i = 0;
+                        if (pastList != null) {
+                            for (Shift shift : shiftList) {
+                                if (!pastList.contains(shift)) {
+                                    i++;
+                                }
+                            }
+                        }
+                        createNotification(0, i);
+                    } else {
+                        createNotification(1, 0);
                     }
                 }
             });
@@ -38,12 +47,12 @@ public class BackgroundSync extends BroadcastReceiver {
         }
     }
 
-    private void createNotification() {
+    private void createNotification(Integer message, Integer addedShifts) {
         NotificationManager notificationManager = (NotificationManager) con.getSystemService(Context.NOTIFICATION_SERVICE);
-        Notification notification;
+        Notification.Builder notification;
 
         String channelId = "default";
-        CharSequence channelName = "UpdatedSchedule";
+        CharSequence channelName = "background_sync";
         Intent intent = new Intent(con, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(con, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -56,23 +65,29 @@ public class BackgroundSync extends BroadcastReceiver {
             notificationManager.createNotificationChannel(notificationChannel);
 
             notification = new Notification.Builder(con)
-                    .setContentTitle("Schedule updated")
-                    .setContentText("New shifts added")
                     .setSmallIcon(R.drawable.ic_notification)
                     .setContentIntent(pendingIntent)
                     .setChannelId(channelId)
-                    .setDefaults(-1)
-                    .build();
+                    .setDefaults(-1);
         } else {
             notification = new Notification.Builder(con)
-                    .setContentTitle("Schedule updated")
-                    .setContentText("New shifts added")
                     .setSmallIcon(R.drawable.ic_notification)
                     .setContentIntent(pendingIntent)
-                    .setDefaults(-1)
-                    .build();
+                    .setDefaults(-1);
         }
 
-        notificationManager.notify(1, notification);
+        switch (message) {
+            case 0:
+                notification.setContentTitle("Schedule updated");
+                notification.setContentText(addedShifts + " shifts added");
+                break;
+
+            case 1:
+                notification.setContentTitle("Schedule failed to update");
+                notification.setContentText("Try again?");
+                //notification.addAction();
+        }
+
+        notificationManager.notify(1, notification.build());
     }
 }

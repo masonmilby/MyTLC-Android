@@ -6,22 +6,22 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1503872688356"
+    timestamp="1503968967367"
     token="7076933301872360641"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="309" />
+        duration="1028" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="10" />
+        duration="43" />
     <task
         name="verifier"
-        duration="8" />
+        duration="35" />
 
     <artifact
         location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1503872688356"
+        timestamp="1503968967367"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\mason\StudioProjects\MyTLC\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
