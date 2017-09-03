@@ -1,11 +1,16 @@
 package com.milburn.mytlc;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.annotation.ColorInt;
 import android.util.TypedValue;
 import android.view.View;
+
+import java.util.Calendar;
 
 public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeListener{
 
@@ -24,6 +29,10 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     public String key_collapsed = "collapsed";
     public String key_delete_settings = "delete_settings";
     public String key_delete_events = "delete_events";
+
+    public String key_sync_background = "sync_background";
+    public String key_sync_import = "sync_import";
+    public String key_sync_import_calendar = "sync_import_calendar";
 
     public PrefManager(Context context, onPrefChanged onChanged) {
         changeInterface = onChanged;
@@ -103,6 +112,27 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
         return color;
     }
 
+    public void changeAlarm(Integer enabled) {
+        AlarmManager alarmMgr = (AlarmManager)con.getSystemService(con.ALARM_SERVICE);
+        Intent intent1 = new Intent(con, BackgroundSync.class);
+        PendingIntent alarmIntent = PendingIntent.getBroadcast(con, 0, intent1, 0);
+
+        switch (enabled) {
+            case 0:
+                alarmMgr.cancel(alarmIntent);
+                break;
+
+            case 1:
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTimeInMillis(System.currentTimeMillis());
+                calendar.set(Calendar.HOUR_OF_DAY, 1);
+                calendar.set(Calendar.MINUTE, 0);
+
+                alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
+                break;
+        }
+    }
+
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
         changeInterface.prefChanged(sharedPreferences, s);
@@ -171,6 +201,14 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     }
 
     public Boolean getDeleteEvents() {
-        return sharedPref.getBoolean(key_delete_events, false);
+        return sharedPref.getBoolean(key_delete_events, true);
+    }
+
+    public Boolean getSyncBackground() {
+        return sharedPref.getBoolean(key_sync_background, true);
+    }
+
+    public String getSelectedCalendar() {
+        return sharedPref.getString(key_sync_import_calendar, "Null");
     }
 }

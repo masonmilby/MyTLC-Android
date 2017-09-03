@@ -9,12 +9,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BackgroundSync extends BroadcastReceiver {
 
     private Credentials credentials;
     private Context con;
+    private PostLoginAPI postLoginAPI;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -22,21 +24,22 @@ public class BackgroundSync extends BroadcastReceiver {
         credentials = new Credentials(context);
 
         if (!credentials.getCredentials().isEmpty()) {
-            PostLoginAPI postLoginAPI = new PostLoginAPI(context, new PostLoginAPI.AsyncResponse() {
+            postLoginAPI = new PostLoginAPI(context, new PostLoginAPI.AsyncResponse() {
                 @Override
                 public void processFinish(List<Shift> shiftList) {
                     if (!shiftList.isEmpty()) {
                         Credentials credentials = new Credentials(context);
-                        List<Shift> pastList = credentials.getSchedule();
-                        credentials.setSchedule(shiftList);
+                        List<Shift> pastList = new ArrayList<>();
+                        pastList.addAll(credentials.getSchedule());
+
                         int i = 0;
-                        if (pastList != null) {
-                            for (Shift shift : shiftList) {
-                                if (!pastList.contains(shift)) {
-                                    i++;
-                                }
+                        for (Shift shift : shiftList) {
+                            if (!pastList.contains(shift)) {
+                                i++;
                             }
                         }
+
+                        credentials.setSchedule(shiftList);
                         createNotification(0, i);
                     } else {
                         createNotification(1, 0);
@@ -84,8 +87,7 @@ public class BackgroundSync extends BroadcastReceiver {
 
             case 1:
                 notification.setContentTitle("Schedule failed to update");
-                notification.setContentText("Try again?");
-                //notification.addAction();
+                notification.setContentText(postLoginAPI.errorMessage);
         }
 
         notificationManager.notify(1, notification.build());

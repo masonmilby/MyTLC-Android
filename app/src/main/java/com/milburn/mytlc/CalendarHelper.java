@@ -1,16 +1,20 @@
 package com.milburn.mytlc;
 
+import android.*;
+import android.Manifest;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.CalendarContract;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,30 +68,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     }
 
     private void importToCalendar() {
-        Cursor cur = null;
-
-        final String[] EVENT_PROJECTION = new String[]{
-                CalendarContract.Calendars._ID,
-                CalendarContract.Calendars.CALENDAR_DISPLAY_NAME
-        };
-
-        try {
-            cur = cr.query(calUri, EVENT_PROJECTION, null, null, null);
-        } catch (SecurityException se) {
-            se.printStackTrace();
-        }
-
-        calendarMap = new HashMap<>();
-        while (cur.moveToNext()) {
-            calendarMap.put(cur.getString(1), cur.getInt(0));
-        }
-        cur.close();
-        calendarNames = calendarMap.keySet().toArray(new CharSequence[calendarMap.size()]);
-        if (calendarNames.length < 1) {
-            snackString = "No calendars available";
-            publishProgress(1);
-            return;
-        }
+        getCalendarNames();
 
         dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_import, null);
 
@@ -183,6 +164,35 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         if (!storeId.isEmpty()) {
             bbyApi.execute(storeId);
         }
+    }
+
+    public CharSequence[] getCalendarNames() {
+        Cursor cur = null;
+
+        final String[] EVENT_PROJECTION = new String[]{
+                CalendarContract.Calendars._ID,
+                CalendarContract.Calendars.CALENDAR_DISPLAY_NAME
+        };
+
+        try {
+            cur = cr.query(calUri, EVENT_PROJECTION, null, null, null);
+        } catch (SecurityException se) {
+            se.printStackTrace();
+        }
+
+        calendarMap = new HashMap<>();
+        while (cur.moveToNext()) {
+            calendarMap.put(cur.getString(1), cur.getInt(0));
+        }
+        cur.close();
+        calendarNames = calendarMap.keySet().toArray(new CharSequence[calendarMap.size()]);
+        if (calendarNames.length < 1) {
+            snackString = "No calendars available";
+            publishProgress(1);
+            return null;
+        }
+
+        return calendarNames;
     }
 
     @Override

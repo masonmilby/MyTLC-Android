@@ -2,6 +2,7 @@ package com.milburn.mytlc;
 
 import android.app.ActivityManager;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -13,6 +14,7 @@ import android.view.View;
 public class SettingsActivity extends AppCompatActivity {
 
     private PrefManager pm;
+    private SettingsFragment settingsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        SettingsFragment settingsFragment = new SettingsFragment();
+        settingsFragment = new SettingsFragment();
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, settingsFragment)
                 .commit();
@@ -54,6 +56,23 @@ public class SettingsActivity extends AppCompatActivity {
 
             ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
             this.setTaskDescription(taskDesc);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        if (grantResults.length > 0 && requestCode == 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            CalendarHelper calendarHelper = new CalendarHelper(this);
+            CharSequence[] calNames = calendarHelper.getCalendarNames();
+            settingsFragment.listCalendars.setEntries(calNames);
+            settingsFragment.listCalendars.setEntryValues(calNames);
+            settingsFragment.listCalendars.setDefaultValue(calNames[0]);
+            settingsFragment.listCalendars.setValue(calNames[0].toString());
+
+            settingsFragment.listCalendars.setEnabled(true);
+        } else if (grantResults.length > 0 && requestCode == 0 && grantResults[0] == PackageManager.PERMISSION_DENIED) {
+            settingsFragment.importCalendar.setChecked(false);
+            settingsFragment.listCalendars.setEnabled(false);
         }
     }
 }

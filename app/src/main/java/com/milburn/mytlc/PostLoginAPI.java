@@ -43,6 +43,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     public FirebaseAnalytics firebaseAnalytics;
 
     private Boolean errorStatus = true;
+    public String errorMessage = "Error retrieving schedule";
     private List<String[]> htmlList = new ArrayList<>();
 
     public PostLoginAPI(Context context, AsyncResponse asyncResponse) {
@@ -387,8 +388,27 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     }
                     break;
             }
-        } else if (progress[0] < 100 && progress[0].equals(progress[1])) {
-            errorStatus = false;
+        } else {
+
+            switch (progress[0]) {
+                case 100:
+                    errorMessage = "MyTLC is currently updating. " + loginDoc.getElementsByTag("font").first().text().replace("MyTLC is currently updating schedule information and viewing schedules is unavailable. ", "");
+                    break;
+
+                case 101:
+                    errorMessage = loginDoc.getElementsByClass("errorText").first().text();
+                    break;
+
+                case 102:
+                    errorMessage = "Error retrieving schedule";
+                    break;
+
+                default:
+                    if (progress[0] < 100 && progress[0].equals(progress[1])) {
+                        errorStatus = false;
+                    }
+                    break;
+            }
         }
     }
 }

@@ -55,23 +55,9 @@ public class MainActivity extends AppCompatActivity {
     private PrefManager pm;
     private FirebaseHelper firebaseHelper;
 
-    private AlarmManager alarmMgr;
-    private PendingIntent alarmIntent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        alarmMgr = (AlarmManager)this.getSystemService(this.ALARM_SERVICE);
-        Intent intent1 = new Intent(this, BackgroundSync.class);
-        alarmIntent = PendingIntent.getBroadcast(this, 0, intent1, 0);
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 9);
-
-        alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
@@ -294,11 +280,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkPerms() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CALENDAR) != PackageManager.PERMISSION_GRANTED
-                || ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
-            return false;
-        }
-        return true;
+        return ActivityCompat.checkSelfPermission(this, android.Manifest.permission.READ_CALENDAR) != PackageManager.PERMISSION_GRANTED
+                || ActivityCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED;
     }
 
     @Override

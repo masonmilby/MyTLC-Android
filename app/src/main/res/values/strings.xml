@@ -44,8 +44,8 @@
     <string name="pref_custom_title">Custom colors</string>
     <string name="dialog_primary">Primary color</string>
     <string name="dialog_accent">Accent color</string>
-    <string name="item_past">Show past shifts</string>
-    <string name="pref_past_title">Save past shifts</string>
+    <string name="item_past">Show archived shifts</string>
+    <string name="pref_past_title">Archive shifts</string>
     <string name="pref_past_sum">Allows for accurate pay and hour calculation</string>
     <string name="item_report">Report issue</string>
     <string name="dialog_issue_message">Message</string>

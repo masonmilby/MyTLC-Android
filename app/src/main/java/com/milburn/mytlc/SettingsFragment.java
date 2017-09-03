@@ -1,12 +1,18 @@
 package com.milburn.mytlc;
 
+import android.*;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.util.TypedValue;
 import android.view.View;
@@ -24,6 +30,9 @@ public class SettingsFragment extends PreferenceFragment {
     private LinearLayout layoutAccent;
     private Credentials credentials;
     private CheckBoxPreference checkPref;
+    private CheckBoxPreference checkBackground;
+    public ListPreference listCalendars;
+    public CheckBoxPreference importCalendar;
 
 
     @Override
@@ -42,6 +51,11 @@ public class SettingsFragment extends PreferenceFragment {
         sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         checkPref = (CheckBoxPreference) findPreference(pm.key_past);
+        checkBackground = (CheckBoxPreference) findPreference(pm.key_sync_background);
+
+        importCalendar = (CheckBoxPreference) findPreference(pm.key_sync_import);
+        listCalendars = (ListPreference) findPreference(pm.key_sync_import_calendar);
+
         setSummary();
 
         findPreference(pm.key_custom).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -57,6 +71,28 @@ public class SettingsFragment extends PreferenceFragment {
             public boolean onPreferenceClick(Preference preference) {
                 if (!checkPref.isChecked() && sharedPref.contains("PastSchedule")) {
                     showConfirmation();
+                }
+                return false;
+            }
+        });
+
+        findPreference(pm.key_sync_background).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                if (checkBackground.isChecked()) {
+                    pm.changeAlarm(1);
+                } else {
+                    pm.changeAlarm(0);
+                }
+                return false;
+            }
+        });
+
+        findPreference(pm.key_sync_import).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                if (importCalendar.isChecked() && !checkPerms()) {
+                    ActivityCompat.requestPermissions(getActivity(), new String[]{android.Manifest.permission.READ_CALENDAR, android.Manifest.permission.WRITE_CALENDAR}, 0);
                 }
                 return false;
             }
@@ -112,6 +148,19 @@ public class SettingsFragment extends PreferenceFragment {
         findPreference(pm.key_pay).setSummary("$" + pm.getPay());
         findPreference(pm.key_tax).setSummary(pm.getTax() + "%");
         findPreference(pm.key_base).setSummary(pm.getBase());
+        findPreference(pm.key_sync_import_calendar).setSummary(pm.getSelectedCalendar());
+
+        if (importCalendar.isChecked() && checkPerms()) {
+            CalendarHelper calendarHelper = new CalendarHelper(getActivity().getBaseContext());
+            CharSequence[] calNames = calendarHelper.getCalendarNames();
+            listCalendars.setEntries(calNames);
+            listCalendars.setEntryValues(calNames);
+            listCalendars.setDefaultValue(calNames[0]);
+
+            listCalendars.setEnabled(true);
+        } else {
+            listCalendars.setEnabled(false);
+        }
     }
 
     private void changeSelectedColor(View view) {
@@ -152,7 +201,7 @@ public class SettingsFragment extends PreferenceFragment {
     private void showConfirmation() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Are you sure?");
-        builder.setMessage("Disabling past shift saving will clear all currently stored past shifts.");
+        builder.setMessage("Disabling shift archiving will clear all currently stored past shifts.");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -168,5 +217,10 @@ public class SettingsFragment extends PreferenceFragment {
         });
         builder.create();
         builder.show();
+    }
+
+    private boolean checkPerms() {
+        return ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
+                || ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED;
     }
 }
