@@ -8,6 +8,7 @@ import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -25,6 +26,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -50,10 +52,17 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     private View dialogView;
     private CharSequence[] calendarNames;
     private HashMap<String, Integer> calendarMap;
+    private PrefManager pm;
 
     public CalendarHelper(Context con) {
         context = con;
         credentials = new Credentials(context);
+        pm = new PrefManager(con, new PrefManager.onPrefChanged() {
+            @Override
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {
+                //
+            }
+        });
 
         cr = context.getContentResolver();
         calUri = CalendarContract.Calendars.CONTENT_URI;
@@ -63,13 +72,16 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     @Override
     protected Void doInBackground(List<Shift>... params) {
         shiftList = params[0];
-        importToCalendar();
+        getCalendarNames();
+        if (!context.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+            createDialog();
+        } else {
+            syncImport();
+        }
         return null;
     }
 
-    private void importToCalendar() {
-        getCalendarNames();
-
+    private void createDialog() {
         dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_import, null);
 
         builder = new AlertDialog.Builder(context);
@@ -79,42 +91,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                 .setPositiveButton("Import", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String calName = spinnerCalendar.getSelectedItem().toString();
-
-                        if (checkDelete.isChecked()) {
-                            deleteEvents(calName);
-                        }
-
-                        if (editAddress.getText().toString().contentEquals("")) {
-                            credentials.setGetAddress(false);
-                        } else {
-                            credentials.setGetAddress(true);
-                        }
-
-                        List<Long> eventIds = new ArrayList<>();
-                        for (Shift shift : shiftList) {
-                            ContentValues values = new ContentValues();
-                            values.put(CalendarContract.Events.DTSTART, shift.getStartTime().getTime());
-                            values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
-                            values.put(CalendarContract.Events.TITLE, editEventTitle.getText().toString());
-                            values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts() + "\n" + "Activities: " + shift.getCombinedAct());
-                            values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
-                            values.put(CalendarContract.Events.EVENT_TIMEZONE, java.util.Calendar.getInstance().getTimeZone().getDisplayName());
-                            values.put(CalendarContract.Events.EVENT_LOCATION, editAddress.getText().toString());
-
-                            try {
-                                Uri uri = cr.insert(eventUri, values);
-                                Long id = Long.parseLong(uri.getLastPathSegment());
-                                eventIds.add(id);
-                            } catch (SecurityException se) {
-                                se.printStackTrace();
-                            }
-                        }
-                        if (!eventIds.isEmpty()) {
-                            credentials.addEventIds(calName, eventIds);
-                        }
-                        snackString = "Events successfully added to " + "'" + calName + "'";
-                        publishProgress(1);
+                        importToCalendar();
                     }
                 })
 
@@ -150,20 +127,26 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         }
     }
 
-    private void getStoreAddress() {
+    private String getStoreAddress() {
+        final String[] storeAddress = new String[1];
         BBYApi bbyApi = new BBYApi(context, new BBYApi.AsyncResponse() {
             @Override
             public void processFinish(String address) {
-                if (address != null) {
+                if (address != null && editAddress != null) {
                     editAddress.setText(address);
+                    storeAddress[0] = address;
+                } else {
+                    storeAddress[0] = address;
                 }
             }
         });
 
-        String storeId = editStore.getText().toString();
+        String storeId = shiftList.get(0).getStoreNumber();
         if (!storeId.isEmpty()) {
             bbyApi.execute(storeId);
         }
+
+        return storeAddress[0];
     }
 
     public CharSequence[] getCalendarNames() {
@@ -193,6 +176,74 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         }
 
         return calendarNames;
+    }
+
+    public void importToCalendar() {
+        String calName = spinnerCalendar.getSelectedItem().toString();
+
+        if (checkDelete.isChecked()) {
+            deleteEvents(calName);
+        }
+
+        if (editAddress.getText().toString().contentEquals("")) {
+            credentials.setGetAddress(false);
+        } else {
+            credentials.setGetAddress(true);
+        }
+
+        List<Long> eventIds = new ArrayList<>();
+        for (Shift shift : shiftList) {
+            ContentValues values = new ContentValues();
+            values.put(CalendarContract.Events.DTSTART, shift.getStartTime().getTime());
+            values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
+            values.put(CalendarContract.Events.TITLE, editEventTitle.getText().toString());
+            values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts() + "\n" + "Activities: " + shift.getCombinedAct());
+            values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
+            values.put(CalendarContract.Events.EVENT_TIMEZONE, Calendar.getInstance().getTimeZone().getDisplayName());
+            values.put(CalendarContract.Events.EVENT_LOCATION, editAddress.getText().toString());
+
+            try {
+                Uri uri = cr.insert(eventUri, values);
+                Long id = Long.parseLong(uri.getLastPathSegment());
+                eventIds.add(id);
+            } catch (SecurityException se) {
+                se.printStackTrace();
+            }
+        }
+        if (!eventIds.isEmpty()) {
+            credentials.addEventIds(calName, eventIds);
+        }
+        snackString = "Events successfully added to " + "'" + calName + "'";
+        publishProgress(1);
+    }
+
+    private void syncImport() {
+        String calName = pm.getSelectedCalendar();
+        deleteEvents(calName);
+
+        List<Long> eventIds = new ArrayList<>();
+        for (Shift shift : shiftList) {
+            ContentValues values = new ContentValues();
+            values.put(CalendarContract.Events.DTSTART, shift.getStartTime().getTime());
+            values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
+            values.put(CalendarContract.Events.TITLE, "Work at BestBuy");
+            values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts() + "\n" + "Activities: " + shift.getCombinedAct());
+            values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
+            values.put(CalendarContract.Events.EVENT_TIMEZONE, Calendar.getInstance().getTimeZone().getDisplayName());
+            values.put(CalendarContract.Events.EVENT_LOCATION, getStoreAddress());
+
+            try {
+                Uri uri = cr.insert(eventUri, values);
+                Long id = Long.parseLong(uri.getLastPathSegment());
+                eventIds.add(id);
+            } catch (SecurityException se) {
+                se.printStackTrace();
+            }
+        }
+        if (!eventIds.isEmpty()) {
+            credentials.addEventIds(calName, eventIds);
+        }
+        publishProgress(3);
     }
 
     @Override
@@ -235,6 +286,9 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                     Integer calPos = adapter.getPosition(credentials.getLastCalName());
                     spinnerCalendar.setSelection(calPos);
                 }
+                break;
+
+            case 3:
                 break;
         }
     }

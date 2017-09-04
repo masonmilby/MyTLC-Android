@@ -40,6 +40,9 @@ public class BackgroundSync extends BroadcastReceiver {
                         }
 
                         credentials.setSchedule(shiftList);
+                        CalendarHelper calendarHelper = new CalendarHelper(con);
+                        calendarHelper.execute(shiftList);
+
                         createNotification(0, i);
                     } else {
                         createNotification(1, 0);

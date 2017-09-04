@@ -67,8 +67,8 @@ public class SettingsActivity extends AppCompatActivity {
             settingsFragment.listCalendars.setEntries(calNames);
             settingsFragment.listCalendars.setEntryValues(calNames);
             settingsFragment.listCalendars.setDefaultValue(calNames[0]);
-            settingsFragment.listCalendars.setValue(calNames[0].toString());
 
+            settingsFragment.importCalendar.setChecked(true);
             settingsFragment.listCalendars.setEnabled(true);
         } else if (grantResults.length > 0 && requestCode == 0 && grantResults[0] == PackageManager.PERMISSION_DENIED) {
             settingsFragment.importCalendar.setChecked(false);
