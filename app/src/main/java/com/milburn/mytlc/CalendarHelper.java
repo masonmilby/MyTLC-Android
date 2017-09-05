@@ -54,6 +54,8 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     private HashMap<String, Integer> calendarMap;
     private PrefManager pm;
 
+    private String storeAddress = "";
+
     public CalendarHelper(Context con) {
         context = con;
         credentials = new Credentials(context);
@@ -76,7 +78,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         if (!context.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
             createDialog();
         } else {
-            syncImport();
+            getStoreAddress();
         }
         return null;
     }
@@ -127,16 +129,17 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         }
     }
 
-    private String getStoreAddress() {
-        final String[] storeAddress = new String[1];
+    private void getStoreAddress() {
         BBYApi bbyApi = new BBYApi(context, new BBYApi.AsyncResponse() {
             @Override
             public void processFinish(String address) {
                 if (address != null && editAddress != null) {
                     editAddress.setText(address);
-                    storeAddress[0] = address;
-                } else {
-                    storeAddress[0] = address;
+                } else if (address != null && context.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+                    storeAddress = address;
+                    syncImport();
+                } else if (context.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+                    syncImport();
                 }
             }
         });
@@ -145,8 +148,6 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         if (!storeId.isEmpty()) {
             bbyApi.execute(storeId);
         }
-
-        return storeAddress[0];
     }
 
     public CharSequence[] getCalendarNames() {
@@ -226,11 +227,11 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             ContentValues values = new ContentValues();
             values.put(CalendarContract.Events.DTSTART, shift.getStartTime().getTime());
             values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
-            values.put(CalendarContract.Events.TITLE, "Work at BestBuy");
+            values.put(CalendarContract.Events.TITLE, "Work at Best Buy");
             values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts() + "\n" + "Activities: " + shift.getCombinedAct());
             values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
             values.put(CalendarContract.Events.EVENT_TIMEZONE, Calendar.getInstance().getTimeZone().getDisplayName());
-            values.put(CalendarContract.Events.EVENT_LOCATION, getStoreAddress());
+            values.put(CalendarContract.Events.EVENT_LOCATION, storeAddress);
 
             try {
                 Uri uri = cr.insert(eventUri, values);

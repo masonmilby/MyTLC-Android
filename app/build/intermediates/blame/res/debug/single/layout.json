@@ -236,6 +236,10 @@
         "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_alarm_offset.xml",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\layout\\dialog_alarm_offset.xml"
+    },
+    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },

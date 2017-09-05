@@ -17,6 +17,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.NumberPicker;
 
 public class SettingsFragment extends PreferenceFragment {
 
@@ -33,6 +34,13 @@ public class SettingsFragment extends PreferenceFragment {
     public ListPreference listCalendars;
     public CheckBoxPreference importCalendar;
     private Activity mActivity;
+
+    private NumberPicker pickerHours;
+    private NumberPicker pickerMinute;
+    private NumberPicker pickerMinute2;
+
+    private CheckBoxPreference syncAlarm;
+    private Preference syncAlarmTime;
 
     @Override
     public void onAttach(Context context) {
@@ -62,6 +70,9 @@ public class SettingsFragment extends PreferenceFragment {
         importCalendar = (CheckBoxPreference) findPreference(pm.key_sync_import);
         listCalendars = (ListPreference) findPreference(pm.key_sync_import_calendar);
 
+        syncAlarm = (CheckBoxPreference) findPreference(pm.key_sync_alarm);
+        syncAlarmTime = findPreference(pm.key_sync_alarm_time);
+
         setSummary();
         setChecked();
 
@@ -69,6 +80,14 @@ public class SettingsFragment extends PreferenceFragment {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 showColorPicker();
+                return false;
+            }
+        });
+
+        findPreference(pm.key_sync_alarm_time).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                showOffsetPicker();
                 return false;
             }
         });
@@ -111,6 +130,7 @@ public class SettingsFragment extends PreferenceFragment {
         View v  = mActivity.getLayoutInflater().inflate(R.layout.dialog_color, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
         builder.setView(v);
+        builder.setTitle("Custom colors");
         builder.setPositiveButton("Select", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -152,11 +172,40 @@ public class SettingsFragment extends PreferenceFragment {
         }
     }
 
+    private void showOffsetPicker() {
+        View v  = mActivity.getLayoutInflater().inflate(R.layout.dialog_alarm_offset, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+        builder.setView(v);
+        builder.setTitle("Alarm offset");
+        builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                pm.setSyncAlarmTime(pickerHours.getValue()+":"+pickerMinute.getValue()+pickerMinute2.getValue());
+            }
+        });
+        builder.create();
+        builder.show();
+
+        String[] pickerValues = pm.getSyncAlarmTime().split("");
+        pickerHours = v.findViewById(R.id.numberPicker_Hours);
+        pickerMinute = v.findViewById(R.id.numberPicker_Minute);
+        pickerMinute2 = v.findViewById(R.id.numberPicker_Minute2);
+        pickerHours.setMaxValue(12);
+        pickerMinute.setMaxValue(5);
+        pickerMinute2.setMaxValue(9);
+
+        pickerHours.setValue(Integer.valueOf(pickerValues[1]));
+        pickerMinute.setValue(Integer.valueOf(pickerValues[3]));
+        pickerMinute2.setValue(Integer.valueOf(pickerValues[4]));
+    }
+
     private void setSummary() {
         findPreference(pm.key_pay).setSummary("$" + pm.getPay());
         findPreference(pm.key_tax).setSummary(pm.getTax() + "%");
         findPreference(pm.key_base).setSummary(pm.getBase());
         findPreference(pm.key_sync_import_calendar).setSummary(pm.getSelectedCalendar());
+        findPreference(pm.key_sync_alarm_time).setSummary("-"+pm.getSyncAlarmTime()+" hours");
+        syncAlarmTime.setEnabled(syncAlarm.isChecked());
     }
 
     private void changeSelectedColor(View view) {

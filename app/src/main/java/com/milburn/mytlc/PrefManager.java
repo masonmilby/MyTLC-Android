@@ -33,6 +33,8 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     public String key_sync_background = "sync_background";
     public String key_sync_import = "sync_import";
     public String key_sync_import_calendar = "sync_import_calendar";
+    public String key_sync_alarm = "sync_alarm";
+    public String key_sync_alarm_time = "sync_alarm_time";
 
     public PrefManager(Context context, onPrefChanged onChanged) {
         changeInterface = onChanged;
@@ -125,7 +127,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
             case 1:
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTimeInMillis(System.currentTimeMillis());
-                calendar.set(Calendar.HOUR_OF_DAY, 1);
+                calendar.set(Calendar.HOUR_OF_DAY, 0);
                 calendar.set(Calendar.MINUTE, 0);
 
                 alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
@@ -208,7 +210,25 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
         return sharedPref.getBoolean(key_sync_background, true);
     }
 
+    public Boolean getImportCalendar() {
+        return sharedPref.getBoolean(key_sync_import, false);
+    }
+
     public String getSelectedCalendar() {
         return sharedPref.getString(key_sync_import_calendar, "Null");
+    }
+
+    public String getSyncAlarmTime() {
+        return sharedPref.getString(key_sync_alarm_time, "0:00");
+    }
+
+    public void setSyncAlarmTime(String time) {
+        sharedPref.edit()
+                .putString(key_sync_alarm_time, time)
+                .apply();
+    }
+
+    public Boolean getSyncAlarm() {
+        return sharedPref.getBoolean(key_sync_alarm, false);
     }
 }
