@@ -25,7 +25,7 @@
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/textView7"
+            app:layout_constraintLeft_toRightOf="@+id/textMinus"
             app:layout_constraintTop_toTopOf="parent" />
 
         <NumberPicker
@@ -36,7 +36,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/textView6"
+            app:layout_constraintLeft_toRightOf="@+id/textColon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <NumberPicker
@@ -55,13 +55,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
-            android:text="-"
+            android:text="@string/dialog_offset_minus"
             android:textAppearance="@android:style/TextAppearance.Material.Small"
             android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="@+id/numberPicker_Hours"
@@ -70,42 +70,42 @@
             app:layout_constraintVertical_bias="0.5" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textHours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="8dp"
-            android:text="Hours"
+            android:text="@string/dialog_offset_hours"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="@+id/numberPicker_Hours"
             app:layout_constraintRight_toRightOf="@+id/numberPicker_Hours"
             app:layout_constraintTop_toBottomOf="@+id/numberPicker_Hours" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textColon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="0dp"
-            android:text=":"
+            android:text="@string/dialog_offset_colon"
             app:layout_constraintBottom_toBottomOf="@+id/numberPicker_Hours"
             app:layout_constraintLeft_toRightOf="@+id/numberPicker_Hours"
             app:layout_constraintTop_toTopOf="@+id/numberPicker_Hours" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textMinutes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="8dp"
-            android:text="Minutes"
+            android:text="@string/dialog_offset_min"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="@+id/numberPicker_Minute"
             app:layout_constraintRight_toRightOf="@+id/numberPicker_Minute2"
-            app:layout_constraintTop_toBottomOf="@+id/numberPicker_Minute"
-            app:layout_constraintHorizontal_bias="0.5" />
+            app:layout_constraintTop_toBottomOf="@+id/numberPicker_Minute" />
 
     </android.support.constraint.ConstraintLayout>
 

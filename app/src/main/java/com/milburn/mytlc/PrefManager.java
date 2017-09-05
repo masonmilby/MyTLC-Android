@@ -11,6 +11,8 @@ import android.util.TypedValue;
 import android.view.View;
 
 import java.util.Calendar;
+import java.util.SimpleTimeZone;
+import java.util.TimeZone;
 
 public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeListener{
 
@@ -127,7 +129,8 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
             case 1:
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTimeInMillis(System.currentTimeMillis());
-                calendar.set(Calendar.HOUR_OF_DAY, 0);
+                //TODO: Setup TimeZone
+                calendar.set(Calendar.HOUR_OF_DAY, 7);
                 calendar.set(Calendar.MINUTE, 0);
 
                 alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);

@@ -44,24 +44,24 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="sync_background"
-            android:summary="Syncing occurs at 7:00am (EST) after MyTLC opens"
-            android:title="Background syncing" />
+            android:summary="@string/pref_background_summary"
+            android:title="@string/pref_background_title" />
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="sync_import"
-            android:title="Calendar import after sync" />
+            android:title="@string/pref_import_title" />
         <ListPreference
             android:defaultValue="None"
             android:enabled="false"
             android:key="sync_import_calendar"
-            android:title="Selected calendar" />
+            android:title="@string/pref_import_cal_title" />
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="sync_alarm"
-            android:title="Set alarm after sync" />
+            android:title="@string/pref_alarm_title" />
         <Preference
             android:key="sync_alarm_time"
-            android:title="Alarm offset" />
+            android:title="@string/pref_alarm_time_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_cat_account_title">
         <EditTextPreference

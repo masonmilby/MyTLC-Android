@@ -4079,8 +4079,8 @@ containing a value of this type.
         public static final int textSpacerNoTitle=0x7f0f007a;
         public static final int textView4=0x7f0f00be;
         public static final int textView5=0x7f0f00bf;
-        public static final int textView6=0x7f0f00bc;
-        public static final int textView7=0x7f0f00ba;
+        public static final int textColon =0x7f0f00bc;
+        public static final int textMinus =0x7f0f00ba;
         public static final int text_accent=0x7f0f00d6;
         public static final int text_input_password_toggle=0x7f0f00b6;
         public static final int text_primary=0x7f0f00c0;

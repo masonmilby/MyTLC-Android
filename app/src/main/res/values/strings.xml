@@ -54,4 +54,14 @@
     <string name="pref_account_change_pass">Update saved password</string>
     <string name="pref_account_delete_settings">Delete settings on logout</string>
     <string name="pref_account_delete_events">Delete imported events on logout</string>
+    <string name="pref_background_title">Background syncing</string>
+    <string name="pref_background_summary">Syncing occurs at 7:00am (EST) after MyTLC opens</string>
+    <string name="pref_import_title">Calendar import after sync</string>
+    <string name="pref_import_cal_title">Selected calendar</string>
+    <string name="pref_alarm_title">Set alarm after sync</string>
+    <string name="pref_alarm_time_title">Alarm offset</string>
+    <string name="dialog_offset_minus">-</string>
+    <string name="dialog_offset_hours">Hours</string>
+    <string name="dialog_offset_colon">:</string>
+    <string name="dialog_offset_min">Minutes</string>
 </resources>
