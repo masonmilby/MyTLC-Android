@@ -10,6 +10,9 @@ import android.support.annotation.ColorInt;
 import android.util.TypedValue;
 import android.view.View;
 
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+
 import java.util.Calendar;
 import java.util.Random;
 
@@ -131,11 +134,14 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
                 int min = 0;
                 int randomMinute = random.nextInt((max - min) + 1) + min;
 
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.HOUR_OF_DAY, 7);
-                calendar.set(Calendar.MINUTE, randomMinute);
+                //DateTimeZone timeZoneCST = DateTimeZone.forID("CST6CDT");
+                DateTimeZone timeZoneCST = DateTimeZone.forOffsetHours(-6);
+                DateTimeZone timeZoneLocal = DateTimeZone.getDefault();
 
-                alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
+                DateTime timeSchedule = DateTime.now(timeZoneCST).withTime(7, randomMinute, 0, 0);
+                DateTime timeLocal = timeSchedule.withZone(timeZoneLocal);
+
+                alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, timeLocal.getMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
                 break;
         }
     }
