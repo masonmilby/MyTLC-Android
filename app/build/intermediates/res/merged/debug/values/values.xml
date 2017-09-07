@@ -921,6 +921,10 @@
     <string name="dialog_check_delete">Delete old or duplicate events</string>
     <string name="dialog_issue_email">Follow-up email</string>
     <string name="dialog_issue_message">Message</string>
+    <string name="dialog_offset_colon">:</string>
+    <string name="dialog_offset_hours">Hours</string>
+    <string name="dialog_offset_min">Minutes</string>
+    <string name="dialog_offset_minus">-</string>
     <string name="dialog_primary">Primary color</string>
     <string name="dialog_store">Store Number</string>
     <string name="dialog_store_address">Store Address</string>
@@ -952,6 +956,10 @@
     <string name="pref_account_change_user">Update saved username</string>
     <string name="pref_account_delete_events">Delete imported events on logout</string>
     <string name="pref_account_delete_settings">Delete settings on logout</string>
+    <string name="pref_alarm_time_title">Alarm offset</string>
+    <string name="pref_alarm_title">Set alarm after sync</string>
+    <string name="pref_background_summary">Syncing occurs at 7:00am (EST) after MyTLC opens</string>
+    <string name="pref_background_title">Background syncing</string>
     <string name="pref_base_default">Light</string>
     <string name="pref_base_title">Base theme</string>
     <string name="pref_cat_account_title">Account</string>
@@ -959,6 +967,8 @@
     <string name="pref_cat_schedule_title">Schedule</string>
     <string name="pref_cat_theme_title">Theme</string>
     <string name="pref_custom_title">Custom colors</string>
+    <string name="pref_import_cal_title">Selected calendar</string>
+    <string name="pref_import_title">Calendar import after sync</string>
     <string name="pref_past_sum">Allows for accurate pay and hour calculation</string>
     <string name="pref_past_title">Archive shifts</string>
     <string name="pref_pay_title">Hourly pay</string>
