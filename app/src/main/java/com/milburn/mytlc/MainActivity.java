@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initMain() {
+        if (pm.getSyncBackground() && !pm.getAlarmSet()) {
+            pm.changeAlarm(1);
+        }
+
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mCompactCalendarView = (CompactCalendarView) findViewById(R.id.compactCalendarView);

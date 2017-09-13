@@ -53,11 +53,10 @@
             android:label="@string/title_activity_settings" >
         </activity>
 
-        <receiver
-            android:name="com.milburn.mytlc.BackgroundSync"
-            android:exported="false" >
-        </receiver>
-        <receiver android:name="com.milburn.mytlc.BootReceiver" >
+        <service android:name="com.milburn.mytlc.BackgroundSync" >
+        </service>
+
+        <receiver android:name="com.milburn.mytlc.TLCReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>

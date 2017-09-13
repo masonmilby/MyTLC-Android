@@ -1,37 +1,42 @@
 package com.milburn.mytlc;
 
+import android.app.IntentService;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.provider.AlarmClock;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class BackgroundSync extends BroadcastReceiver {
+public class BackgroundSync extends IntentService {
 
     private Credentials credentials;
-    private Context con;
     private PostLoginAPI postLoginAPI;
     private PrefManager pm;
 
     private String alarmResult = "";
     private String calendarResult = "";
 
+    public BackgroundSync() {
+        super("BackgroundSync");
+    }
+
     @Override
-    public void onReceive(final Context context, Intent intent) {
-        con = context;
-        credentials = new Credentials(context);
-        pm = new PrefManager(context, new PrefManager.onPrefChanged() {
+    protected void onHandleIntent(@Nullable Intent intent) {
+        System.out.println("Started");
+
+        credentials = new Credentials(this);
+        pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override
             public void prefChanged(SharedPreferences sharedPreferences, String s) {
                 //
@@ -39,11 +44,11 @@ public class BackgroundSync extends BroadcastReceiver {
         });
 
         if (!credentials.getCredentials().isEmpty()) {
-            postLoginAPI = new PostLoginAPI(context, new PostLoginAPI.AsyncResponse() {
+            postLoginAPI = new PostLoginAPI(this, new PostLoginAPI.AsyncResponse() {
                 @Override
                 public void processFinish(List<Shift> shiftList) {
                     if (!shiftList.isEmpty()) {
-                        Credentials credentials = new Credentials(context);
+                        Credentials credentials = new Credentials(getApplicationContext());
                         List<Shift> pastList = new ArrayList<>();
                         pastList.addAll(credentials.getSchedule());
 
@@ -64,7 +69,7 @@ public class BackgroundSync extends BroadcastReceiver {
                         }
 
                         if (total > 0 && pm.getImportCalendar() && checkPerms()) {
-                            CalendarHelper calendarHelper = new CalendarHelper(con);
+                            CalendarHelper calendarHelper = new CalendarHelper(getApplicationContext());
                             calendarHelper.execute(shiftList);
                             calendarResult = "Shifts imported to calendar";
                         } else if (total > 0 && pm.getImportCalendar() && !checkPerms()) {
@@ -77,18 +82,18 @@ public class BackgroundSync extends BroadcastReceiver {
                     }
                 }
             });
-            postLoginAPI.execute(credentials.getCredentials());
+            postLoginAPI.doInBackground(credentials.getCredentials());
         }
     }
 
     private void createNotification(Integer message, Integer addedShifts) {
-        NotificationManager notificationManager = (NotificationManager) con.getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         Notification.Builder notification;
 
         String channelId = "default";
         CharSequence channelName = "background_sync";
-        Intent intent = new Intent(con, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(con, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent intent = new Intent(this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
@@ -98,13 +103,13 @@ public class BackgroundSync extends BroadcastReceiver {
             notificationChannel.enableVibration(true);
             notificationManager.createNotificationChannel(notificationChannel);
 
-            notification = new Notification.Builder(con)
+            notification = new Notification.Builder(this)
                     .setSmallIcon(R.drawable.ic_notification)
                     .setContentIntent(pendingIntent)
                     .setChannelId(channelId)
                     .setDefaults(-1);
         } else {
-            notification = new Notification.Builder(con)
+            notification = new Notification.Builder(this)
                     .setSmallIcon(R.drawable.ic_notification)
                     .setContentIntent(pendingIntent)
                     .setDefaults(-1);
@@ -133,11 +138,13 @@ public class BackgroundSync extends BroadcastReceiver {
         }
 
         notificationManager.notify(1, notification.build());
+
+        stopSelf();
     }
 
     private boolean checkPerms() {
-        return ActivityCompat.checkSelfPermission(con, android.Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
-                || ActivityCompat.checkSelfPermission(con, android.Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED;
+        return ActivityCompat.checkSelfPermission(this, android.Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
+                || ActivityCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED;
     }
 
     private Boolean setAlarm(List<Shift> shiftList) {
@@ -158,21 +165,21 @@ public class BackgroundSync extends BroadcastReceiver {
 
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(firstShift.getStartTime());
+            calendar.add(Calendar.HOUR_OF_DAY, -offHour);
+            calendar.add(Calendar.MINUTE, -offMinute);
+
             Integer shiftHour = calendar.get(Calendar.HOUR_OF_DAY);
             Integer shiftMinute = calendar.get(Calendar.MINUTE);
 
-            Integer finalHour = shiftHour-offHour;
-            Integer finalMin = shiftMinute-offMinute;
-
             Intent setAlarm = new Intent(AlarmClock.ACTION_SET_ALARM);
-            setAlarm.putExtra(AlarmClock.EXTRA_HOUR, shiftHour-offHour)
-                    .putExtra(AlarmClock.EXTRA_MINUTES, shiftMinute-offMinute)
+            setAlarm.putExtra(AlarmClock.EXTRA_HOUR, shiftHour)
+                    .putExtra(AlarmClock.EXTRA_MINUTES, shiftMinute)
                     .putExtra(AlarmClock.EXTRA_MESSAGE, "Work at Best Buy")
                     .putExtra(AlarmClock.EXTRA_SKIP_UI, true);
 
-            con.startActivity(setAlarm);
+            this.startActivity(setAlarm);
 
-            String setTime = finalHour + ":" + finalMin;
+            String setTime = shiftHour + ":" + shiftMinute;
 
             alarmResult = "Alarm set for " + setTime;
             return true;

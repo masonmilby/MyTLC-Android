@@ -55,6 +55,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     private PrefManager pm;
 
     private String storeAddress = "";
+    private Boolean isSync;
 
     public CalendarHelper(Context con) {
         context = con;
@@ -69,13 +70,15 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         cr = context.getContentResolver();
         calUri = CalendarContract.Calendars.CONTENT_URI;
         eventUri = CalendarContract.Events.CONTENT_URI;
+
+        isSync = context.getClass().getSimpleName().equals("BackgroundSync");
     }
 
     @Override
     protected Void doInBackground(List<Shift>... params) {
         shiftList = params[0];
         getCalendarNames();
-        if (!context.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+        if (!isSync) {
             createDialog();
         } else {
             getStoreAddress();
@@ -135,10 +138,10 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             public void processFinish(String address) {
                 if (address != null && editAddress != null) {
                     editAddress.setText(address);
-                } else if (address != null && context.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+                } else if (address != null && isSync) {
                     storeAddress = address;
                     syncImport();
-                } else if (context.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+                } else if (isSync) {
                     syncImport();
                 }
             }

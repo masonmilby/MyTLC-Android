@@ -13,7 +13,6 @@ import android.view.View;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
-import java.util.Calendar;
 import java.util.Random;
 
 public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeListener{
@@ -120,7 +119,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
 
     public void changeAlarm(Integer enabled) {
         AlarmManager alarmMgr = (AlarmManager)con.getSystemService(con.ALARM_SERVICE);
-        Intent intent1 = new Intent(con, BackgroundSync.class);
+        Intent intent1 = new Intent(con, TLCReceiver.class);
         PendingIntent alarmIntent = PendingIntent.getBroadcast(con, 0, intent1, 0);
 
         switch (enabled) {
@@ -144,6 +143,13 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
                 alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, timeLocal.getMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
                 break;
         }
+    }
+
+    public Boolean getAlarmSet() {
+        Intent intent1 = new Intent(con, TLCReceiver.class);
+        PendingIntent alarmIntent = PendingIntent.getBroadcast(con, 0, intent1, PendingIntent.FLAG_NO_CREATE);
+
+        return alarmIntent != null;
     }
 
     @Override

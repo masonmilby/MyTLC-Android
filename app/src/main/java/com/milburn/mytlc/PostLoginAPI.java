@@ -338,7 +338,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
     @Override
     protected void onProgressUpdate(Integer... progress) {
-        if (!mContext.getClass().getSimpleName().equals("ReceiverRestrictedContext")) {
+        if (!mContext.getClass().getSimpleName().equals("BackgroundSync")) {
             if (mProgressDialog == null) {
                 mProgressDialog = new ProgressDialog(mContext);
                 mProgressDialog.setCancelable(false);

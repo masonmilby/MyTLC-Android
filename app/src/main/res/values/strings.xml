@@ -55,7 +55,7 @@
     <string name="pref_account_delete_settings">Delete settings on logout</string>
     <string name="pref_account_delete_events">Delete imported events on logout</string>
     <string name="pref_background_title">Background syncing</string>
-    <string name="pref_background_summary">Syncing occurs at 7:00am (EST) after MyTLC opens</string>
+    <string name="pref_background_summary">Syncing occurs at 5:00am (CST) after MyTLC opens</string>
     <string name="pref_import_title">Calendar import after sync</string>
     <string name="pref_import_cal_title">Selected calendar</string>
     <string name="pref_alarm_title">Set alarm after sync</string>
