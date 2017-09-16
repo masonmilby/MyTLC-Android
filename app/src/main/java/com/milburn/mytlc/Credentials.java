@@ -152,6 +152,7 @@ public class Credentials {
             }
         }
         if (!tempList.isEmpty()) {
+            tempList.addAll(oldPastShiftList);
             Gson gson = new Gson();
             String serializedSchedule = gson.toJson(tempList);
             sharedPreferences.edit()

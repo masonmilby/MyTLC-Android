@@ -1,24 +1,26 @@
 package com.milburn.mytlc;
 
-import android.app.IntentService;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.IBinder;
 import android.provider.AlarmClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class BackgroundSync extends IntentService {
+public class BackgroundSync extends Service {
 
     private Credentials credentials;
     private PostLoginAPI postLoginAPI;
@@ -27,13 +29,16 @@ public class BackgroundSync extends IntentService {
     private String alarmResult = "";
     private String calendarResult = "";
 
-    public BackgroundSync() {
-        super("BackgroundSync");
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
     }
 
     @Override
-    protected void onHandleIntent(@Nullable Intent intent) {
-        System.out.println("Started");
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Toast toast = Toast.makeText(this, "Started", Toast.LENGTH_LONG);
+        toast.show();
 
         credentials = new Credentials(this);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
@@ -82,8 +87,9 @@ public class BackgroundSync extends IntentService {
                     }
                 }
             });
-            postLoginAPI.doInBackground(credentials.getCredentials());
+            postLoginAPI.execute(credentials.getCredentials());
         }
+        return Service.START_STICKY;
     }
 
     private void createNotification(Integer message, Integer addedShifts) {

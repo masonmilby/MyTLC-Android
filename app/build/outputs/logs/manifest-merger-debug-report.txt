@@ -137,7 +137,7 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:
 intent-filter#android.intent.action.BOOT_COMPLETED
 ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:46:13-48:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:47:17-86
+ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:47:17-79
 	android:name
 		ADDED from C:\Users\mason\StudioProjects\MyTLC\app\src\main\AndroidManifest.xml:47:25-76
 uses-sdk

@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.widget.Toast;
 
 public class TLCReceiver extends BroadcastReceiver {
     @Override
@@ -14,6 +15,9 @@ public class TLCReceiver extends BroadcastReceiver {
                 //
             }
         });
+
+        Toast toast = Toast.makeText(context, "Received", Toast.LENGTH_LONG);
+        toast.show();
 
         if (intent.getAction() != null && intent.getAction().equals("android.intent.action.BOOT_COMPLETED") && pm.getSyncBackground()) {
             pm.changeAlarm(1);
