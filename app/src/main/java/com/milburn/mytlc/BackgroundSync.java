@@ -131,12 +131,19 @@ public class BackgroundSync extends Service {
                     notification.setContentTitle("Schedule updated");
                 }
 
-                if (!calendarResult.equals("")) {
+                if (!calendarResult.equals("") && !alarmResult.equals("")) {
                     calendarResult = calendarResult+"\n";
                 }
 
+                String bigString;
+                if (calendarResult.equals("") && alarmResult.equals("")) {
+                    bigString = addedShifts + " shifts added";
+                } else {
+                    bigString = addedShifts + " shifts added\n";
+                }
+
                 notification.setContentText(addedShifts + " shifts added");
-                notification.setStyle(new Notification.BigTextStyle().bigText(addedShifts + " shifts added\n" + calendarResult + alarmResult));
+                notification.setStyle(new Notification.BigTextStyle().bigText(bigString + calendarResult + alarmResult));
                 break;
         }
 
