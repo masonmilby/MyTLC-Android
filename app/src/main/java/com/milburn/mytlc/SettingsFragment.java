@@ -180,23 +180,20 @@ public class SettingsFragment extends PreferenceFragment {
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                pm.setSyncAlarmTime(pickerHours.getValue()+":"+pickerMinute.getValue()+pickerMinute2.getValue());
+                pm.setSyncAlarmTime(pickerHours.getValue()+":"+pickerMinute.getValue());
             }
         });
         builder.create();
         builder.show();
 
-        String[] pickerValues = pm.getSyncAlarmTime().split("");
+        String[] pickerValues = pm.getSyncAlarmTime().split(":");
         pickerHours = v.findViewById(R.id.numberPicker_Hours);
         pickerMinute = v.findViewById(R.id.numberPicker_Minute);
-        pickerMinute2 = v.findViewById(R.id.numberPicker_Minute2);
         pickerHours.setMaxValue(12);
-        pickerMinute.setMaxValue(5);
-        pickerMinute2.setMaxValue(9);
+        pickerMinute.setMaxValue(59);
 
-        pickerHours.setValue(Integer.valueOf(pickerValues[1]));
-        pickerMinute.setValue(Integer.valueOf(pickerValues[3]));
-        pickerMinute2.setValue(Integer.valueOf(pickerValues[4]));
+        pickerHours.setValue(Integer.valueOf(pickerValues[0]));
+        pickerMinute.setValue(Integer.valueOf(pickerValues[1]));
     }
 
     private void setSummary() {

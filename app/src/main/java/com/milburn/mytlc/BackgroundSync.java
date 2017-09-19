@@ -37,9 +37,6 @@ public class BackgroundSync extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Toast toast = Toast.makeText(this, "Started", Toast.LENGTH_LONG);
-        toast.show();
-
         credentials = new Credentials(this);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override

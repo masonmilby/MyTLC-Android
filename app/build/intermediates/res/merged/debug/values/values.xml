@@ -958,7 +958,7 @@
     <string name="pref_account_delete_settings">Delete settings on logout</string>
     <string name="pref_alarm_time_title">Alarm offset</string>
     <string name="pref_alarm_title">Set alarm after sync</string>
-    <string name="pref_background_summary">Syncing occurs at 5:00am (CST) after MyTLC opens</string>
+    <string name="pref_background_summary">Syncing occurs at 6:00am (CST) after MyTLC unlocks</string>
     <string name="pref_background_title">Background syncing</string>
     <string name="pref_base_default">Light</string>
     <string name="pref_base_title">Base theme</string>

@@ -16,9 +16,6 @@ public class TLCReceiver extends BroadcastReceiver {
             }
         });
 
-        Toast toast = Toast.makeText(context, "Received", Toast.LENGTH_LONG);
-        toast.show();
-
         if (intent.getAction() != null && intent.getAction().equals("android.intent.action.BOOT_COMPLETED") && pm.getSyncBackground()) {
             pm.changeAlarm(1);
         } else if (pm.getSyncBackground()) {

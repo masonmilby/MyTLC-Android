@@ -13,6 +13,7 @@ import android.view.View;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeListener{
@@ -133,11 +134,10 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
                 int min = 0;
                 int randomMinute = random.nextInt((max - min) + 1) + min;
 
-                //DateTimeZone timeZoneCST = DateTimeZone.forID("CST6CDT");
-                DateTimeZone timeZoneCST = DateTimeZone.forOffsetHours(-6);
+                DateTimeZone timeZoneCST = DateTimeZone.forID("CST6CDT");
                 DateTimeZone timeZoneLocal = DateTimeZone.getDefault();
 
-                DateTime timeSchedule = DateTime.now(timeZoneCST).withTime(7, randomMinute, 0, 0);
+                DateTime timeSchedule = DateTime.now(timeZoneCST).withTime(6, randomMinute, 0, 0);
                 DateTime timeLocal = timeSchedule.withZone(timeZoneLocal);
 
                 alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, timeLocal.getMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);
@@ -236,7 +236,13 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     }
 
     public String getSyncAlarmTime() {
-        return sharedPref.getString(key_sync_alarm_time, "0:00");
+        String offTime = sharedPref.getString(key_sync_alarm_time, "0:00");
+
+        if (offTime.split(":")[1].length() < 2) {
+            offTime = offTime.split(":")[0] + ":" + "0" + offTime.split(":")[1];
+        }
+
+        return offTime;
     }
 
     public void setSyncAlarmTime(String time) {
