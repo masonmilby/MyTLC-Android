@@ -165,6 +165,9 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             cur = cr.query(calUri, EVENT_PROJECTION, null, null, null);
         } catch (SecurityException se) {
             se.printStackTrace();
+            snackString = "No calendars available";
+            publishProgress(1);
+            return null;
         }
 
         calendarMap = new HashMap<>();

@@ -10,11 +10,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.IBinder;
 import android.provider.AlarmClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,6 +37,16 @@ public class BackgroundSync extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            Notification notification = new Notification.Builder(this)
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setContentTitle("MyTLC Background Sync")
+                    .setContentText("Syncing...")
+                    .setVibrate(null).build();
+
+            startForeground(2, notification);
+        }
+
         credentials = new Credentials(this);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
             @Override
@@ -149,6 +159,7 @@ public class BackgroundSync extends Service {
 
         notificationManager.notify(1, notification.build());
 
+        stopForeground(true);
         stopSelf();
     }
 

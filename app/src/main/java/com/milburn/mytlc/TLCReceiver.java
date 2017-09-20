@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.widget.Toast;
 
 public class TLCReceiver extends BroadcastReceiver {
@@ -20,7 +21,12 @@ public class TLCReceiver extends BroadcastReceiver {
             pm.changeAlarm(1);
         } else if (pm.getSyncBackground()) {
             Intent service = new Intent(context, BackgroundSync.class);
-            context.startService(service);
+
+            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+                context.startForegroundService(service);
+            } else{
+                context.startService(service);
+            }
         }
     }
 }

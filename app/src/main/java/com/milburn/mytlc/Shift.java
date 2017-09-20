@@ -66,7 +66,7 @@ public class Shift {
     }
 
     public String getCombinedTime(Integer index) {
-        if ((getDeptSize()-1) < index) {
+        if ((getDates().size()-1) < index) {
             return null;
         }
         SimpleDateFormat dateFormat = new SimpleDateFormat("h:mm aa");
@@ -110,7 +110,7 @@ public class Shift {
     }
 
     public Date[] getDate(Integer index) {
-        if (index > (getDates().size()-1)) {
+        if ((getDates().size()-1) < index) {
             return new Date[]{};
         }
         return dateList.get(index);
@@ -168,6 +168,7 @@ public class Shift {
         if ((getActivityList().size()-1) < index) {
             return null;
         }
+
         return getActivityList().get(index);
     }
 }
