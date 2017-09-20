@@ -29,6 +29,10 @@ public class BackgroundSync extends Service {
     private String alarmResult = "";
     private String calendarResult = "";
 
+    private String channelId = "default";
+    private CharSequence channelName = "background_sync";
+    NotificationManager notificationManager;
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -37,11 +41,21 @@ public class BackgroundSync extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel notificationChannel = new NotificationChannel(channelId, channelName, importance);
+            notificationChannel.enableLights(true);
+            notificationChannel.setLightColor(Color.YELLOW);
+            notificationChannel.enableVibration(true);
+            notificationManager.createNotificationChannel(notificationChannel);
+
             Notification notification = new Notification.Builder(this)
                     .setSmallIcon(R.drawable.ic_notification)
-                    .setContentTitle("MyTLC Background Sync")
-                    .setContentText("Syncing...")
+                    .setContentTitle("Background task running")
+                    .setContentText("Syncing")
+                    .setChannelId(channelId)
                     .setVibrate(null).build();
 
             startForeground(2, notification);
@@ -100,22 +114,12 @@ public class BackgroundSync extends Service {
     }
 
     private void createNotification(Integer message, Integer addedShifts) {
-        NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         Notification.Builder notification;
 
-        String channelId = "default";
-        CharSequence channelName = "background_sync";
         Intent intent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel notificationChannel = new NotificationChannel(channelId, channelName, importance);
-            notificationChannel.enableLights(true);
-            notificationChannel.setLightColor(Color.YELLOW);
-            notificationChannel.enableVibration(true);
-            notificationManager.createNotificationChannel(notificationChannel);
-
             notification = new Notification.Builder(this)
                     .setSmallIcon(R.drawable.ic_notification)
                     .setContentIntent(pendingIntent)
