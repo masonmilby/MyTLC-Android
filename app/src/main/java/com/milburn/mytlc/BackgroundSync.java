@@ -43,7 +43,13 @@ public class BackgroundSync extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+        Notification.Builder notification = new Notification.Builder(this)
+                .setSmallIcon(R.drawable.ic_notification)
+                .setContentTitle("Background task running")
+                .setContentText("Syncing")
+                .setVibrate(null);
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel notificationChannel = new NotificationChannel(channelId, channelName, importance);
             notificationChannel.enableLights(true);
@@ -51,15 +57,10 @@ public class BackgroundSync extends Service {
             notificationChannel.enableVibration(true);
             notificationManager.createNotificationChannel(notificationChannel);
 
-            Notification notification = new Notification.Builder(this)
-                    .setSmallIcon(R.drawable.ic_notification)
-                    .setContentTitle("Background task running")
-                    .setContentText("Syncing")
-                    .setChannelId(channelId)
-                    .setVibrate(null).build();
-
-            startForeground(2, notification);
+            notification.setChannelId(channelId);
         }
+
+        startForeground(2, notification.build());
 
         credentials = new Credentials(this);
         pm = new PrefManager(this, new PrefManager.onPrefChanged() {
@@ -169,7 +170,7 @@ public class BackgroundSync extends Service {
 
     private boolean checkPerms() {
         return ActivityCompat.checkSelfPermission(this, android.Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
-                || ActivityCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED;
+                && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED;
     }
 
     private Boolean setAlarm(List<Shift> shiftList) {
