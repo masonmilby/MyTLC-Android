@@ -154,7 +154,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     }
 
     public CharSequence[] getCalendarNames() {
-        Cursor cur = null;
+        Cursor cur;
 
         final String[] EVENT_PROJECTION = new String[]{
                 CalendarContract.Calendars._ID,

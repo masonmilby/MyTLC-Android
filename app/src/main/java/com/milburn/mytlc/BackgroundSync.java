@@ -203,6 +203,8 @@ public class BackgroundSync extends Service {
                     .putExtra(AlarmClock.EXTRA_MESSAGE, "Work at Best Buy")
                     .putExtra(AlarmClock.EXTRA_SKIP_UI, true);
 
+            setAlarm.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
             this.startActivity(setAlarm);
 
             String setTime = shiftHour + ":" + shiftMinute;

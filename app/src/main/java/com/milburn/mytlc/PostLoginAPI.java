@@ -250,6 +250,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     }
 
     private List<Date[]> getTimeDate() {
+        //TODO: If shift has <hr> divider then repeat for each section
         List<Date[]> timesList = new ArrayList<>();
         if (!currentDay.hasClass("calendarTextSchedDtlTime")) {
             String[] dateTimes = currentDay.select("div.calendarTextShiftTime").text().split(" - ");
