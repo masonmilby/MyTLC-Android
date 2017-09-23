@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-web\\web_hi_res_512.png",
         "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\mipmap-web\\web_hi_res_512.png"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-web\\web_hi_res_512.png",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\src\\main\\res\\mipmap-web\\web_hi_res_512.png"
     }
 ]

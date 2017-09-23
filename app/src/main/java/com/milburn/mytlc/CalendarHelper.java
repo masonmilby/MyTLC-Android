@@ -87,25 +87,6 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     }
 
     private void createDialog() {
-        dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_import, null);
-
-        builder = new AlertDialog.Builder(context);
-        builder.setTitle("Customize your events")
-                .setView(dialogView)
-                .setCancelable(false)
-                .setPositiveButton("Import", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        importToCalendar();
-                    }
-                })
-
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //
-                    }
-                });
         publishProgress(2);
     }
 
@@ -262,6 +243,26 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                 break;
 
             case 2:
+                dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_import, null);
+
+                builder = new AlertDialog.Builder(context);
+                builder.setTitle("Customize your events")
+                        .setView(dialogView)
+                        .setCancelable(false)
+                        .setPositiveButton("Import", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                importToCalendar();
+                            }
+                        })
+
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //
+                            }
+                        });
+
                 builder.create();
                 builder.show();
 

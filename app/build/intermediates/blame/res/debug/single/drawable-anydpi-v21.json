@@ -6,5 +6,13 @@
     {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\2b565eb32841cf3d5056ce38a253e62e349fcde6\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\2b565eb32841cf3d5056ce38a253e62e349fcde6\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     }
 ]

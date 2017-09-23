@@ -4,6 +4,14 @@
         "source": "C:\\Users\\mason\\.android\\build-cache\\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },
     {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\2b565eb32841cf3d5056ce38a253e62e349fcde6\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\mason\\.android\\build-cache\\2b565eb32841cf3d5056ce38a253e62e349fcde6\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    },
+    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
         "source": "C:\\Users\\mason\\.android\\build-cache\\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     }

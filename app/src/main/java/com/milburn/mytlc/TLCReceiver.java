@@ -16,10 +16,11 @@ public class TLCReceiver extends BroadcastReceiver {
                 //
             }
         });
+        Credentials credentials = new Credentials(context);
 
-        if (intent.getAction() != null && intent.getAction().equals("android.intent.action.BOOT_COMPLETED") && pm.getSyncBackground()) {
+        if (credentials.credsExist() && intent.getAction() != null && intent.getAction().equals("android.intent.action.BOOT_COMPLETED") && pm.getSyncBackground()) {
             pm.changeAlarm(1);
-        } else if (pm.getSyncBackground()) {
+        } else if (credentials.credsExist() && pm.getSyncBackground()) {
             Intent service = new Intent(context, BackgroundSync.class);
 
             if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){

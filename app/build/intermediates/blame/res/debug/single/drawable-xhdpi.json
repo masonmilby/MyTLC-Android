@@ -1,5 +1,17 @@
 [
     {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_back_arrow.png",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\src\\main\\res\\drawable-xhdpi\\ic_back_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_drop_light.png",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\src\\main\\res\\drawable-xhdpi\\ic_drop_light.png"
+    },
+    {
+        "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_drop_dark.png",
+        "source": "C:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\src\\main\\res\\drawable-xhdpi\\ic_drop_dark.png"
+    },
+    {
         "merged": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_drop_light.png",
         "source": "C:\\Users\\mason\\StudioProjects\\MyTLC\\app\\src\\main\\res\\drawable-xhdpi\\ic_drop_light.png"
     },
