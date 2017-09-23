@@ -79,15 +79,11 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         shiftList = params[0];
         getCalendarNames();
         if (!isSync) {
-            createDialog();
+            getCalendarNames();
         } else {
             getStoreAddress();
         }
         return null;
-    }
-
-    private void createDialog() {
-        publishProgress(2);
     }
 
     public void deleteEvents(String calName) {
@@ -148,7 +144,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             se.printStackTrace();
             snackString = "No calendars available";
             publishProgress(1);
-            return null;
+            return new CharSequence[0];
         }
 
         calendarMap = new HashMap<>();
@@ -160,9 +156,10 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         if (calendarNames.length < 1) {
             snackString = "No calendars available";
             publishProgress(1);
-            return null;
+            return new CharSequence[0];
         }
 
+        publishProgress(2);
         return calendarNames;
     }
 
@@ -287,13 +284,16 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                 checkDelete = (CheckBox) dialogView.findViewById(R.id.check_delete);
                 checkDelete.setChecked(true);
 
-                ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, calendarNames);
-                spinnerCalendar.setAdapter(adapter);
+                if (calendarNames != null) {
+                    ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, calendarNames);
+                    spinnerCalendar.setAdapter(adapter);
 
-                if (credentials.getLastCalName() != null) {
-                    Integer calPos = adapter.getPosition(credentials.getLastCalName());
-                    spinnerCalendar.setSelection(calPos);
+                    if (credentials.getLastCalName() != null) {
+                        Integer calPos = adapter.getPosition(credentials.getLastCalName());
+                        spinnerCalendar.setSelection(calPos);
+                    }
                 }
+
                 break;
 
             case 3:

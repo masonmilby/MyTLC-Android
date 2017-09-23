@@ -1,4 +1,4 @@
-#Fri Sep 22 13:44:59 EDT 2017
+#Sat Sep 23 00:45:50 EDT 2017
 base.0=C\:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8
 renamed.0=classes.dex
 file.0=C\:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8\\classes.dex

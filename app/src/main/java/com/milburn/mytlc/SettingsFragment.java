@@ -22,8 +22,6 @@ import android.widget.NumberPicker;
 public class SettingsFragment extends PreferenceFragment {
 
     private PrefManager pm;
-    private SharedPreferences sharedPref;
-
     private View primary = null;
     private View accent = null;
     private LinearLayout layoutPrimary;
@@ -37,7 +35,6 @@ public class SettingsFragment extends PreferenceFragment {
 
     private NumberPicker pickerHours;
     private NumberPicker pickerMinute;
-    private NumberPicker pickerMinute2;
 
     private CheckBoxPreference syncAlarm;
     private Preference syncAlarmTime;
@@ -45,7 +42,13 @@ public class SettingsFragment extends PreferenceFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mActivity = (Activity) context;
+        mActivity = (SettingsActivity) context;
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mActivity = activity;
     }
     
 
@@ -62,7 +65,6 @@ public class SettingsFragment extends PreferenceFragment {
                 setSummary();
             }
         });
-        sharedPref = PreferenceManager.getDefaultSharedPreferences(mActivity);
 
         checkPref = (CheckBoxPreference) findPreference(pm.key_past);
         checkBackground = (CheckBoxPreference) findPreference(pm.key_sync_background);
@@ -95,7 +97,7 @@ public class SettingsFragment extends PreferenceFragment {
         findPreference(pm.key_past).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                if (!checkPref.isChecked() && sharedPref.contains("PastSchedule")) {
+                if (!checkPref.isChecked() && !credentials.getPastSchedule().isEmpty()) {
                     showConfirmation();
                 }
                 return false;
