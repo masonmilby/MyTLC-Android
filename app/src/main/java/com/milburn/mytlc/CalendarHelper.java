@@ -77,7 +77,6 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     @Override
     protected Void doInBackground(List<Shift>... params) {
         shiftList = params[0];
-        getCalendarNames();
         if (!isSync) {
             getCalendarNames();
         } else {
@@ -250,6 +249,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 importToCalendar();
+                                dialog.dismiss();
                             }
                         })
 
