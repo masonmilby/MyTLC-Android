@@ -1,7 +1,5 @@
 package com.milburn.mytlc;
 
-import android.*;
-import android.Manifest;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -9,13 +7,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.CalendarContract;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -78,7 +74,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     protected Void doInBackground(List<Shift>... params) {
         shiftList = params[0];
         if (!isSync) {
-            getCalendarNames();
+            getCalendarNames(false);
         } else {
             getStoreAddress();
         }
@@ -129,7 +125,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         }
     }
 
-    public CharSequence[] getCalendarNames() {
+    public CharSequence[] getCalendarNames(Boolean isSingle) {
         Cursor cur;
 
         final String[] EVENT_PROJECTION = new String[]{
@@ -158,7 +154,9 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             return new CharSequence[0];
         }
 
-        publishProgress(2);
+        if (!isSingle) {
+            publishProgress(2);
+        }
         return calendarNames;
     }
 

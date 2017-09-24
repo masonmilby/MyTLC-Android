@@ -63,7 +63,7 @@ public class SettingsActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         if (grantResults.length > 0 && requestCode == 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             CalendarHelper calendarHelper = new CalendarHelper(this);
-            CharSequence[] calNames = calendarHelper.getCalendarNames();
+            CharSequence[] calNames = calendarHelper.getCalendarNames(true);
             settingsFragment.listCalendars.setEntries(calNames);
             settingsFragment.listCalendars.setEntryValues(calNames);
             settingsFragment.listCalendars.setDefaultValue(calNames[0]);
