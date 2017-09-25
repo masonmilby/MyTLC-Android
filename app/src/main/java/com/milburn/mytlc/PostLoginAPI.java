@@ -232,13 +232,13 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         currentDay = null;
         Elements tempElements = new Elements();
         if (!shiftDoc.getElementsByClass(" calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().children().select("div.calendarShift");
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().children();
         } else if (!shiftDoc.getElementsByClass(" calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().children().select("div.calendarShift");
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().children();
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().children().select("div.calendarShift");
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().children();
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().children().select("div.calendarShift");
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().children();
         }
 
         if (currentDay != null) {
@@ -254,10 +254,18 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         List<Elements> elementsList = new ArrayList<>();
         Elements tempElements = new Elements();
         for (Element element : currentDay) {
-            if (element.tagName().equals("hr") || currentDay.indexOf(element) == currentDay.size()-1) {
+            if (element.tagName().equals("hr") | currentDay.indexOf(element) == currentDay.size()-1) {
+                if (tempElements.isEmpty() && currentDay.indexOf(element) == currentDay.size()-1) {
+                    tempElements.add(element);
+                }
                 elementsList.add(tempElements);
+                tempElements.remove();
             } else {
-                tempElements.add(element);
+                if (element.className().equals("calendarShift")) {
+                    tempElements.addAll(element.children());
+                } else {
+                    tempElements.add(element);
+                }
             }
         }
 

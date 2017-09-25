@@ -17,10 +17,10 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManif
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:6:5-67
-MERGED from [com.google.firebase:firebase-crash:11.2.0] C:\Users\mason\.android\build-cache\38f52ca1340505c0d096e2786971b38d232d0a67\output\AndroidManifest.xml:18:5-66
-MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\ab1cfa91c00b9aff0bd10a43e34e0df74ab0d60f\output\AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-crash:11.2.0] C:\Users\mason\.android\build-cache\97ea770e7531823c45577b867c8f4657c5d13338\output\AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\57d59a4860f74cd495043d4a7f043400bdcf1960\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:20:5-66
 	android:name
 		ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.READ_CALENDAR
@@ -41,9 +41,9 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManif
 		ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:10:22-78
 uses-permission#android.permission.WAKE_LOCK
 ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:11:5-68
-MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\ab1cfa91c00b9aff0bd10a43e34e0df74ab0d60f\output\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\57d59a4860f74cd495043d4a7f043400bdcf1960\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:21:5-67
 	android:name
 		ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:11:22-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -56,30 +56,30 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManif
 		ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:13:22-77
 application
 ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:15:5-51:19
-MERGED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\81cda7aaf0dcd58fb897774bf76ef7edae09e229\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.0.1] C:\Users\mason\.android\build-cache\8ec597a463e355947100d7db6d06c2e8956d7153\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\mason\.android\build-cache\4cb1173801cd79eff21a50773403f26a9367c170\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:appcompat-v7:26.0.1] C:\Users\mason\.android\build-cache\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\1ddada57a85d49caf58306d57688f5edd79c852b\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\d857b81fdf9a1130caf2a502757de83f51d9585f\output\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.firebase:firebase-core:11.2.0] C:\Users\mason\.android\build-cache\b1e64bedefff47d96bd1eaf718c757bad993ea88\output\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-crash:11.2.0] C:\Users\mason\.android\build-cache\38f52ca1340505c0d096e2786971b38d232d0a67\output\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-auth:11.2.0] C:\Users\mason\.android\build-cache\d39d7c85ba22d3161981841622be486c5b3ceff0\output\AndroidManifest.xml:19:5-20:19
-MERGED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\92da1bc37dddeb543aa47718c7032717c026f8a1\output\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:24:5-34:19
-MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\ab1cfa91c00b9aff0bd10a43e34e0df74ab0d60f\output\AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:28:5-49:19
-MERGED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\753170257174801596f3ddac269ea77c2ce9393a\output\AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.android.gms:play-services-tasks:11.2.0] C:\Users\mason\.android\build-cache\3dfdfac1713c57a661453d60c4c3cd8fc03d701d\output\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\8e83e3a3275fb2baec218da9669955653036c927\output\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:26.0.1] C:\Users\mason\.android\build-cache\ad74a5ba07d5729b917d75de2c9ea83ab768ddeb\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\mason\.android\build-cache\0dd15bc5ef023542c738cc69abfc339d38a9014e\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\mason\.android\build-cache\e8363fc049dc82895d78a20fce5ad4c6ccf46166\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\mason\.android\build-cache\1b27681e2f240b2dd0ee0324518d7fb70ff6376d\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\mason\.android\build-cache\a4db983a48cde2957e933708ad6795e8e29fe780\output\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\build-cache\9e75085aebc5ed12f5ecfe3aff7e52092b4917fc\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\8525473404d0e33ca5f0febcc3492840b6d3fb08\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\2b565eb32841cf3d5056ce38a253e62e349fcde6\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\adcdd9dbb0b3e836e4f0921f15420eb86aa66281\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.1] C:\Users\mason\.android\build-cache\5528798fbd426e7e214801c073d65d858aa99e94\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\mason\.android\build-cache\5d7205b2b5bfc2221468de950560b1888e2eaac3\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.1] C:\Users\mason\.android\build-cache\899b763e163c505e4cb6eb236846417fa875f671\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\a7b2d115ede1f78ab88b604b7862e9e66bee0817\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\1c6c4df40b3d764a4bfa25aade5502e592f2d802\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.firebase:firebase-core:11.2.0] C:\Users\mason\.android\build-cache\4c5cfb4c2f3b59b737a516dc62dca0769eb70af0\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-crash:11.2.0] C:\Users\mason\.android\build-cache\97ea770e7531823c45577b867c8f4657c5d13338\output\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-auth:11.2.0] C:\Users\mason\.android\build-cache\52adfb6ebda30f7ee382033f41df0fca57a629e0\output\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\c237ddc7c4b9e35debc00348fbd41cf694035c88\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\57d59a4860f74cd495043d4a7f043400bdcf1960\output\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\1508f83fcc844ba85a396a0983434ed47ffba405\output\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:11.2.0] C:\Users\mason\.android\build-cache\cdb8a83011920ecb163f7aba4a9aa62c56bd5ef8\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\70a0dd26fec149ad3771c21e785bb3bb4a6bf81c\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:26.0.1] C:\Users\mason\.android\build-cache\cf1648be2190aca2675d148b6e2ca8a15fe86cd4\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\mason\.android\build-cache\380d5a844fa2d349986299a237f6ec51af3ed590\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\mason\.android\build-cache\b86fed01ddd286d57319ac9fa0f75257610e415c\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\mason\.android\build-cache\6613b8f58919cadf51814df998e7d3411afe9a03\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\mason\.android\build-cache\187c580a93fead91e34c03cf1c9b5751bdb79e98\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\build-cache\05c7b713cc6d6e8cb4653bc77a8bc697f2d6bbe1\output\AndroidManifest.xml:25:5-29:19
 	android:label
 		ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:18:9-41
 	android:supportsRtl
@@ -142,35 +142,35 @@ ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManif
 		ADDED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml:47:25-76
 uses-sdk
 INJECTED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\81cda7aaf0dcd58fb897774bf76ef7edae09e229\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.0.1] C:\Users\mason\.android\build-cache\8ec597a463e355947100d7db6d06c2e8956d7153\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\mason\.android\build-cache\4cb1173801cd79eff21a50773403f26a9367c170\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.1] C:\Users\mason\.android\build-cache\621ba1170615b369b79c12c87af909a2caeda420\output\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:26.0.1] C:\Users\mason\.android\build-cache\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\1ddada57a85d49caf58306d57688f5edd79c852b\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\d857b81fdf9a1130caf2a502757de83f51d9585f\output\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-core:11.2.0] C:\Users\mason\.android\build-cache\b1e64bedefff47d96bd1eaf718c757bad993ea88\output\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-crash:11.2.0] C:\Users\mason\.android\build-cache\38f52ca1340505c0d096e2786971b38d232d0a67\output\AndroidManifest.xml:20:5-43
-MERGED from [com.google.firebase:firebase-storage:11.2.0] C:\Users\mason\.android\build-cache\3d1147a74ec8dd2ba286460973d8a3425437ce20\output\AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-storage-common:11.2.0] C:\Users\mason\.android\build-cache\a0f6eb9ed13cf98f13387f64babe807e41917d14\output\AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-auth:11.2.0] C:\Users\mason\.android\build-cache\d39d7c85ba22d3161981841622be486c5b3ceff0\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\92da1bc37dddeb543aa47718c7032717c026f8a1\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\ab1cfa91c00b9aff0bd10a43e34e0df74ab0d60f\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\753170257174801596f3ddac269ea77c2ce9393a\output\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.2.0] C:\Users\mason\.android\build-cache\3dfdfac1713c57a661453d60c4c3cd8fc03d701d\output\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\8e83e3a3275fb2baec218da9669955653036c927\output\AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:26.0.1] C:\Users\mason\.android\build-cache\ad74a5ba07d5729b917d75de2c9ea83ab768ddeb\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\mason\.android\build-cache\0dd15bc5ef023542c738cc69abfc339d38a9014e\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\mason\.android\build-cache\e8363fc049dc82895d78a20fce5ad4c6ccf46166\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\mason\.android\build-cache\1b27681e2f240b2dd0ee0324518d7fb70ff6376d\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\mason\.android\build-cache\a4db983a48cde2957e933708ad6795e8e29fe780\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\build-cache\9e75085aebc5ed12f5ecfe3aff7e52092b4917fc\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\8525473404d0e33ca5f0febcc3492840b6d3fb08\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\2b565eb32841cf3d5056ce38a253e62e349fcde6\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\adcdd9dbb0b3e836e4f0921f15420eb86aa66281\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.1] C:\Users\mason\.android\build-cache\5528798fbd426e7e214801c073d65d858aa99e94\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\mason\.android\build-cache\5d7205b2b5bfc2221468de950560b1888e2eaac3\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.sundeepk:compact-calendar-view:2.0.2.1] C:\Users\mason\.android\build-cache\7983c83fc7ebf734378adb7c9afbd8a20a574ccc\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.0.1] C:\Users\mason\.android\build-cache\899b763e163c505e4cb6eb236846417fa875f671\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\a7b2d115ede1f78ab88b604b7862e9e66bee0817\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\1c6c4df40b3d764a4bfa25aade5502e592f2d802\output\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:11.2.0] C:\Users\mason\.android\build-cache\4c5cfb4c2f3b59b737a516dc62dca0769eb70af0\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-crash:11.2.0] C:\Users\mason\.android\build-cache\97ea770e7531823c45577b867c8f4657c5d13338\output\AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-storage:11.2.0] C:\Users\mason\.android\build-cache\18b075416ee137be604cd7088f5c0f6f71f7c1b5\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage-common:11.2.0] C:\Users\mason\.android\build-cache\1f9be650c0b15b1ea0a8b24608c6072b3ed0e01a\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-auth:11.2.0] C:\Users\mason\.android\build-cache\52adfb6ebda30f7ee382033f41df0fca57a629e0\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\c237ddc7c4b9e35debc00348fbd41cf694035c88\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\57d59a4860f74cd495043d4a7f043400bdcf1960\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\1508f83fcc844ba85a396a0983434ed47ffba405\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.2.0] C:\Users\mason\.android\build-cache\cdb8a83011920ecb163f7aba4a9aa62c56bd5ef8\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\70a0dd26fec149ad3771c21e785bb3bb4a6bf81c\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:26.0.1] C:\Users\mason\.android\build-cache\cf1648be2190aca2675d148b6e2ca8a15fe86cd4\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\mason\.android\build-cache\380d5a844fa2d349986299a237f6ec51af3ed590\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\mason\.android\build-cache\b86fed01ddd286d57319ac9fa0f75257610e415c\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\mason\.android\build-cache\6613b8f58919cadf51814df998e7d3411afe9a03\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\mason\.android\build-cache\187c580a93fead91e34c03cf1c9b5751bdb79e98\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\build-cache\05c7b713cc6d6e8cb4653bc77a8bc697f2d6bbe1\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\2b565eb32841cf3d5056ce38a253e62e349fcde6\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml
@@ -178,146 +178,146 @@ MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mason\StudioProjects\MyTLC-Android\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\fe0981ed7bddeb4dbca9b756e43ac984c5d3e91d\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\81cda7aaf0dcd58fb897774bf76ef7edae09e229\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.0.1] C:\Users\mason\.android\build-cache\8ec597a463e355947100d7db6d06c2e8956d7153\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:appcompat-v7:26.0.1] C:\Users\mason\.android\build-cache\ed3735fc2e6943f7d7765225e2b2d59ff91f0a12\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\1ddada57a85d49caf58306d57688f5edd79c852b\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\d857b81fdf9a1130caf2a502757de83f51d9585f\output\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.0.1] C:\Users\mason\.android\build-cache\ad74a5ba07d5729b917d75de2c9ea83ab768ddeb\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\mason\.android\build-cache\0dd15bc5ef023542c738cc69abfc339d38a9014e\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\mason\.android\build-cache\e8363fc049dc82895d78a20fce5ad4c6ccf46166\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\mason\.android\build-cache\1b27681e2f240b2dd0ee0324518d7fb70ff6376d\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\mason\.android\build-cache\a4db983a48cde2957e933708ad6795e8e29fe780\output\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\build-cache\9e75085aebc5ed12f5ecfe3aff7e52092b4917fc\output\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\8525473404d0e33ca5f0febcc3492840b6d3fb08\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:design:26.0.1] C:\Users\mason\.android\build-cache\2b565eb32841cf3d5056ce38a253e62e349fcde6\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\mason\.android\build-cache\adcdd9dbb0b3e836e4f0921f15420eb86aa66281\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.1] C:\Users\mason\.android\build-cache\5528798fbd426e7e214801c073d65d858aa99e94\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:appcompat-v7:26.0.1] C:\Users\mason\.android\build-cache\899b763e163c505e4cb6eb236846417fa875f671\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\a7b2d115ede1f78ab88b604b7862e9e66bee0817\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.1] C:\Users\mason\.android\build-cache\1c6c4df40b3d764a4bfa25aade5502e592f2d802\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.1] C:\Users\mason\.android\build-cache\cf1648be2190aca2675d148b6e2ca8a15fe86cd4\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.1] C:\Users\mason\.android\build-cache\380d5a844fa2d349986299a237f6ec51af3ed590\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.1] C:\Users\mason\.android\build-cache\b86fed01ddd286d57319ac9fa0f75257610e415c\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.1] C:\Users\mason\.android\build-cache\6613b8f58919cadf51814df998e7d3411afe9a03\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.1] C:\Users\mason\.android\build-cache\187c580a93fead91e34c03cf1c9b5751bdb79e98\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.1] C:\Users\mason\.android\build-cache\05c7b713cc6d6e8cb4653bc77a8bc697f2d6bbe1\output\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:25:13-35
+		ADDED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\8525473404d0e33ca5f0febcc3492840b6d3fb08\output\AndroidManifest.xml:25:13-35
 	android:name
-		ADDED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\40ce4e6e602c9e178a7061bcd3f77c11682bf60e\output\AndroidManifest.xml:24:13-51
+		ADDED from [com.android.support:cardview-v7:26.0.1] C:\Users\mason\.android\build-cache\8525473404d0e33ca5f0febcc3492840b6d3fb08\output\AndroidManifest.xml:24:13-51
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\92da1bc37dddeb543aa47718c7032717c026f8a1\output\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\c237ddc7c4b9e35debc00348fbd41cf694035c88\output\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\92da1bc37dddeb543aa47718c7032717c026f8a1\output\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\c237ddc7c4b9e35debc00348fbd41cf694035c88\output\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\92da1bc37dddeb543aa47718c7032717c026f8a1\output\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\c237ddc7c4b9e35debc00348fbd41cf694035c88\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\92da1bc37dddeb543aa47718c7032717c026f8a1\output\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:11.2.0] C:\Users\mason\.android\build-cache\c237ddc7c4b9e35debc00348fbd41cf694035c88\output\AndroidManifest.xml:19:19-85
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\ab1cfa91c00b9aff0bd10a43e34e0df74ab0d60f\output\AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:19:5-78
+ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\57d59a4860f74cd495043d4a7f043400bdcf1960\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:21:22-76
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:21:22-76
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\ab1cfa91c00b9aff0bd10a43e34e0df74ab0d60f\output\AndroidManifest.xml:25:7-26:18
+ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\57d59a4860f74cd495043d4a7f043400bdcf1960\output\AndroidManifest.xml:25:7-26:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:25:90-112
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:25:90-112
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:25:113-137
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:25:113-137
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:25:17-89
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:25:17-89
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:27:7-31:18
+ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:27:7-31:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:27:162-184
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:27:162-184
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:27:185-208
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:27:185-208
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:27:105-161
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:27:105-161
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:27:17-104
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:27:17-104
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:28:11-30:27
+ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:28:11-30:27
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:29:15-76
+ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:29:15-76
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:29:23-74
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:29:23-74
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\ab1cfa91c00b9aff0bd10a43e34e0df74ab0d60f\output\AndroidManifest.xml:27:7-137
+ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.2.0] C:\Users\mason\.android\build-cache\57d59a4860f74cd495043d4a7f043400bdcf1960\output\AndroidManifest.xml:27:7-137
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:32:88-110
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:32:88-110
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:32:111-135
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:32:111-135
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:32:16-87
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:32:16-87
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:33:7-197
+ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:33:7-197
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:33:148-170
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:33:148-170
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:33:171-195
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:33:171-195
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:33:91-147
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:33:91-147
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\597e1712a20652a07d3f7400a3a5072939769d11\output\AndroidManifest.xml:33:16-90
+		ADDED from [com.google.firebase:firebase-analytics:11.2.0] C:\Users\mason\.android\build-cache\e035a4c4fa8edb176ab5eeacab945ea8763d1596\output\AndroidManifest.xml:33:16-90
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:22:5-81
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:22:5-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:22:22-79
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:22:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:24:5-109
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:24:5-109
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:24:72-107
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:24:72-107
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:24:17-71
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:24:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:26:5-78
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:26:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:26:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:30:9-35:20
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:30:9-35:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:30:85-108
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:30:85-108
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:30:109-169
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:30:109-169
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:30:19-84
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:30:19-84
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:31:13-34:29
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:31:13-34:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:32:17-80
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:32:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:32:25-78
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:32:25-78
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:33:17-60
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:33:17-60
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:33:27-58
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:33:27-58
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:39:9-119
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:39:9-119
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:39:93-117
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:39:93-117
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:39:19-92
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:39:19-92
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:43:9-47:19
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:43:9-47:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:43:83-106
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:43:83-106
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:43:18-82
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:43:18-82
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:44:13-46:29
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:44:13-46:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:44:28-51
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:44:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:45:17-79
+ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:45:17-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\c731a3d871fc00cbbadf500326c9970370929ed4\output\AndroidManifest.xml:45:25-77
+		ADDED from [com.google.firebase:firebase-iid:11.2.0] C:\Users\mason\.android\build-cache\acafc45ba9265669e30b8ba371b03658871f0915\output\AndroidManifest.xml:45:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\753170257174801596f3ddac269ea77c2ce9393a\output\AndroidManifest.xml:6:9-194
+ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\1508f83fcc844ba85a396a0983434ed47ffba405\output\AndroidManifest.xml:6:9-194
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\753170257174801596f3ddac269ea77c2ce9393a\output\AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\1508f83fcc844ba85a396a0983434ed47ffba405\output\AndroidManifest.xml:6:19-78
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\753170257174801596f3ddac269ea77c2ce9393a\output\AndroidManifest.xml:6:144-168
+		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\1508f83fcc844ba85a396a0983434ed47ffba405\output\AndroidManifest.xml:6:144-168
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\753170257174801596f3ddac269ea77c2ce9393a\output\AndroidManifest.xml:6:169-192
+		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\1508f83fcc844ba85a396a0983434ed47ffba405\output\AndroidManifest.xml:6:169-192
 	android:name
-		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\753170257174801596f3ddac269ea77c2ce9393a\output\AndroidManifest.xml:6:79-143
+		ADDED from [com.google.firebase:firebase-common:11.2.0] C:\Users\mason\.android\build-cache\1508f83fcc844ba85a396a0983434ed47ffba405\output\AndroidManifest.xml:6:79-143
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\8e83e3a3275fb2baec218da9669955653036c927\output\AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\70a0dd26fec149ad3771c21e785bb3bb4a6bf81c\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\8e83e3a3275fb2baec218da9669955653036c927\output\AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\70a0dd26fec149ad3771c21e785bb3bb4a6bf81c\output\AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\8e83e3a3275fb2baec218da9669955653036c927\output\AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:11.2.0] C:\Users\mason\.android\build-cache\70a0dd26fec149ad3771c21e785bb3bb4a6bf81c\output\AndroidManifest.xml:20:20-65
