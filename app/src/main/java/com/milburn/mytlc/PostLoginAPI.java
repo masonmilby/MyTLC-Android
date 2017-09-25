@@ -250,34 +250,24 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
     }
 
     private List<Date[]> getTimeDate() {
-        //TODO: If shift has <hr> divider then repeat for each section
         List<Date[]> timesList = new ArrayList<>();
-        if (!currentDay.hasClass("calendarTextSchedDtlTime")) {
-            String[] dateTimes = currentDay.select("div.calendarTextShiftTime").text().split(" - ");
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
-            try {
-                Date start = dateFormat.parse(dateTimes[0]);
-                Date end = dateFormat.parse(dateTimes[1]);
-                timesList.add(new Date[]{start, end});
-            } catch (ParseException e) {
-                FirebaseCrash.log("Get times failed");
-                FirebaseCrash.report(e);
-                e.printStackTrace();
-                return null;
+        List<Elements> elementsList = new ArrayList<>();
+        Elements tempElements = new Elements();
+        for (Element element : currentDay) {
+            if (element.tagName().equals("hr") || currentDay.indexOf(element) == currentDay.size()-1) {
+                elementsList.add(tempElements);
+            } else {
+                tempElements.add(element);
             }
-        } else {
-            String dateString = currentDay.select("div.calendarTextShiftTime").text().split(" ")[0];
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhh:mmaa");
+        }
 
-            Elements timeElements = currentDay.select("div.calendarTextSchedDtlTime");
-            for (Element time : timeElements) {
-                String[] timeOriginal = time.text().split(" - ");
-                String time1 = timeOriginal[0].replace("a", "AM").replace("p", "PM");
-                String time2 = timeOriginal[1].replace("a", "AM").replace("p", "PM");
-
+        for (Elements currentElements : elementsList) {
+            if (!currentElements.hasClass("calendarTextSchedDtlTime")) {
+                String[] dateTimes = currentElements.select("div.calendarTextShiftTime").text().split(" - ");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
                 try {
-                    Date start = dateFormat.parse(dateString + time1);
-                    Date end = dateFormat.parse(dateString + time2);
+                    Date start = dateFormat.parse(dateTimes[0]);
+                    Date end = dateFormat.parse(dateTimes[1]);
                     timesList.add(new Date[]{start, end});
                 } catch (ParseException e) {
                     FirebaseCrash.log("Get times failed");
@@ -285,8 +275,30 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     e.printStackTrace();
                     return null;
                 }
+            } else {
+                String dateString = currentElements.select("div.calendarTextShiftTime").text().split(" ")[0];
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddhh:mmaa");
+
+                Elements timeElements = currentElements.select("div.calendarTextSchedDtlTime");
+                for (Element time : timeElements) {
+                    String[] timeOriginal = time.text().split(" - ");
+                    String time1 = timeOriginal[0].replace("a", "AM").replace("p", "PM");
+                    String time2 = timeOriginal[1].replace("a", "AM").replace("p", "PM");
+
+                    try {
+                        Date start = dateFormat.parse(dateString + time1);
+                        Date end = dateFormat.parse(dateString + time2);
+                        timesList.add(new Date[]{start, end});
+                    } catch (ParseException e) {
+                        FirebaseCrash.log("Get times failed");
+                        FirebaseCrash.report(e);
+                        e.printStackTrace();
+                        return null;
+                    }
+                }
             }
         }
+
         if (!timesList.isEmpty()) {
             FirebaseCrash.log("Get times completed");
             return timesList;
