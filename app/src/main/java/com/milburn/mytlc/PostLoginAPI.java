@@ -230,46 +230,22 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
     private void setCurrentDay() {
         currentDay = null;
-        Elements tempElements = new Elements();
         if (!shiftDoc.getElementsByClass(" calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().children();
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekday currentDay").first().children().select("div.calendarShift");
         } else if (!shiftDoc.getElementsByClass(" calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().children();
+            currentDay = shiftDoc.getElementsByClass(" calendarColWeekend currentDay").first().children().select("div.calendarShift");
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().children();
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekday currentDay").first().children().select("div.calendarShift");
         } else if (!shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").isEmpty()) {
-            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().children();
-        }
-
-        if (currentDay != null) {
-            for (Element group : currentDay) {
-                tempElements.addAll(group.children());
-            }
-            currentDay = tempElements;
+            currentDay = shiftDoc.getElementsByClass("calendarCurrentDay calendarColWeekend currentDay").first().children().select("div.calendarShift");
         }
     }
 
     private List<Date[]> getTimeDate() {
         List<Date[]> timesList = new ArrayList<>();
-        List<Elements> elementsList = new ArrayList<>();
-        Elements tempElements = new Elements();
-        for (Element element : currentDay) {
-            if (element.tagName().equals("hr") | currentDay.indexOf(element) == currentDay.size()-1) {
-                if (tempElements.isEmpty() && currentDay.indexOf(element) == currentDay.size()-1) {
-                    tempElements.add(element);
-                }
-                elementsList.add(tempElements);
-                tempElements.remove();
-            } else {
-                if (element.className().equals("calendarShift")) {
-                    tempElements.addAll(element.children());
-                } else {
-                    tempElements.add(element);
-                }
-            }
-        }
 
-        for (Elements currentElements : elementsList) {
+        for (Element currentElement : currentDay) {
+            Elements currentElements = currentElement.children();
             if (!currentElements.hasClass("calendarTextSchedDtlTime")) {
                 String[] dateTimes = currentElements.select("div.calendarTextShiftTime").text().split(" - ");
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
