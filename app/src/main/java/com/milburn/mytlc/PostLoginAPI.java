@@ -296,11 +296,17 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         List<String> actList = new ArrayList<>();
         DepartmentMap deptMap = new DepartmentMap();
         for (Element dept : depts) {
-            String[] deptSplit = dept.text().split(",");
-            actList.add(deptSplit[4]);
-            deptSplit = deptSplit[3].split("-");
-            String deptNum = deptSplit[2].replace("DEPT", "");
-            deptList.add(deptMap.getDeptName(deptNum));
+            try {
+                String[] deptSplit = dept.text().split(",");
+                actList.add(deptSplit[4]);
+                deptSplit = deptSplit[3].split("-");
+                String deptNum = deptSplit[2].replace("DEPT", "");
+                deptList.add(deptMap.getDeptName(deptNum));
+            } catch (Exception e) {
+                FirebaseCrash.log(dept.text());
+                FirebaseCrash.report(e);
+                e.printStackTrace();
+            }
         }
 
         List<List<String>> finalList = new ArrayList<>();

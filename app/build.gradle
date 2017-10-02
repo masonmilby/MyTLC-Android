@@ -7,8 +7,8 @@ android {
         applicationId "com.milburn.mytlc"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 27
-        versionName "3.0.5"
+        versionCode 28
+        versionName "3.0.7"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -40,6 +40,7 @@ dependencies {
     compile 'com.google.firebase:firebase-analytics:11.2.0'
     testCompile 'junit:junit:4.12'
     compile 'joda-time:joda-time:2.9.9'
+    compile 'com.asprise.ocr:java-ocr-api:15.3.0.3'
 }
 
 apply plugin: 'com.google.gms.google-services'
