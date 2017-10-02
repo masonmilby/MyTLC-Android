@@ -51,9 +51,9 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
     private PrefManager pm;
 
     private String storeAddress = "";
-    private Boolean isSync;
+    private Boolean isBackground = false;
 
-    public CalendarHelper(Context con) {
+    public CalendarHelper(Context con, Boolean isSync) {
         context = con;
         credentials = new Credentials(context);
         pm = new PrefManager(con, new PrefManager.onPrefChanged() {
@@ -67,15 +67,17 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         calUri = CalendarContract.Calendars.CONTENT_URI;
         eventUri = CalendarContract.Events.CONTENT_URI;
 
-        isSync = context.getClass().getSimpleName().equals("BackgroundSync");
+        isBackground = isSync;
     }
 
     @Override
     protected Void doInBackground(List<Shift>... params) {
+        System.out.println(context.getClass());
         shiftList = params[0];
-        if (!isSync) {
-            getCalendarNames(false);
+        if (!isBackground) {
+            getCalendarNames(true);
         } else {
+            getCalendarNames(false);
             getStoreAddress();
         }
         return null;
@@ -110,10 +112,10 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             public void processFinish(String address) {
                 if (address != null && editAddress != null) {
                     editAddress.setText(address);
-                } else if (address != null && isSync) {
+                } else if (address != null && isBackground) {
                     storeAddress = address;
                     syncImport();
-                } else if (isSync) {
+                } else if (isBackground) {
                     syncImport();
                 }
             }
@@ -125,7 +127,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         }
     }
 
-    public CharSequence[] getCalendarNames(Boolean isSingle) {
+    public CharSequence[] getCalendarNames(Boolean showUI) {
         Cursor cur;
 
         final String[] EVENT_PROJECTION = new String[]{
@@ -137,8 +139,10 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             cur = cr.query(calUri, EVENT_PROJECTION, null, null, null);
         } catch (SecurityException se) {
             se.printStackTrace();
-            snackString = "No calendars available";
-            publishProgress(1);
+            if (showUI) {
+                snackString = "No calendars available";
+                publishProgress(1);
+            }
             return new CharSequence[0];
         }
 
@@ -149,12 +153,14 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         cur.close();
         calendarNames = calendarMap.keySet().toArray(new CharSequence[calendarMap.size()]);
         if (calendarNames.length < 1) {
-            snackString = "No calendars available";
-            publishProgress(1);
+            if (showUI) {
+                snackString = "No calendars available";
+                publishProgress(1);
+            }
             return new CharSequence[0];
         }
 
-        if (!isSingle) {
+        if (showUI) {
             publishProgress(2);
         }
         return calendarNames;
@@ -225,7 +231,6 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         if (!eventIds.isEmpty()) {
             credentials.addEventIds(calName, eventIds);
         }
-        publishProgress(3);
     }
 
     @Override
@@ -292,9 +297,6 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
                     }
                 }
 
-                break;
-
-            case 3:
                 break;
         }
     }

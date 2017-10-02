@@ -281,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void importToCalendar(List<Shift> shiftList) {
-        CalendarHelper calendarHelper = new CalendarHelper(this);
+        CalendarHelper calendarHelper = new CalendarHelper(this, false);
         calendarHelper.execute(shiftList);
     }
 
@@ -363,7 +363,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.item_logout:
                 if (pm.getDeleteEvents() && !credentials.getEventIds().isEmpty() && checkPerms()) {
-                    CalendarHelper calendarHelper = new CalendarHelper(getBaseContext());
+                    CalendarHelper calendarHelper = new CalendarHelper(getBaseContext(), false);
                     calendarHelper.deleteEvents();
 
                     credentials.logout();
@@ -388,7 +388,7 @@ public class MainActivity extends AppCompatActivity {
             importBool = true;
             getSchedule();
         } else if (grantResults.length > 0 && requestCode == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            CalendarHelper calendarHelper = new CalendarHelper(getBaseContext());
+            CalendarHelper calendarHelper = new CalendarHelper(getBaseContext(), false);
             calendarHelper.deleteEvents();
 
             credentials.logout();

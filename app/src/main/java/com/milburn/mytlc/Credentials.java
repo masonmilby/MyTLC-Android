@@ -86,19 +86,7 @@ public class Credentials {
                 .remove("PastSchedule")
                 .apply();
         if (pm.getDeleteSettings()) {
-            sharedPreferences.edit()
-                    .remove("pay")
-                    .remove("tax")
-                    .remove("getAddress")
-                    .remove("past_shifts")
-                    .remove("delete_settings")
-                    .remove("delete_events")
-                    .remove("collapsed")
-                    .remove("display_past")
-                    .remove("primaryColor")
-                    .remove("accentColor")
-                    .remove("base_theme")
-                    .apply();
+            sharedPreferences.edit().clear().apply();
         }
     }
 

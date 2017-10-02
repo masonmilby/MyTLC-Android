@@ -265,8 +265,8 @@ public class SettingsFragment extends PreferenceFragment {
 
     private void setChecked() {
         if (importCalendar.isChecked() && checkPerms()) {
-            CalendarHelper calendarHelper = new CalendarHelper(mActivity);
-            CharSequence[] calNames = calendarHelper.getCalendarNames(true);
+            CalendarHelper calendarHelper = new CalendarHelper(mActivity, false);
+            CharSequence[] calNames = calendarHelper.getCalendarNames(false);
             listCalendars.setEntries(calNames);
             listCalendars.setEntryValues(calNames);
             listCalendars.setDefaultValue(calNames[0]);
