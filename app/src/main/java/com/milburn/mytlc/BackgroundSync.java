@@ -95,11 +95,11 @@ public class BackgroundSync extends Service {
                             setAlarm(shiftList);
                         }
 
-                        if (total > 0 && pm.getImportCalendar() && checkPerms()) {
+                        if (pm.getImportCalendar() && checkPerms()) {
                             CalendarHelper calendarHelper = new CalendarHelper(getApplicationContext());
                             calendarHelper.execute(shiftList);
                             calendarResult = "Shifts imported to calendar";
-                        } else if (total > 0 && pm.getImportCalendar() && !checkPerms()) {
+                        } else if (pm.getImportCalendar() && !checkPerms()) {
                             calendarResult = "Cannot import to calendar, permission denied";
                         }
 
