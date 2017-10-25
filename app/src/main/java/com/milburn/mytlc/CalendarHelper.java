@@ -170,7 +170,8 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         String calName = spinnerCalendar.getSelectedItem().toString();
 
         if (checkDelete.isChecked()) {
-            deleteEvents(calName);
+            deleteEvents(calName + "Manual");
+            deleteEvents(calName + "Background");
         }
 
         if (editAddress.getText().toString().contentEquals("")) {
@@ -199,7 +200,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             }
         }
         if (!eventIds.isEmpty()) {
-            credentials.addEventIds(calName, eventIds);
+            credentials.addEventIds(calName + "Manual", eventIds);
         }
         snackString = "Events successfully added to " + "'" + calName + "'";
         publishProgress(1);
@@ -207,7 +208,8 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
 
     private void syncImport() {
         String calName = pm.getSelectedCalendar();
-        deleteEvents(calName);
+        deleteEvents(calName + "Background");
+        deleteEvents(calName + "Manual");
 
         List<Long> eventIds = new ArrayList<>();
         for (Shift shift : shiftList) {
@@ -229,7 +231,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
             }
         }
         if (!eventIds.isEmpty()) {
-            credentials.addEventIds(calName, eventIds);
+            credentials.addEventIds(calName + "Background", eventIds);
         }
     }
 
