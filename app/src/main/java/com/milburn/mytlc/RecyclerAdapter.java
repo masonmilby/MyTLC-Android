@@ -22,6 +22,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -71,13 +72,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public RecyclerAdapter(List<Shift> itemArray, Context con) {
         pm = new PrefManager(con, new PrefManager.onPrefChanged() {
             @Override
-            public void prefChanged(SharedPreferences sharedPreferences, String s) {
-                //
-            }
-        });
+            public void prefChanged(SharedPreferences sharedPreferences, String s) {} });
+
         if (pm.getDisplay()) {
             Credentials credentials = new Credentials(con);
-            mShiftArray.addAll(credentials.getPastSchedule());
+            ArrayList tempArchiveShifts = new ArrayList();
+            tempArchiveShifts.addAll(credentials.getPastSchedule());
+            Collections.reverse(tempArchiveShifts);
+            mShiftArray.addAll(tempArchiveShifts);
         }
         mShiftArray.addAll(itemArray);
         addDividers();
