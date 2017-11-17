@@ -245,7 +245,7 @@ public class SettingsFragment extends PreferenceFragment {
     private void showConfirmation() {
         AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
         builder.setTitle("Are you sure?");
-        builder.setMessage("Disabling shift archiving will clear all currently stored past shifts.");
+        builder.setMessage("Disabling shift archiving will clear all archived shifts.");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -269,10 +269,15 @@ public class SettingsFragment extends PreferenceFragment {
             CharSequence[] calNames = calendarHelper.getCalendarNames(false);
             listCalendars.setEntries(calNames);
             listCalendars.setEntryValues(calNames);
-            listCalendars.setDefaultValue(calNames[0]);
+            if (calNames.length > 0) {
+                listCalendars.setEnabled(true);
+                listCalendars.setDefaultValue(calNames[0]);
+            } else {
+                listCalendars.setEnabled(false);
+                listCalendars.setValue("No calendars found");
+            }
 
             importCalendar.setChecked(true);
-            listCalendars.setEnabled(true);
         } else if (!importCalendar.isChecked() || !checkPerms()){
             importCalendar.setChecked(false);
             listCalendars.setEnabled(false);
