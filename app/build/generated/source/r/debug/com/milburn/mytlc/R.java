@@ -4366,18 +4366,19 @@ public final class R {
     public static final int pref_past_sum=0x7f0e0072;
     public static final int pref_past_title=0x7f0e0073;
     public static final int pref_pay_title=0x7f0e0074;
-    public static final int pref_tax_title=0x7f0e0075;
-    public static final int project_id=0x7f0e0076;
-    public static final int remember_checkbox=0x7f0e0077;
-    public static final int search_menu_title=0x7f0e0078;
-    public static final int status_bar_notification_info_overflow=0x7f0e0079;
-    public static final int time_1=0x7f0e007a;
-    public static final int time_2=0x7f0e007b;
-    public static final int time_3=0x7f0e007c;
-    public static final int title_activity_settings=0x7f0e007d;
-    public static final int username_hint=0x7f0e007e;
-    public static final int weeks_hours=0x7f0e007f;
-    public static final int weeks_pay=0x7f0e0080;
+    public static final int pref_show_notification_title=0x7f0e0075;
+    public static final int pref_tax_title=0x7f0e0076;
+    public static final int project_id=0x7f0e0077;
+    public static final int remember_checkbox=0x7f0e0078;
+    public static final int search_menu_title=0x7f0e0079;
+    public static final int status_bar_notification_info_overflow=0x7f0e007a;
+    public static final int time_1=0x7f0e007b;
+    public static final int time_2=0x7f0e007c;
+    public static final int time_3=0x7f0e007d;
+    public static final int title_activity_settings=0x7f0e007e;
+    public static final int username_hint=0x7f0e007f;
+    public static final int weeks_hours=0x7f0e0080;
+    public static final int weeks_pay=0x7f0e0081;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0f0000;

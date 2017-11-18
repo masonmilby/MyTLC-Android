@@ -117,6 +117,12 @@ public class BackgroundSync extends Service {
     }
 
     private void createNotification(Integer message, Integer addedShifts) {
+        if (!pm.getDisplayNotification() && message == 1) {
+            stopForeground(true);
+            stopSelf();
+            return;
+        }
+
         Notification.Builder notification;
 
         Intent intent = new Intent(this, MainActivity.class);

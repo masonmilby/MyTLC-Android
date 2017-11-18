@@ -39,6 +39,7 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
     public String key_sync_import_calendar = "sync_import_calendar";
     public String key_sync_alarm = "sync_alarm";
     public String key_sync_alarm_time = "sync_alarm_time";
+    public String key_display_notification = "display_notification";
 
     public PrefManager(Context context, onPrefChanged onChanged) {
         changeInterface = onChanged;
@@ -253,5 +254,9 @@ public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeLi
 
     public Boolean getSyncAlarm() {
         return sharedPref.getBoolean(key_sync_alarm, false);
+    }
+
+    public Boolean getDisplayNotification() {
+        return sharedPref.getBoolean(key_display_notification, true);
     }
 }

@@ -47,6 +47,10 @@
             android:summary="@string/pref_background_summary"
             android:title="@string/pref_background_title" />
         <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="display_notification"
+            android:title="@string/pref_show_notification_title" />
+        <CheckBoxPreference
             android:defaultValue="false"
             android:key="sync_import"
             android:title="@string/pref_import_title" />
