@@ -243,7 +243,8 @@ public class MainActivity extends AppCompatActivity {
             mRecyclerView.setAdapter(mRecyclerAdapter);
             addToCalendar(existingList);
             createSnack(updatedTime);
-            mRecyclerView.smoothScrollToPosition(credentials.getPastSchedule().size());
+            RecyclerAdapter recyclerAdapter = (RecyclerAdapter)mRecyclerView.getAdapter();
+            mRecyclerView.smoothScrollToPosition(recyclerAdapter.getPosition(existingList.get(0)));
             return true;
         }
 
