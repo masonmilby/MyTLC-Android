@@ -14,7 +14,8 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -40,7 +41,6 @@ dependencies {
     compile 'com.google.firebase:firebase-analytics:11.6.0'
     testCompile 'junit:junit:4.12'
     compile 'joda-time:joda-time:2.9.9'
-    compile 'com.asprise.ocr:java-ocr-api:15.3.0.3'
 }
 
 apply plugin: 'com.google.gms.google-services'
