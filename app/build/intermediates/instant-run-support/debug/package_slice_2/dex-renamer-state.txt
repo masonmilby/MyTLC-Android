@@ -1,4 +1,4 @@
-#Sat Nov 25 08:25:07 EST 2017
-base.0=C\:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\22
+#Sun Nov 26 00:31:34 EST 2017
+base.0=C\:\\Users\\mason\\StudioProjects\\MyTLC-Android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\41
 path.0=classes.dex
 renamed.0=classes.dex
