@@ -7,8 +7,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.crash.FirebaseCrash;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -69,10 +69,10 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     .method(Connection.Method.GET)
                     .execute();
             tokenValue = mainResponse.parse().select("input[name=url_login_token]").first().attr("value");
-            FirebaseCrash.log("MyTLC loaded");
+            Crashlytics.log("MyTLC loaded");
             htmlList.add(new String[]{"Main.html", mainResponse.parse().toString()});
         } catch (Exception e) {
-            FirebaseCrash.log("MyTLC loading failed");
+            Crashlytics.log("MyTLC loading failed");
             publishProgress(102);
             e.printStackTrace();
             return false;
@@ -97,7 +97,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
             loginDoc = loginResponse.parse();
             htmlList.add(new String[]{"Login.html", loginDoc.toString()});
         } catch (Exception e) {
-            FirebaseCrash.log("Login failed");
+            Crashlytics.log("Login failed");
             publishProgress(102);
             e.printStackTrace();
             return false;
@@ -105,16 +105,16 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
         if (loginDoc.title().contentEquals("Infor HCM Workforce Management - ETM Login")) {
             if (loginDoc.getElementsByClass("errorText").first() != null) {
-                FirebaseCrash.log("Login failed: " + loginDoc.getElementsByClass("errorText").first().text());
+                Crashlytics.log("Login failed: " + loginDoc.getElementsByClass("errorText").first().text());
                 publishProgress(101);
                 return false;
             }
         } else if (loginDoc.getElementsByTag("font").first() != null && loginDoc.getElementsByTag("font").first().text().contains("updating schedule information")) {
-            FirebaseCrash.log("Login failed: updating schedule");
+            Crashlytics.log("Login failed: updating schedule");
             publishProgress(100);
             return false;
         }
-        FirebaseCrash.log("Login completed");
+        Crashlytics.log("Login completed");
 
         try {
             String secureToken = loginDoc.select("input[name=secureToken]").first().attr("value");
@@ -155,13 +155,13 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
             shiftPageNextDoc = shiftPageNextResponse.parse();
             htmlList.add(new String[]{"ShiftNextPage.html", shiftPageNextDoc.toString()});
         } catch (Exception e) {
-            FirebaseCrash.log("Next page loading failed");
-            FirebaseCrash.report(e);
+            Crashlytics.log("Next page loading failed");
+            Crashlytics.logException(e);
             publishProgress(102);
             e.printStackTrace();
             return false;
         }
-        FirebaseCrash.log("Next page loaded");
+        Crashlytics.log("Next page loaded");
 
         return !shiftPageNextDoc.title().contentEquals("Infor HCM Workforce Management - ETM Login");
     }
@@ -192,11 +192,11 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                             .cookies(loginResponse.cookies())
                             .header("cache-control", "no-cache")
                             .get();
-                    FirebaseCrash.log("Shift" + i + " loaded");
+                    Crashlytics.log("Shift" + i + " loaded");
                     htmlList.add(new String[]{"Shift" + i + ".html", shiftDoc.toString()});
                 } catch (Exception e) {
-                    FirebaseCrash.log("Shift" + i + " load failed");
-                    FirebaseCrash.report(e);
+                    Crashlytics.log("Shift" + i + " load failed");
+                    Crashlytics.logException(e);
                     publishProgress(102);
                     e.printStackTrace();
                     return false;
@@ -212,9 +212,9 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     List<String> activityList = deptActList.get(1);
                     if (deptActList != null && parsedDepts != null && parsedTimeDate != null && storeNumber != null && activityList != null) {
                         shiftList.add(new Shift(parsedTimeDate, parsedDepts, storeNumber, activityList));
-                        FirebaseCrash.log("Shift" + i + " added");
+                        Crashlytics.log("Shift" + i + " added");
                     } else {
-                        FirebaseCrash.log("Shift" + i + " failed to add");
+                        Crashlytics.log("Shift" + i + " failed to add");
                         publishProgress(102);
                         return false;
                     }
@@ -223,7 +223,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
             }
             return true;
         }
-        FirebaseCrash.log("Shift list null");
+        Crashlytics.log("Shift list null");
         publishProgress(102);
         return false;
     }
@@ -254,8 +254,8 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     Date end = dateFormat.parse(dateTimes[1]);
                     timesList.add(new Date[]{start, end});
                 } catch (ParseException e) {
-                    FirebaseCrash.log("Get times failed");
-                    FirebaseCrash.report(e);
+                    Crashlytics.log("Get times failed");
+                    Crashlytics.logException(e);
                     e.printStackTrace();
                     return null;
                 }
@@ -274,8 +274,8 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                         Date end = dateFormat.parse(dateString + time2);
                         timesList.add(new Date[]{start, end});
                     } catch (ParseException e) {
-                        FirebaseCrash.log("Get times failed");
-                        FirebaseCrash.report(e);
+                        Crashlytics.log("Get times failed");
+                        Crashlytics.logException(e);
                         e.printStackTrace();
                         return null;
                     }
@@ -284,7 +284,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         }
 
         if (!timesList.isEmpty()) {
-            FirebaseCrash.log("Get times completed");
+            Crashlytics.log("Get times completed");
             return timesList;
         }
         return null;
@@ -303,8 +303,8 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                 String deptNum = deptSplit[2].replace("DEPT", "");
                 deptList.add(deptMap.getDeptName(deptNum));
             } catch (Exception e) {
-                FirebaseCrash.log(dept.text());
-                FirebaseCrash.report(e);
+                Crashlytics.log(dept.text());
+                Crashlytics.logException(e);
                 e.printStackTrace();
             }
         }
@@ -327,7 +327,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         if (firebaseHelper.getReport() && shiftList != null && !shiftList.isEmpty()) {
             Bundle bundle = new Bundle();
             bundle.putString("UUID", firebaseHelper.getUUID());
-            firebaseAnalytics.logEvent("report_issue", bundle);
+            firebaseAnalytics.logEvent("logException_issue", bundle);
             firebaseHelper.sendIssue(htmlList, shiftList);
         }
         firebaseHelper.setReport(false);

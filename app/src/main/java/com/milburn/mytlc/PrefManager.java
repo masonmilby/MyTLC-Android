@@ -13,7 +13,6 @@ import android.view.View;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
-import java.text.DecimalFormat;
 import java.util.Random;
 
 public class PrefManager implements SharedPreferences.OnSharedPreferenceChangeListener{

@@ -1,12 +1,8 @@
 package com.milburn.mytlc;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.Image;
-import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +11,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.firebase.crash.FirebaseCrash;
+import com.crashlytics.android.Crashlytics;
 
 import java.text.DecimalFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -256,7 +251,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 finalPay = "$" + String.valueOf(df.format((pay * hours) - ((pay * hours) * (tax / 100.0))));
             } catch (Exception e) {
                 finalPay = "0";
-                FirebaseCrash.report(e);
+                Crashlytics.logException(e);
             }
 
             return new String[]{totalHours, dates, finalPay};
