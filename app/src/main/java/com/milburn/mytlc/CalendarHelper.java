@@ -208,30 +208,32 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
 
     private void syncImport() {
         String calName = pm.getSelectedCalendar();
-        deleteEvents(calName + "Background");
-        deleteEvents(calName + "Manual");
+        if (!calName.equals("Null")) {
+            deleteEvents(calName + "Background");
+            deleteEvents(calName + "Manual");
 
-        List<Long> eventIds = new ArrayList<>();
-        for (Shift shift : shiftList) {
-            ContentValues values = new ContentValues();
-            values.put(CalendarContract.Events.DTSTART, shift.getStartTime().getTime());
-            values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
-            values.put(CalendarContract.Events.TITLE, "Work at Best Buy");
-            values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts() + "\n" + "Activities: " + shift.getCombinedAct());
-            values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
-            values.put(CalendarContract.Events.EVENT_TIMEZONE, Calendar.getInstance().getTimeZone().getDisplayName());
-            values.put(CalendarContract.Events.EVENT_LOCATION, storeAddress);
+            List<Long> eventIds = new ArrayList<>();
+            for (Shift shift : shiftList) {
+                ContentValues values = new ContentValues();
+                values.put(CalendarContract.Events.DTSTART, shift.getStartTime().getTime());
+                values.put(CalendarContract.Events.DTEND, shift.getEndTime().getTime());
+                values.put(CalendarContract.Events.TITLE, "Work at Best Buy");
+                values.put(CalendarContract.Events.DESCRIPTION, "Departments: " + shift.getCombinedDepts() + "\n" + "Activities: " + shift.getCombinedAct());
+                values.put(CalendarContract.Events.CALENDAR_ID, calendarMap.get(calName));
+                values.put(CalendarContract.Events.EVENT_TIMEZONE, Calendar.getInstance().getTimeZone().getDisplayName());
+                values.put(CalendarContract.Events.EVENT_LOCATION, storeAddress);
 
-            try {
-                Uri uri = cr.insert(eventUri, values);
-                Long id = Long.parseLong(uri.getLastPathSegment());
-                eventIds.add(id);
-            } catch (SecurityException se) {
-                se.printStackTrace();
+                try {
+                    Uri uri = cr.insert(eventUri, values);
+                    Long id = Long.parseLong(uri.getLastPathSegment());
+                    eventIds.add(id);
+                } catch (SecurityException se) {
+                    se.printStackTrace();
+                }
             }
-        }
-        if (!eventIds.isEmpty()) {
-            credentials.addEventIds(calName + "Background", eventIds);
+            if (!eventIds.isEmpty()) {
+                credentials.addEventIds(calName + "Background", eventIds);
+            }
         }
     }
 

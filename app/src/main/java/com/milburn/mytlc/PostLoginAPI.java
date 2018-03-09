@@ -208,7 +208,12 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                     List<List<String>> deptActList = getDeptsActivities();
                     List<String> parsedDepts = deptActList.get(0);
                     List<Date[]> parsedTimeDate = getTimeDate();
-                    String storeNumber = currentDay.select("div.calendarTextSchedDtl").first().text().split(",")[3].split("-")[1].replaceFirst("^0+(?!$)", "");
+                    String storeNumber = "0000";
+                    try {
+                        storeNumber = currentDay.select("div.calendarTextSchedDtl").first().text().split(",")[3].split("-")[1].replaceFirst("^0+(?!$)", "");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     List<String> activityList = deptActList.get(1);
                     if (deptActList != null && parsedDepts != null && parsedTimeDate != null && storeNumber != null && activityList != null) {
                         shiftList.add(new Shift(parsedTimeDate, parsedDepts, storeNumber, activityList));
