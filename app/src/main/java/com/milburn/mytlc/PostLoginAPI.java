@@ -26,8 +26,6 @@ import java.util.List;
 public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Boolean> {
 
     private Context mContext;
-    private ProgressDialog mProgressDialog;
-    private ProgressDialog mProgressAlert = null;
     private Snackbar mSnackBar;
     private HashMap<String, String> loginMap;
     private List<Shift> shiftList = new ArrayList<>();
@@ -68,9 +66,10 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
             mainResponse = Jsoup.connect("https://mytlc.bestbuy.com/etm/")
                     .method(Connection.Method.GET)
                     .execute();
-            tokenValue = mainResponse.parse().select("input[name=url_login_token]").first().attr("value");
+            Document mainDoc = mainResponse.parse();
+            tokenValue = mainDoc.select("input[name=url_login_token]").first().attr("value");
             Crashlytics.log("MyTLC loaded");
-            htmlList.add(new String[]{"Main.html", mainResponse.parse().toString()});
+            htmlList.add(new String[]{"Main.html", mainDoc.toString()});
         } catch (Exception e) {
             Crashlytics.log("MyTLC loading failed");
             publishProgress(102);
@@ -252,13 +251,13 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         for (Element currentElement : currentDay) {
             Elements currentElements = currentElement.children();
             if (!currentElements.hasClass("calendarTextSchedDtlTime")) {
-                String[] dateTimes = currentElements.select("div.calendarTextShiftTime").text().split(" - ");
+                String[] dateTimes = currentElements.select("div.calendarTextShiftTime").text().split(" - ");
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
                 try {
                     Date start = dateFormat.parse(dateTimes[0]);
                     Date end = dateFormat.parse(dateTimes[1]);
                     timesList.add(new Date[]{start, end});
-                } catch (ParseException e) {
+                } catch (Exception e) {
                     Crashlytics.log("Get times failed");
                     Crashlytics.logException(e);
                     e.printStackTrace();
@@ -270,7 +269,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
 
                 Elements timeElements = currentElements.select("div.calendarTextSchedDtlTime");
                 for (Element time : timeElements) {
-                    String[] timeOriginal = time.text().split(" - ");
+                    String[] timeOriginal = time.text().split(" - ");
                     String time1 = timeOriginal[0].replace("a", "AM").replace("p", "PM");
                     String time2 = timeOriginal[1].replace("a", "AM").replace("p", "PM");
 
@@ -278,7 +277,7 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
                         Date start = dateFormat.parse(dateString + time1);
                         Date end = dateFormat.parse(dateString + time2);
                         timesList.add(new Date[]{start, end});
-                    } catch (ParseException e) {
+                    } catch (Exception e) {
                         Crashlytics.log("Get times failed");
                         Crashlytics.logException(e);
                         e.printStackTrace();
@@ -344,60 +343,57 @@ public class PostLoginAPI extends AsyncTask<HashMap<String, String>, Integer, Bo
         }
     }
 
+    private void showDialog(Integer[] progress, String message, boolean show, Context context) {
+        if (context instanceof MainActivity) {
+            if (progress != null) {
+                ((MainActivity) context).showProgressAlert(progress, show);
+            } else {
+                ((MainActivity) context).showProgressDialog(message, show);
+            }
+        } else if (context instanceof LoginActivity) {
+            if (progress != null) {
+                ((LoginActivity) context).showProgressAlert(progress, show);
+            } else {
+                ((LoginActivity) context).showProgressDialog(message, show);
+            }
+        }
+    }
+
     @Override
     protected void onProgressUpdate(Integer... progress) {
-        if (!mContext.getClass().getSimpleName().equals("BackgroundSync")) {
-            if (mProgressDialog == null) {
-                mProgressDialog = new ProgressDialog(mContext);
-                mProgressDialog.setCancelable(false);
-            }
-
+        if (mContext instanceof MainActivity | mContext instanceof LoginActivity) {
             switch (progress[0]) {
                 case 100:
-                    mProgressDialog.dismiss();
+                    showDialog(null, null, false, mContext);
                     createSnack("MyTLC is currently updating. " + loginDoc.getElementsByTag("font").first().text().replace("MyTLC is currently updating schedule information and viewing schedules is unavailable. ", ""));
                     break;
 
                 case 101:
-                    mProgressDialog.dismiss();
+                    showDialog(null, null, false, mContext);
                     createSnack(loginDoc.getElementsByClass("errorText").first().text());
                     break;
 
                 case 102:
-                    mProgressDialog.dismiss();
+                    showDialog(null, null, false, mContext);
                     createSnack("Error retrieving schedule");
                     break;
 
                 case 103:
-                    mProgressDialog.setMessage("Authenticating...");
-                    mProgressDialog.show();
+                    showDialog(null, "Authenticating...", true, mContext);
                     break;
 
                 default:
-                    if (mProgressDialog.isShowing()) {
-                        mProgressDialog.dismiss();
-                    }
-
-                    if (mProgressAlert == null) {
-                        mProgressAlert = new ProgressDialog(mContext);
-                        mProgressAlert.setIndeterminate(false);
-                        mProgressAlert.setCancelable(false);
-                        mProgressAlert.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                        mProgressAlert.setTitle("Parsing shifts");
-                    }
+                    showDialog(null, null, false, mContext);
 
                     if (!progress[0].equals(progress[1])) {
-                        mProgressAlert.setMax(progress[1]);
-                        mProgressAlert.setProgress(progress[0]);
-                        mProgressAlert.show();
+                        showDialog(progress, null, true, mContext);
                     } else {
-                        mProgressAlert.dismiss();
+                        showDialog(progress, null, false, mContext);
                         errorStatus = false;
                     }
                     break;
             }
         } else {
-
             switch (progress[0]) {
                 case 100:
                     errorMessage = "MyTLC is currently updating. " + loginDoc.getElementsByTag("font").first().text().replace("MyTLC is currently updating schedule information and viewing schedules is unavailable. ", "");

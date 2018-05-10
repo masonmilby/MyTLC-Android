@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.milburn.mytlc";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 38;
-  public static final String VERSION_NAME = "3.1.7";
+  public static final int VERSION_CODE = 40;
+  public static final String VERSION_NAME = "3.3.0";
 }

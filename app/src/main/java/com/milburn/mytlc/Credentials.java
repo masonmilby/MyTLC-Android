@@ -183,7 +183,11 @@ public class Credentials {
             String scheduleString = sharedPreferences.getString("Schedule", "DEFAULT");
             Type stringType = new TypeToken<ArrayList<Shift>>(){}.getType();
 
-            return gson.fromJson(scheduleString, stringType);
+            try {
+                return gson.fromJson(scheduleString, stringType);
+            } catch (Exception e) {
+                return new ArrayList<>();
+            }
         }
         return new ArrayList<>();
     }

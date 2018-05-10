@@ -1,13 +1,11 @@
 package com.milburn.mytlc;
 
-import android.app.ActivityManager;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.support.design.widget.TextInputLayout;
@@ -35,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     private HashMap<String, String> mUserPassMap;
     private Toolbar mToolbar;
     private PrefManager pm;
+    private ProgressDialog progressDialog;
+    private ProgressDialog progressAlert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,6 +131,36 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    public void showProgressDialog(String message, boolean show) {
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setCancelable(false);
+            progressDialog.setMessage(message);
+        }
+        if (show) {
+            progressDialog.show();
+        } else {
+            progressDialog.dismiss();
+        }
+    }
+
+    public void showProgressAlert(Integer[] progress, boolean show) {
+        if (progressAlert == null) {
+            progressAlert = new ProgressDialog(this);
+            progressAlert.setIndeterminate(false);
+            progressAlert.setCancelable(false);
+            progressAlert.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            progressAlert.setTitle("Parsing shifts");
+        }
+        if (show) {
+            progressAlert.setMax(progress[1]);
+            progressAlert.setProgress(progress[0]);
+            progressAlert.show();
+        } else {
+            progressAlert.dismiss();
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_login, menu);
@@ -166,12 +196,12 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            Drawable draw = getPackageManager().getApplicationIcon(this.getApplicationInfo());
-            Bitmap icon = ((BitmapDrawable) draw).getBitmap();
+    }
 
-            ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
-            this.setTaskDescription(taskDesc);
-        }
+    @Override
+    public void onStop() {
+        showProgressDialog(null, false);
+        showProgressAlert(null, false);
+        super.onStop();
     }
 }

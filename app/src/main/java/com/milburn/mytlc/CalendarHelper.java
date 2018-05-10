@@ -147,10 +147,12 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
         }
 
         calendarMap = new HashMap<>();
-        while (cur.moveToNext()) {
-            calendarMap.put(cur.getString(1), cur.getInt(0));
+        if (cur != null) {
+            while (cur.moveToNext()) {
+                calendarMap.put(cur.getString(1), cur.getInt(0));
+            }
+            cur.close();
         }
-        cur.close();
         calendarNames = calendarMap.keySet().toArray(new CharSequence[calendarMap.size()]);
         if (calendarNames.length < 1) {
             if (showUI) {
@@ -208,7 +210,7 @@ public class CalendarHelper extends AsyncTask<List<Shift>, Integer, Void> {
 
     private void syncImport() {
         String calName = pm.getSelectedCalendar();
-        if (!calName.equals("Null")) {
+        if (!calName.equals("Null") && calendarMap.get(calName) != null && !calendarMap.get(calName).equals("")) {
             deleteEvents(calName + "Background");
             deleteEvents(calName + "Manual");
 

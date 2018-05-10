@@ -50,13 +50,6 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            Drawable draw = getPackageManager().getApplicationIcon(this.getApplicationInfo());
-            Bitmap icon = ((BitmapDrawable) draw).getBitmap();
-
-            ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(getString(R.string.app_name), icon, pm.getColorFromAttribute(R.attr.colorPrimary));
-            this.setTaskDescription(taskDesc);
-        }
     }
 
     @Override

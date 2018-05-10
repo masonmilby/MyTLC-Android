@@ -1,5 +1,6 @@
 package com.milburn.mytlc;
 
+import android.accessibilityservice.FingerprintGestureController;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -194,8 +195,20 @@ public class BackgroundSync extends Service {
 
         if (hours > 0 && hours < 24) {
             String[] pickerValues = pm.getSyncAlarmTime().split("");
-            Integer offHour = Integer.valueOf(pickerValues[1]);
-            Integer offMinute = Integer.valueOf(pickerValues[3]+pickerValues[4]);
+
+            Integer offHour;
+            try {
+                offHour = Integer.valueOf(pickerValues[1]);
+            } catch (Exception e) {
+                offHour = 0;
+            }
+
+            Integer offMinute;
+            try {
+                offMinute = Integer.valueOf(pickerValues[3]+pickerValues[4]);
+            } catch (Exception e) {
+                offMinute = 0;
+            }
 
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(firstShift.getStartTime());

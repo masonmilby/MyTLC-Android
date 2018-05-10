@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.milburn.mytlc"
-    android:versionCode="37"
-    android:versionName="3.1.6" >
+    android:versionCode="40"
+    android:versionName="3.3.0" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -16,7 +16,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <permission
@@ -70,6 +71,18 @@
             android:launchMode="singleInstance"
             android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
